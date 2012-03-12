@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hind Stock</string>
+    <string name="calculating">Calculating…</string>
+    <string name="calculate">Calculate</string>
+    <string name="sell_date_hint">today</string>
+    <string name="buy_date_hint">1 year ago</string>
+    <string name="sell_date_label">Sell Date</string>
+    <string name="buy_date_label">Buy Date</string>
+    <string name="dollars_label">dollars</string>
+    <string name="shares_label">shares</string>
+    <string name="dollars_hint">1000</string>
+    <string name="symbol_hint">GOOG</string>
+    <string name="symbol_label">Symbol</string>
+    <string name="shares_hint">100</string>
+
+</resources>

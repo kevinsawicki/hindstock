@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="gain">#178817</color>
+    <color name="loss">#CD171C</color>
+    <color name="text">#000000</color>
+    <color name="text_light">#888888</color>
+    <color name="background">#FFFFFF</color>
+    <color name="header_bg_start">#EEEEEE</color>
+    <color name="header_bg_end">#DDDDDD</color>
+
+</resources>
