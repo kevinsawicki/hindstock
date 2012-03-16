@@ -15,7 +15,7 @@
  */
 package com.github.kevinsawicki.hindstock;
 
-import static android.view.View.GONE;
+import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 import static android.widget.Toast.LENGTH_LONG;
 import static java.text.DateFormat.SHORT;
@@ -90,6 +90,8 @@ public class HindStockActivity extends Activity {
 
 	private TextView netText;
 
+	private Button calcButton;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -105,7 +107,7 @@ public class HindStockActivity extends Activity {
 
 		buyDate.add(YEAR, -1);
 
-		Button calcButton = (Button) findViewById(id.b_calculate);
+		calcButton = (Button) findViewById(id.b_calculate);
 		calcButton.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
@@ -124,8 +126,8 @@ public class HindStockActivity extends Activity {
 					shares = getShares();
 				}
 
+				calcButton.setVisibility(INVISIBLE);
 				loadingArea.setVisibility(VISIBLE);
-				netText.setVisibility(GONE);
 				new GainLossRequest(symbol, shares, dollars, buyDate, sellDate) {
 
 					protected void onSuccess(float buyAmount, float sellAmount) {
@@ -162,13 +164,13 @@ public class HindStockActivity extends Activity {
 								.append('%').append(')');
 						netText.setText(netLabel);
 
-						loadingArea.setVisibility(GONE);
-						netText.setVisibility(VISIBLE);
+						loadingArea.setVisibility(INVISIBLE);
+						calcButton.setVisibility(VISIBLE);
 					}
 
 					protected void onFailure(IOException cause) {
-						loadingArea.setVisibility(GONE);
-						netText.setVisibility(GONE);
+						loadingArea.setVisibility(INVISIBLE);
+						calcButton.setVisibility(VISIBLE);
 						showQuoteException(cause);
 					}
 				}.execute();
