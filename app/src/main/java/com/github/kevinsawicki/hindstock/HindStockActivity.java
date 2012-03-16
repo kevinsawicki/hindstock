@@ -58,7 +58,7 @@ import java.util.GregorianCalendar;
  * Main activity to compute the net gain/loss on a theoretical stock purchase of
  * either a quantity of shares or dollar figure investment.
  */
-public class HindStockActivity extends Activity {
+public class HindStockActivity extends Activity implements OnClickListener {
 
 	private static final String TAG = "HindStock";
 
@@ -126,85 +126,7 @@ public class HindStockActivity extends Activity {
 		buyDate.add(YEAR, -1);
 
 		calcButton = (Button) findViewById(id.b_calculate);
-		calcButton.setOnClickListener(new OnClickListener() {
-
-			public void onClick(View v) {
-				((InputMethodManager) getSystemService(INPUT_METHOD_SERVICE))
-						.hideSoftInputFromWindow(getWindow().getDecorView()
-								.getWindowToken(), 0);
-
-				String symbol = getSymbol();
-				float dollars;
-				float shares;
-				if (dollarText.isEnabled()) {
-					dollars = getDollars();
-					shares = -1;
-				} else {
-					dollars = -1;
-					shares = getShares();
-				}
-
-				calcButton.setVisibility(INVISIBLE);
-				loadingArea.setVisibility(VISIBLE);
-				new GainLossRequest(symbol, shares, dollars, buyDate, sellDate) {
-
-					protected void onSuccess(Quote quote) {
-						float netAmount = quote.getNet();
-						double dollars = Math.floor(Math.abs(netAmount) + 0.5F);
-						int percentage = Math.round(quote.getRate());
-						percentage = Math.abs(percentage);
-						StringBuilder netTextValue = new StringBuilder();
-						if (netAmount >= 0) {
-							netLabel.setTextColor(getColor(color.gain));
-							netText.setTextColor(getColor(color.gain));
-						} else {
-							netLabel.setTextColor(getColor(color.loss));
-							netText.setTextColor(getColor(color.loss));
-						}
-						netTextValue.append('$').append(' ');
-
-						if (dollars < 1000000F) {
-							netTextValue.append(numberFormat.format(dollars));
-						} else if (dollars < 1000000000F) {
-							dollars = dollars / 1000000F;
-							netTextValue.append(decimalFormat.format(dollars));
-							netTextValue.append(' ').append('m');
-						} else if (dollars < 1000000000000F) {
-							dollars = dollars / 1000000000F;
-							netTextValue.append(decimalFormat.format(dollars));
-							netTextValue.append(' ').append('b');
-						} else if (dollars < 1000000000000000F) {
-							dollars = dollars / 1000000000000F;
-							netTextValue.append(decimalFormat.format(dollars));
-							netTextValue.append(' ').append('t');
-						}
-
-						netTextValue.append("  ").append('(')
-								.append(numberFormat.format(percentage))
-								.append('%').append(')');
-						buyPriceText.setText("$ "
-								+ decimalFormat.format(quote.getCost()));
-						priceLabelsArea.setVisibility(VISIBLE);
-						buyPriceText.setText("$ "
-								+ decimalFormat.format(quote.buyPrice));
-						sellPriceText.setText("$ "
-								+ decimalFormat.format(quote.sellPrice));
-						priceValuesArea.setVisibility(VISIBLE);
-						netArea.setVisibility(VISIBLE);
-						netText.setText(netTextValue);
-
-						loadingArea.setVisibility(INVISIBLE);
-						calcButton.setVisibility(VISIBLE);
-					}
-
-					protected void onFailure(IOException cause) {
-						loadingArea.setVisibility(INVISIBLE);
-						calcButton.setVisibility(VISIBLE);
-						showQuoteException(cause);
-					}
-				}.execute();
-			}
-		});
+		calcButton.setOnClickListener(this);
 
 		sellDateText.setOnClickListener(new OnClickListener() {
 
@@ -337,5 +259,86 @@ public class HindStockActivity extends Activity {
 		default:
 			return super.onCreateDialog(dialogId, args);
 		}
+	}
+
+	private void hideKeyboard() {
+		((InputMethodManager) getSystemService(INPUT_METHOD_SERVICE))
+				.hideSoftInputFromWindow(getWindow().getDecorView()
+						.getWindowToken(), 0);
+	}
+
+	public void onClick(View v) {
+		hideKeyboard();
+
+		String symbol = getSymbol();
+		float dollars;
+		float shares;
+		if (dollarText.isEnabled()) {
+			dollars = getDollars();
+			shares = -1;
+		} else {
+			dollars = -1;
+			shares = getShares();
+		}
+
+		calcButton.setVisibility(INVISIBLE);
+		loadingArea.setVisibility(VISIBLE);
+		new GainLossRequest(symbol, shares, dollars, buyDate, sellDate) {
+
+			protected void onSuccess(Quote quote) {
+				float netAmount = quote.getNet();
+				double dollars = Math.floor(Math.abs(netAmount) + 0.5F);
+				int percentage = Math.round(quote.getRate());
+				percentage = Math.abs(percentage);
+				StringBuilder netTextValue = new StringBuilder();
+				if (netAmount >= 0) {
+					netLabel.setTextColor(getColor(color.gain));
+					netText.setTextColor(getColor(color.gain));
+				} else {
+					netLabel.setTextColor(getColor(color.loss));
+					netText.setTextColor(getColor(color.loss));
+				}
+				netTextValue.append('$').append(' ');
+
+				if (dollars < 1000000F) {
+					netTextValue.append(numberFormat.format(dollars));
+				} else if (dollars < 1000000000F) {
+					dollars = dollars / 1000000F;
+					netTextValue.append(decimalFormat.format(dollars));
+					netTextValue.append(' ').append('m');
+				} else if (dollars < 1000000000000F) {
+					dollars = dollars / 1000000000F;
+					netTextValue.append(decimalFormat.format(dollars));
+					netTextValue.append(' ').append('b');
+				} else if (dollars < 1000000000000000F) {
+					dollars = dollars / 1000000000000F;
+					netTextValue.append(decimalFormat.format(dollars));
+					netTextValue.append(' ').append('t');
+				}
+
+				netTextValue.append("  ").append('(')
+						.append(numberFormat.format(percentage)).append('%')
+						.append(')');
+				buyPriceText.setText("$ "
+						+ decimalFormat.format(quote.getCost()));
+				priceLabelsArea.setVisibility(VISIBLE);
+				buyPriceText.setText("$ "
+						+ decimalFormat.format(quote.buyPrice));
+				sellPriceText.setText("$ "
+						+ decimalFormat.format(quote.sellPrice));
+				priceValuesArea.setVisibility(VISIBLE);
+				netArea.setVisibility(VISIBLE);
+				netText.setText(netTextValue);
+
+				loadingArea.setVisibility(INVISIBLE);
+				calcButton.setVisibility(VISIBLE);
+			}
+
+			protected void onFailure(IOException cause) {
+				loadingArea.setVisibility(INVISIBLE);
+				calcButton.setVisibility(VISIBLE);
+				showQuoteException(cause);
+			}
+		}.execute();
 	}
 }
