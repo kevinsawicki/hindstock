@@ -48,6 +48,7 @@ import com.github.kevinsawicki.hindstock.R.layout;
 
 import java.io.IOException;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -65,6 +66,8 @@ public class HindStockActivity extends Activity {
 	private static final int ID_SELL_DATE = 1;
 
 	private final NumberFormat numberFormat = NumberFormat.getIntegerInstance();
+
+	private final NumberFormat decimalFormat = new DecimalFormat("0.00");
 
 	private final DateFormat dateFormat = DateFormat.getDateInstance(SHORT);
 
@@ -125,7 +128,7 @@ public class HindStockActivity extends Activity {
 				new GainLossRequest(symbol, shares, dollars, buyDate, sellDate) {
 
 					protected void onSuccess(float netAmount) {
-						int dollars = Math.round(Math.abs(netAmount));
+						double dollars = Math.floor(Math.abs(netAmount) + 0.5F);
 						StringBuilder netLabel = new StringBuilder();
 						if (netAmount >= 0) {
 							netText.setTextColor(getColor(color.gain));
@@ -135,7 +138,23 @@ public class HindStockActivity extends Activity {
 							netLabel.append('-');
 						}
 						netLabel.append('$');
-						netLabel.append(numberFormat.format(dollars));
+
+						if (dollars < 1000000F) {
+							netLabel.append(numberFormat.format(dollars));
+						} else if (dollars < 1000000000F) {
+							dollars = dollars / 1000000F;
+							netLabel.append(decimalFormat.format(dollars));
+							netLabel.append('M');
+						} else if (dollars < 1000000000000F) {
+							dollars = dollars / 1000000000F;
+							netLabel.append(decimalFormat.format(dollars));
+							netLabel.append('B');
+						} else if (dollars < 1000000000000000F) {
+							dollars = dollars / 1000000000000F;
+							netLabel.append(decimalFormat.format(dollars));
+							netLabel.append('T');
+						}
+
 						netLabel.append(" USD");
 						netText.setText(netLabel);
 
@@ -144,7 +163,7 @@ public class HindStockActivity extends Activity {
 					}
 
 					protected void onFailure(IOException cause) {
-						loadingArea.setVisibility(VISIBLE);
+						loadingArea.setVisibility(GONE);
 						netText.setVisibility(GONE);
 						showQuoteException(cause);
 					}
@@ -206,7 +225,7 @@ public class HindStockActivity extends Activity {
 			public void run() {
 				Toast.makeText(getApplicationContext(),
 						"Requesting quote failed, please try again",
-						LENGTH_LONG);
+						LENGTH_LONG).show();
 			}
 		});
 	}
