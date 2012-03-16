@@ -147,15 +147,15 @@ public class HindStockActivity extends Activity {
 						} else if (dollars < 1000000000F) {
 							dollars = dollars / 1000000F;
 							netLabel.append(decimalFormat.format(dollars));
-							netLabel.append(' ').append('M');
+							netLabel.append(' ').append('m');
 						} else if (dollars < 1000000000000F) {
 							dollars = dollars / 1000000000F;
 							netLabel.append(decimalFormat.format(dollars));
-							netLabel.append(' ').append('B');
+							netLabel.append(' ').append('b');
 						} else if (dollars < 1000000000000000F) {
 							dollars = dollars / 1000000000000F;
 							netLabel.append(decimalFormat.format(dollars));
-							netLabel.append(' ').append('T');
+							netLabel.append(' ').append('t');
 						}
 
 						netLabel.append(' ').append('(').append(percentage)
