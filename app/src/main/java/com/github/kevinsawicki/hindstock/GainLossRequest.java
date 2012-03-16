@@ -108,8 +108,10 @@ public abstract class GainLossRequest extends AsyncTask<Void, Integer, float[]> 
 
 	@Override
 	protected void onPostExecute(final float[] result) {
-		if (result == null)
+		if (result == null) {
 			onFailure(exception);
+			return;
+		}
 
 		if (dollars > 0)
 			onSuccess((result[1] * (dollars / result[0])) - dollars);
