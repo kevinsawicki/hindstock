@@ -223,29 +223,13 @@
                 </TextView>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/ll_results"
+            <TextView
+                android:id="@+id/tv_net"
+                style="@style/labelStyle"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingTop="10dp" >
-
-                <TextView
-                    android:id="@+id/tv_net_rate"
-                    style="@style/labelStyle"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="30sp" />
-
-                <TextView
-                    android:id="@+id/tv_net_dollars"
-                    style="@style/labelStyle"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textSize="30sp" />
-            </LinearLayout>
+                android:gravity="center"
+                android:textSize="30sp" />
         </LinearLayout>
     </ScrollView>
 
