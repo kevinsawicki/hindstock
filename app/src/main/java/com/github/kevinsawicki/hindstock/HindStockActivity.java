@@ -137,7 +137,7 @@ public class HindStockActivity extends Activity {
 							netText.setTextColor(getColor(color.loss));
 							netLabel.append('-');
 						}
-						netLabel.append('$');
+						netLabel.append(' ').append('$');
 
 						if (dollars < 1000000F) {
 							netLabel.append(numberFormat.format(dollars));
