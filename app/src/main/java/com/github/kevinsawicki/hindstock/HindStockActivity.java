@@ -88,7 +88,11 @@ public class HindStockActivity extends Activity {
 
 	private LinearLayout loadingArea;
 
-	private TextView netText;
+	private LinearLayout resultsArea;
+
+	private TextView netDollarsText;
+
+	private TextView netRateText;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -101,7 +105,9 @@ public class HindStockActivity extends Activity {
 		buyDateText = (EditText) findViewById(id.et_buy_date);
 		sellDateText = (EditText) findViewById(id.et_sell_date);
 		loadingArea = (LinearLayout) findViewById(id.ll_loading);
-		netText = (TextView) findViewById(id.tv_net);
+		resultsArea = (LinearLayout) findViewById(id.ll_results);
+		netDollarsText = (TextView) findViewById(id.tv_net_dollars);
+		netRateText = (TextView) findViewById(id.tv_net_rate);
 
 		buyDate.add(YEAR, -1);
 
@@ -125,47 +131,53 @@ public class HindStockActivity extends Activity {
 				}
 
 				loadingArea.setVisibility(VISIBLE);
-				netText.setVisibility(GONE);
+				resultsArea.setVisibility(GONE);
 				new GainLossRequest(symbol, shares, dollars, buyDate, sellDate) {
 
-					protected void onSuccess(float netAmount) {
+					protected void onSuccess(float buyAmount, float sellAmount) {
+						float netAmount = sellAmount - buyAmount;
 						double dollars = Math.floor(Math.abs(netAmount) + 0.5F);
-						StringBuilder netLabel = new StringBuilder();
+						int percentage = Math
+								.round((netAmount / buyAmount) * 100);
+						percentage = Math.abs(percentage);
+						StringBuilder netDollarLabel = new StringBuilder();
+						StringBuilder netRateLatel = new StringBuilder();
 						if (netAmount >= 0) {
-							netText.setTextColor(getColor(color.gain));
-							netLabel.append('+');
+							netDollarsText.setTextColor(getColor(color.gain));
+							netRateText.setTextColor(getColor(color.gain));
 						} else {
-							netText.setTextColor(getColor(color.loss));
-							netLabel.append('-');
+							netDollarsText.setTextColor(getColor(color.loss));
+							netRateText.setTextColor(getColor(color.loss));
 						}
-						netLabel.append(' ').append('$');
+						netDollarLabel.append('$').append(' ');
+						netRateLatel.append(percentage).append('%');
 
 						if (dollars < 1000000F) {
-							netLabel.append(numberFormat.format(dollars));
+							netDollarLabel.append(numberFormat.format(dollars));
 						} else if (dollars < 1000000000F) {
 							dollars = dollars / 1000000F;
-							netLabel.append(decimalFormat.format(dollars));
-							netLabel.append('M');
+							netDollarLabel.append(decimalFormat.format(dollars));
+							netDollarLabel.append(' ').append('M');
 						} else if (dollars < 1000000000000F) {
 							dollars = dollars / 1000000000F;
-							netLabel.append(decimalFormat.format(dollars));
-							netLabel.append('B');
+							netDollarLabel.append(decimalFormat.format(dollars));
+							netDollarLabel.append(' ').append('B');
 						} else if (dollars < 1000000000000000F) {
 							dollars = dollars / 1000000000000F;
-							netLabel.append(decimalFormat.format(dollars));
-							netLabel.append('T');
+							netDollarLabel.append(decimalFormat.format(dollars));
+							netDollarLabel.append(' ').append('T');
 						}
 
-						netLabel.append(" USD");
-						netText.setText(netLabel);
+						netDollarsText.setText(netDollarLabel);
+						netRateText.setText(netRateLatel);
 
 						loadingArea.setVisibility(GONE);
-						netText.setVisibility(VISIBLE);
+						resultsArea.setVisibility(VISIBLE);
 					}
 
 					protected void onFailure(IOException cause) {
 						loadingArea.setVisibility(GONE);
-						netText.setVisibility(GONE);
+						resultsArea.setVisibility(GONE);
 						showQuoteException(cause);
 					}
 				}.execute();

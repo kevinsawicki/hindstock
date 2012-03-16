@@ -43,7 +43,7 @@ public abstract class GainLossRequest extends AsyncTask<Void, Integer, float[]> 
 
 	/**
 	 * Create request
-	 * 
+	 *
 	 * @param symbol
 	 * @param shares
 	 * @param dollars
@@ -114,21 +114,22 @@ public abstract class GainLossRequest extends AsyncTask<Void, Integer, float[]> 
 		}
 
 		if (dollars > 0)
-			onSuccess((result[1] * (dollars / result[0])) - dollars);
+			onSuccess(dollars, (result[1] * (dollars / result[0])));
 		else
-			onSuccess((result[1] - result[0]) * shares);
+			onSuccess(result[0] * shares, result[1] * shares);
 	}
 
 	/**
 	 * Called after request completes and the net amount has been computed
-	 * 
-	 * @param netAmount
+	 *
+	 * @param buyAmount
+	 * @param sellAmount
 	 */
-	protected abstract void onSuccess(float netAmount);
+	protected abstract void onSuccess(float buyAmount, float sellAmount);
 
 	/**
 	 * Called when request fails providing the cause of the failure
-	 * 
+	 *
 	 * @param cause
 	 */
 	protected abstract void onFailure(IOException cause);
