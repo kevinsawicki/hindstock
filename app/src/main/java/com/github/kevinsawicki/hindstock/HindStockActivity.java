@@ -32,6 +32,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnFocusChangeListener;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -75,7 +76,7 @@ public class HindStockActivity extends Activity {
 
 	private final Calendar sellDate = new GregorianCalendar();
 
-	private EditText symbolText;
+	private AutoCompleteTextView symbolText;
 
 	private EditText shareText;
 
@@ -94,7 +95,7 @@ public class HindStockActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(layout.main);
 
-		symbolText = (EditText) findViewById(id.et_stock);
+		symbolText = (AutoCompleteTextView) findViewById(id.actv_stock);
 		shareText = (EditText) findViewById(id.et_shares);
 		dollarText = (EditText) findViewById(id.et_dollars);
 		buyDateText = (EditText) findViewById(id.et_buy_date);
@@ -216,6 +217,17 @@ public class HindStockActivity extends Activity {
 						shareText.setEnabled(isChecked);
 					}
 				});
+
+		loadStocks();
+	}
+
+	private void loadStocks() {
+		new StockListLoader(this) {
+			protected void onPostExecute(Stock[] result) {
+				symbolText.setAdapter(new StockListAdapter(layout.stock,
+						getLayoutInflater(), result));
+			};
+		}.execute();
 	}
 
 	private void showQuoteException(final IOException e) {
