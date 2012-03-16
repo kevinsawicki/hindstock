@@ -70,7 +70,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="10dp" >
+                android:paddingTop="5dp" >
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -150,7 +150,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="10dp" >
+                android:paddingTop="5dp" >
 
                 <TextView
                     style="@style/labelStyle"
@@ -204,18 +204,92 @@
                     android:inputType="none" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_net"
-                style="@style/labelStyle"
+            <LinearLayout
+                android:id="@+id/ll_price_labels"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:shadowColor="@color/background_light"
-                android:shadowDx="1"
-                android:shadowDy="1"
-                android:shadowRadius="1"
-                android:textSize="30sp" />
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/labelStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:text="@string/buy_price_label" />
+
+                <TextView
+                    style="@style/labelStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:text="@string/sell_price_label" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_price_values"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_buy_price"
+                    style="@style/labelStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_sell_price"
+                    style="@style/labelStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="50"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_net"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="5dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_net_label"
+                    style="@style/labelStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/net_label"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_net"
+                    style="@style/labelStyle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:shadowColor="@color/background_light"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:textSize="30sp" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
@@ -257,7 +331,7 @@
                 android:paddingLeft="5dp"
                 android:singleLine="true"
                 android:text="@string/calculating"
-                android:textColor="@color/text_light"
+                android:textColor="@color/text"
                 android:textSize="20sp" >
             </TextView>
         </LinearLayout>
@@ -273,6 +347,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/calculate"
+                android:textColor="@color/text"
                 android:textSize="20dp" />
         </LinearLayout>
     </RelativeLayout>

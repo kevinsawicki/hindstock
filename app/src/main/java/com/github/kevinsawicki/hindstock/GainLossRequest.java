@@ -17,6 +17,7 @@ package com.github.kevinsawicki.hindstock;
 
 import android.os.AsyncTask;
 
+import com.github.kevinsawicki.hindstock.GainLossRequest.Quote;
 import com.github.kevinsawicki.http.HttpRequest.HttpRequestException;
 import com.github.kevinsawicki.stocks.DateUtils;
 import com.github.kevinsawicki.stocks.StockQuoteRequest;
@@ -27,7 +28,69 @@ import java.util.Calendar;
 /**
  * Request class to compute the gain/loss
  */
-public abstract class GainLossRequest extends AsyncTask<Void, Integer, float[]> {
+public abstract class GainLossRequest extends AsyncTask<Void, Integer, Quote> {
+
+	/**
+	 * Quote containing price and share amount
+	 */
+	public static class Quote {
+
+		/**
+		 * Share price bought at
+		 */
+		public final float buyPrice;
+
+		/**
+		 * Share price sold at
+		 */
+		public final float sellPrice;
+
+		/**
+		 * Number of shares
+		 */
+		public final float shares;
+
+		/**
+		 * Create stock quote
+		 *
+		 * @param buyPrice
+		 * @param sellPrice
+		 * @param shares
+		 */
+		public Quote(final float buyPrice, final float sellPrice,
+				final float shares) {
+			this.buyPrice = buyPrice;
+			this.sellPrice = sellPrice;
+			this.shares = shares;
+		}
+
+		/**
+		 * Get amount paid for shares
+		 *
+		 * @return purchase cost
+		 */
+		public float getCost() {
+			return buyPrice * shares;
+		}
+
+		/**
+		 * Get net process
+		 *
+		 * @return net amount
+		 */
+		public float getNet() {
+			return (sellPrice - buyPrice) * shares;
+		}
+
+		/**
+		 * Get return rate
+		 *
+		 * @return rate
+		 */
+		public float getRate() {
+			return (getNet() / getCost()) * 100F;
+		}
+	}
 
 	private final String symbol;
 
@@ -67,10 +130,17 @@ public abstract class GainLossRequest extends AsyncTask<Void, Integer, float[]> 
 	}
 
 	@Override
-	protected float[] doInBackground(Void... params) {
+	protected Quote doInBackground(Void... params) {
 		exception = null;
 		try {
-			return new float[] { getBuyPrice(), getSellPrice() };
+			float buyPrice = getBuyPrice();
+			float sellPrice = getSellPrice();
+			float totalShares;
+			if (dollars > 0)
+				totalShares = dollars / buyPrice;
+			else
+				totalShares = shares;
+			return new Quote(buyPrice, sellPrice, totalShares);
 		} catch (IOException e) {
 			exception = e;
 			return null;
@@ -107,25 +177,19 @@ public abstract class GainLossRequest extends AsyncTask<Void, Integer, float[]> 
 	}
 
 	@Override
-	protected void onPostExecute(final float[] result) {
-		if (result == null) {
-			onFailure(exception);
-			return;
-		}
-
-		if (dollars > 0)
-			onSuccess(dollars, (result[1] * (dollars / result[0])));
+	protected void onPostExecute(final Quote result) {
+		if (result != null)
+			onSuccess(result);
 		else
-			onSuccess(result[0] * shares, result[1] * shares);
+			onFailure(exception);
 	}
 
 	/**
 	 * Called after request completes and the net amount has been computed
 	 *
-	 * @param buyAmount
-	 * @param sellAmount
+	 * @param quote
 	 */
-	protected abstract void onSuccess(float buyAmount, float sellAmount);
+	protected abstract void onSuccess(Quote quote);
 
 	/**
 	 * Called when request fails providing the cause of the failure

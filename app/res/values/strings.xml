@@ -14,5 +14,8 @@
     <string name="symbol_hint">GOOG</string>
     <string name="symbol_label">Symbol</string>
     <string name="shares_hint">100</string>
+    <string name="buy_price_label"><u>Buy Price</u></string>
+    <string name="sell_price_label"><u>Sell Price</u></string>
+    <string name="net_label"><u>Profit</u></string>
 
 </resources>

@@ -86,7 +86,19 @@ public class HindStockActivity extends Activity {
 
 	private EditText sellDateText;
 
+	private LinearLayout priceLabelsArea;
+
+	private LinearLayout priceValuesArea;
+
+	private TextView buyPriceText;
+
+	private TextView sellPriceText;
+
 	private LinearLayout loadingArea;
+
+	private LinearLayout netArea;
+
+	private TextView netLabel;
 
 	private TextView netText;
 
@@ -103,6 +115,12 @@ public class HindStockActivity extends Activity {
 		buyDateText = (EditText) findViewById(id.et_buy_date);
 		sellDateText = (EditText) findViewById(id.et_sell_date);
 		loadingArea = (LinearLayout) findViewById(id.ll_loading);
+		priceLabelsArea = (LinearLayout) findViewById(id.ll_price_labels);
+		priceValuesArea = (LinearLayout) findViewById(id.ll_price_values);
+		buyPriceText = (TextView) findViewById(id.tv_buy_price);
+		sellPriceText = (TextView) findViewById(id.tv_sell_price);
+		netArea = (LinearLayout) findViewById(id.ll_net);
+		netLabel = (TextView) findViewById(id.tv_net_label);
 		netText = (TextView) findViewById(id.tv_net);
 
 		buyDate.add(YEAR, -1);
@@ -130,39 +148,50 @@ public class HindStockActivity extends Activity {
 				loadingArea.setVisibility(VISIBLE);
 				new GainLossRequest(symbol, shares, dollars, buyDate, sellDate) {
 
-					protected void onSuccess(float buyAmount, float sellAmount) {
-						float netAmount = sellAmount - buyAmount;
+					protected void onSuccess(Quote quote) {
+						float netAmount = quote.getNet();
 						double dollars = Math.floor(Math.abs(netAmount) + 0.5F);
-						int percentage = Math
-								.round((netAmount / buyAmount) * 100);
+						int percentage = Math.round(quote.getRate());
 						percentage = Math.abs(percentage);
-						StringBuilder netLabel = new StringBuilder();
+						StringBuilder netTextValue = new StringBuilder();
 						if (netAmount >= 0) {
+							netLabel.setTextColor(getColor(color.gain));
 							netText.setTextColor(getColor(color.gain));
 						} else {
+							netLabel.setTextColor(getColor(color.loss));
 							netText.setTextColor(getColor(color.loss));
 						}
-						netLabel.append('$').append(' ');
+						netTextValue.append('$').append(' ');
 
 						if (dollars < 1000000F) {
-							netLabel.append(numberFormat.format(dollars));
+							netTextValue.append(numberFormat.format(dollars));
 						} else if (dollars < 1000000000F) {
 							dollars = dollars / 1000000F;
-							netLabel.append(decimalFormat.format(dollars));
-							netLabel.append(' ').append('m');
+							netTextValue.append(decimalFormat.format(dollars));
+							netTextValue.append(' ').append('m');
 						} else if (dollars < 1000000000000F) {
 							dollars = dollars / 1000000000F;
-							netLabel.append(decimalFormat.format(dollars));
-							netLabel.append(' ').append('b');
+							netTextValue.append(decimalFormat.format(dollars));
+							netTextValue.append(' ').append('b');
 						} else if (dollars < 1000000000000000F) {
 							dollars = dollars / 1000000000000F;
-							netLabel.append(decimalFormat.format(dollars));
-							netLabel.append(' ').append('t');
+							netTextValue.append(decimalFormat.format(dollars));
+							netTextValue.append(' ').append('t');
 						}
 
-						netLabel.append(' ').append('(').append(percentage)
+						netTextValue.append("  ").append('(')
+								.append(numberFormat.format(percentage))
 								.append('%').append(')');
-						netText.setText(netLabel);
+						buyPriceText.setText("$ "
+								+ decimalFormat.format(quote.getCost()));
+						priceLabelsArea.setVisibility(VISIBLE);
+						buyPriceText.setText("$ "
+								+ decimalFormat.format(quote.buyPrice));
+						sellPriceText.setText("$ "
+								+ decimalFormat.format(quote.sellPrice));
+						priceValuesArea.setVisibility(VISIBLE);
+						netArea.setVisibility(VISIBLE);
+						netText.setText(netTextValue);
 
 						loadingArea.setVisibility(INVISIBLE);
 						calcButton.setVisibility(VISIBLE);
