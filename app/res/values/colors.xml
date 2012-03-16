@@ -5,8 +5,12 @@
     <color name="loss">#CD171C</color>
     <color name="text">#000000</color>
     <color name="text_light">#999999</color>
-    <color name="background">#FFFFFF</color>
-    <color name="header_bg_start">#EEEEEE</color>
-    <color name="header_bg_end">#DDDDDD</color>
+    <color name="background">#EEEEEE</color>
+    <color name="background_darker">#DDDDDD</color>
+    <color name="header_shadow">#1f272c</color>
+    <color name="header_bottom">#FFFFFF</color>
+    <color name="header_bg_start">#7b9eb0</color>
+    <color name="header_bg_end">#4b636f</color>
+    <color name="separator">#CCCCCC</color>
 
 </resources>
