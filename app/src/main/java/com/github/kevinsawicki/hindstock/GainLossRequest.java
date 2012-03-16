@@ -21,21 +21,19 @@
  */
 package com.github.kevinsawicki.hindstock;
 
-import static java.util.Calendar.DAY_OF_YEAR;
 import android.os.AsyncTask;
 
 import com.github.kevinsawicki.http.HttpRequest.HttpRequestException;
+import com.github.kevinsawicki.stocks.DateUtils;
 import com.github.kevinsawicki.stocks.StockQuoteRequest;
 
 import java.io.IOException;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 /**
  * Request class to compute the gain/loss
  */
-public abstract class GainLossRequest extends
-		AsyncTask<StockQuoteRequest, Integer, float[]> {
+public abstract class GainLossRequest extends AsyncTask<Void, Integer, float[]> {
 
 	private final String symbol;
 
@@ -75,21 +73,43 @@ public abstract class GainLossRequest extends
 	}
 
 	@Override
-	protected float[] doInBackground(StockQuoteRequest... params) {
+	protected float[] doInBackground(Void... params) {
 		exception = null;
-		float[] prices = new float[params.length];
-		for (int i = 0; i < params.length; i++)
-			try {
-				if (params[i].next())
-					prices[i] = params[i].getClose();
-			} catch (IOException e) {
-				exception = e;
-				return null;
-			} catch (HttpRequestException e) {
-				exception = e.getCause();
-				return null;
-			}
-		return prices;
+		try {
+			return new float[] { getBuyPrice(), getSellPrice() };
+		} catch (IOException e) {
+			exception = e;
+			return null;
+		}
+	}
+
+	private float getBuyPrice() throws IOException {
+		StockQuoteRequest buyRequest = new StockQuoteRequest();
+		buyRequest.setStartDate(DateUtils.addDays(-7, buyDate))
+				.setEndDate(buyDate).setSymbol(symbol);
+		try {
+			if (!buyRequest.next())
+				throw new IOException();
+			float price = buyRequest.getOpen();
+			if (price == 0.0F)
+				price = buyRequest.getClose();
+			return price;
+		} catch (HttpRequestException e) {
+			throw e.getCause();
+		}
+	}
+
+	private float getSellPrice() throws IOException {
+		StockQuoteRequest sellRequest = new StockQuoteRequest();
+		sellRequest.setStartDate(DateUtils.addDays(-7, sellDate))
+				.setEndDate(sellDate).setSymbol(symbol);
+		try {
+			if (!sellRequest.next())
+				throw new IOException();
+			return sellRequest.getClose();
+		} catch (HttpRequestException e) {
+			throw e.getCause();
+		}
 	}
 
 	@Override
@@ -100,7 +120,7 @@ public abstract class GainLossRequest extends
 		if (dollars > 0)
 			onSuccess((result[1] * (dollars / result[0])) - dollars);
 		else
-			onSuccess(result[1] * shares - result[0] * shares);
+			onSuccess((result[1] - result[0]) * shares);
 	}
 
 	/**
@@ -117,24 +137,4 @@ public abstract class GainLossRequest extends
 	 */
 	protected abstract void onFailure(IOException cause);
 
-	/**
-	 * Execute request
-	 */
-	public void execute() {
-		StockQuoteRequest buyRequest = new StockQuoteRequest();
-		GregorianCalendar startBuyDate = new GregorianCalendar();
-		startBuyDate.setTime(buyDate.getTime());
-		startBuyDate.add(DAY_OF_YEAR, -7);
-		buyRequest.setStartDate(startBuyDate).setEndDate(buyDate)
-				.setSymbol(symbol);
-
-		StockQuoteRequest sellRequest = new StockQuoteRequest();
-		GregorianCalendar startSellDate = new GregorianCalendar();
-		startSellDate.setTime(sellDate.getTime());
-		startSellDate.add(DAY_OF_YEAR, -7);
-		sellRequest.setStartDate(startSellDate).setEndDate(sellDate)
-				.setSymbol(symbol);
-
-		super.execute(buyRequest, sellRequest);
-	}
 }
