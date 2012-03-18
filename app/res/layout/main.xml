@@ -12,16 +12,13 @@
         android:orientation="vertical" >
 
         <TextView
-            style="@style/labelStyle"
+            style="@style/shadowLabelStyle"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:paddingBottom="5dp"
             android:paddingLeft="15dp"
             android:paddingTop="5dp"
             android:shadowColor="@color/header_shadow"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            android:shadowRadius="1"
             android:text="@string/app_name"
             android:textColor="@color/background"
             android:textSize="20sp" />
