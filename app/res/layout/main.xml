@@ -65,7 +65,7 @@
                 android:indeterminateOnly="true" />
 
             <TextView
-                style="@style/labelStyle"
+                style="@style/shadowLabelStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
@@ -111,7 +111,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
-                    style="@style/labelStyle"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
@@ -186,7 +186,7 @@
                     android:orientation="vertical" >
 
                     <TextView
-                        style="@style/labelStyle"
+                        style="@style/shadowLabelStyle"
                         android:layout_width="fill_parent"
                         android:layout_height="0dp"
                         android:layout_weight="50"
@@ -196,7 +196,7 @@
                         android:text="@string/shares_label" />
 
                     <TextView
-                        style="@style/labelStyle"
+                        style="@style/shadowLabelStyle"
                         android:layout_width="fill_parent"
                         android:layout_height="0dp"
                         android:layout_weight="50"
@@ -214,7 +214,7 @@
                 android:paddingTop="5dp" >
 
                 <TextView
-                    style="@style/labelStyle"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
@@ -224,7 +224,7 @@
                     android:text="@string/buy_date_label" />
 
                 <TextView
-                    style="@style/labelStyle"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
@@ -274,7 +274,7 @@
                 android:visibility="gone" >
 
                 <TextView
-                    style="@style/labelStyle"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
@@ -284,7 +284,7 @@
                     android:text="@string/buy_price_label" />
 
                 <TextView
-                    style="@style/labelStyle"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
@@ -303,7 +303,7 @@
 
                 <TextView
                     android:id="@+id/tv_buy_price"
-                    style="@style/labelStyle"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
@@ -313,7 +313,7 @@
 
                 <TextView
                     android:id="@+id/tv_sell_price"
-                    style="@style/labelStyle"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="50"
@@ -332,7 +332,7 @@
 
                 <TextView
                     android:id="@+id/tv_net_label"
-                    style="@style/labelStyle"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -340,14 +340,10 @@
 
                 <TextView
                     android:id="@+id/tv_net"
-                    style="@style/labelStyle"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:shadowColor="@color/background_light"
-                    android:shadowDx="1"
-                    android:shadowDy="1"
-                    android:shadowRadius="1"
                     android:textSize="30sp" />
             </LinearLayout>
         </LinearLayout>
