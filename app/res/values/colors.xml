@@ -6,8 +6,8 @@
     <color name="text">#000000</color>
     <color name="text_light">#888888</color>
     <color name="background_light">#FFFFFF</color>
-    <color name="background">#EEEEEE</color>
-    <color name="background_dark">#DDDDDD</color>
+    <color name="background">#EFEFEF</color>
+    <color name="background_dark">#E1E1E1</color>
     <color name="header_shadow">#1F272C</color>
     <color name="header_bottom">#FFFFFF</color>
     <color name="header_bg_start">#7B9EB0</color>
