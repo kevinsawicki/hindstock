@@ -46,6 +46,7 @@ import android.widget.Toast;
 import com.github.kevinsawicki.hindstock.R.color;
 import com.github.kevinsawicki.hindstock.R.id;
 import com.github.kevinsawicki.hindstock.R.layout;
+import com.github.kevinsawicki.hindstock.R.string;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -121,6 +122,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		sellPriceText = (TextView) findViewById(id.tv_sell_price);
 		netArea = (LinearLayout) findViewById(id.ll_net);
 		netLabel = (TextView) findViewById(id.tv_net_label);
+		netLabel.getPaint().setUnderlineText(true);
 		netText = (TextView) findViewById(id.tv_net);
 
 		buyDate.add(YEAR, -1);
@@ -293,9 +295,11 @@ public class HindStockActivity extends Activity implements OnClickListener {
 				StringBuilder netTextValue = new StringBuilder();
 				if (netAmount >= 0) {
 					netLabel.setTextColor(getColor(color.gain));
+					netLabel.setText(getString(string.profit_label));
 					netText.setTextColor(getColor(color.gain));
 				} else {
 					netLabel.setTextColor(getColor(color.loss));
+					netLabel.setText(getString(string.loss_label));
 					netText.setTextColor(getColor(color.loss));
 				}
 				netTextValue.append('$').append(' ');
