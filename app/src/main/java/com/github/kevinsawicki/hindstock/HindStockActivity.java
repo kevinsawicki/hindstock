@@ -242,13 +242,30 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		return new DatePickerDialog(this, new OnDateSetListener() {
 			public void onDateSet(DatePicker view, int year, int monthOfYear,
 					int dayOfMonth) {
+				Log.d("TEST", "On date set");
 				date.set(YEAR, year);
 				date.set(MONTH, monthOfYear);
 				date.set(DAY_OF_MONTH, dayOfMonth);
 				field.setText(dateFormat.format(date.getTime()));
 			}
 		}, date.get(YEAR), date.get(MONTH), date.get(DAY_OF_MONTH));
+	}
 
+	@Override
+	protected void onPrepareDialog(final int id, final Dialog dialog,
+			final Bundle args) {
+		super.onPrepareDialog(id, dialog, args);
+
+		switch (id) {
+		case ID_BUY_DATE:
+			((DatePickerDialog) dialog).updateDate(buyDate.get(YEAR),
+					buyDate.get(MONTH), buyDate.get(DAY_OF_MONTH));
+			break;
+		case ID_SELL_DATE:
+			((DatePickerDialog) dialog).updateDate(sellDate.get(YEAR),
+					sellDate.get(MONTH), sellDate.get(DAY_OF_MONTH));
+			break;
+		}
 	}
 
 	@Override
