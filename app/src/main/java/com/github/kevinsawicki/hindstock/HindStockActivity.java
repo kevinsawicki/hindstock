@@ -52,6 +52,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -73,9 +74,9 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 	private final DateFormat dateFormat = DateFormat.getDateInstance(SHORT);
 
-	private final Calendar buyDate = new GregorianCalendar();
+	private Calendar buyDate = new GregorianCalendar();
 
-	private final Calendar sellDate = new GregorianCalendar();
+	private Calendar sellDate = new GregorianCalendar();
 
 	private AutoCompleteTextView symbolText;
 
@@ -176,6 +177,35 @@ public class HindStockActivity extends Activity implements OnClickListener {
 				});
 
 		loadStocks();
+	}
+
+	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+		super.onRestoreInstanceState(savedInstanceState);
+
+		String initialBuyDate = buyDateText.getText().toString();
+		if (initialBuyDate.length() > 0)
+			try {
+				buyDate.setTime(dateFormat.parse(initialBuyDate));
+			} catch (ParseException e) {
+				buyDate = new GregorianCalendar();
+				buyDate.add(YEAR, -1);
+				buyDateText.setText("");
+			}
+		else {
+			buyDate = new GregorianCalendar();
+			buyDate.add(YEAR, -1);
+		}
+
+		String initialSellDate = sellDateText.getText().toString();
+		if (initialSellDate.length() > 0)
+			try {
+				sellDate.setTime(dateFormat.parse(initialSellDate));
+			} catch (ParseException e) {
+				sellDate = new GregorianCalendar();
+				sellDateText.setText("");
+			}
+		else
+			sellDate = new GregorianCalendar();
 	}
 
 	private void loadStocks() {
