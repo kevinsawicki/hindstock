@@ -122,7 +122,6 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		sellPriceText = (TextView) findViewById(id.tv_sell_price);
 		netArea = (LinearLayout) findViewById(id.ll_net);
 		netLabel = (TextView) findViewById(id.tv_net_label);
-		netLabel.getPaint().setUnderlineText(true);
 		netText = (TextView) findViewById(id.tv_net);
 
 		buyDate.add(YEAR, -1);
