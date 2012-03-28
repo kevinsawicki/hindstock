@@ -334,7 +334,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 					netTextValue.append(' ').append('t');
 				}
 
-				netTextValue.append("  ").append('(')
+				netTextValue.append("  (")
 						.append(numberFormat.format(percentage)).append('%')
 						.append(')');
 				buyPriceText.setText("$ "
