@@ -23,6 +23,7 @@ import com.github.kevinsawicki.stocks.DateUtils;
 import com.github.kevinsawicki.stocks.StockQuoteRequest;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.Calendar;
 
 /**
@@ -33,7 +34,9 @@ public abstract class GainLossRequest extends AsyncTask<Void, Integer, Quote> {
 	/**
 	 * Quote containing price and share amount
 	 */
-	public static class Quote {
+	public static class Quote implements Serializable {
+
+		private static final long serialVersionUID = -5079891859032286157L;
 
 		/**
 		 * Share price bought at

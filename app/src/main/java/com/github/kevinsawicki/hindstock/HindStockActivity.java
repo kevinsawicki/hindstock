@@ -42,6 +42,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.kevinsawicki.hindstock.GainLossRequest.Quote;
 import com.github.kevinsawicki.hindstock.R.color;
 import com.github.kevinsawicki.hindstock.R.id;
 import com.github.kevinsawicki.hindstock.R.layout;
@@ -67,6 +68,8 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 	private static final int ID_SELL_DATE = 1;
 
+	private static final String EXTRA_QUOTE = "quote";
+
 	private final NumberFormat numberFormat = NumberFormat.getIntegerInstance();
 
 	private final NumberFormat decimalFormat = new DecimalFormat("0.00");
@@ -76,6 +79,8 @@ public class HindStockActivity extends Activity implements OnClickListener {
 	private Calendar buyDate = new GregorianCalendar();
 
 	private Calendar sellDate = new GregorianCalendar();
+
+	private Quote quote;
 
 	private AutoCompleteTextView symbolText;
 
@@ -164,6 +169,12 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		loadStocks();
 	}
 
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		if (quote != null)
+			outState.putSerializable(EXTRA_QUOTE, quote);
+	}
+
 	protected void onRestoreInstanceState(Bundle savedInstanceState) {
 		super.onRestoreInstanceState(savedInstanceState);
 
@@ -191,6 +202,10 @@ public class HindStockActivity extends Activity implements OnClickListener {
 			}
 		else
 			sellDate = new GregorianCalendar();
+
+		quote = (Quote) savedInstanceState.get(EXTRA_QUOTE);
+		if (quote != null)
+			displayQuote(quote);
 	}
 
 	private void loadStocks() {
@@ -298,6 +313,53 @@ public class HindStockActivity extends Activity implements OnClickListener {
 						.getWindowToken(), 0);
 	}
 
+	private void displayQuote(final Quote quote) {
+		float netAmount = quote.getNet();
+		double dollars = Math.floor(Math.abs(netAmount) + 0.5F);
+		int percentage = Math.round(quote.getRate());
+		percentage = Math.abs(percentage);
+		StringBuilder netTextValue = new StringBuilder();
+		if (netAmount >= 0) {
+			netLabel.setTextColor(getColor(color.gain));
+			netLabel.setText(getString(string.profit_label));
+			netText.setTextColor(getColor(color.gain));
+		} else {
+			netLabel.setTextColor(getColor(color.loss));
+			netLabel.setText(getString(string.loss_label));
+			netText.setTextColor(getColor(color.loss));
+		}
+		netTextValue.append('$').append(' ');
+
+		if (dollars < 1000000F) {
+			netTextValue.append(numberFormat.format(dollars));
+		} else if (dollars < 1000000000F) {
+			dollars = dollars / 1000000F;
+			netTextValue.append(decimalFormat.format(dollars));
+			netTextValue.append(' ').append('m');
+		} else if (dollars < 1000000000000F) {
+			dollars = dollars / 1000000000F;
+			netTextValue.append(decimalFormat.format(dollars));
+			netTextValue.append(' ').append('b');
+		} else if (dollars < 1000000000000000F) {
+			dollars = dollars / 1000000000000F;
+			netTextValue.append(decimalFormat.format(dollars));
+			netTextValue.append(' ').append('t');
+		}
+
+		netTextValue.append("  (").append(numberFormat.format(percentage))
+				.append('%').append(')');
+		buyPriceText.setText("$ " + decimalFormat.format(quote.getCost()));
+		priceLabelsArea.setVisibility(VISIBLE);
+		buyPriceText.setText("$ " + decimalFormat.format(quote.buyPrice));
+		sellPriceText.setText("$ " + decimalFormat.format(quote.sellPrice));
+		priceValuesArea.setVisibility(VISIBLE);
+		netArea.setVisibility(VISIBLE);
+		netText.setText(netTextValue);
+
+		loadingArea.setVisibility(INVISIBLE);
+		calcButton.setVisibility(VISIBLE);
+	}
+
 	public void onClick(View v) {
 		hideKeyboard();
 
@@ -317,54 +379,8 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		new GainLossRequest(symbol, shares, dollars, buyDate, sellDate) {
 
 			protected void onSuccess(Quote quote) {
-				float netAmount = quote.getNet();
-				double dollars = Math.floor(Math.abs(netAmount) + 0.5F);
-				int percentage = Math.round(quote.getRate());
-				percentage = Math.abs(percentage);
-				StringBuilder netTextValue = new StringBuilder();
-				if (netAmount >= 0) {
-					netLabel.setTextColor(getColor(color.gain));
-					netLabel.setText(getString(string.profit_label));
-					netText.setTextColor(getColor(color.gain));
-				} else {
-					netLabel.setTextColor(getColor(color.loss));
-					netLabel.setText(getString(string.loss_label));
-					netText.setTextColor(getColor(color.loss));
-				}
-				netTextValue.append('$').append(' ');
-
-				if (dollars < 1000000F) {
-					netTextValue.append(numberFormat.format(dollars));
-				} else if (dollars < 1000000000F) {
-					dollars = dollars / 1000000F;
-					netTextValue.append(decimalFormat.format(dollars));
-					netTextValue.append(' ').append('m');
-				} else if (dollars < 1000000000000F) {
-					dollars = dollars / 1000000000F;
-					netTextValue.append(decimalFormat.format(dollars));
-					netTextValue.append(' ').append('b');
-				} else if (dollars < 1000000000000000F) {
-					dollars = dollars / 1000000000000F;
-					netTextValue.append(decimalFormat.format(dollars));
-					netTextValue.append(' ').append('t');
-				}
-
-				netTextValue.append("  (")
-						.append(numberFormat.format(percentage)).append('%')
-						.append(')');
-				buyPriceText.setText("$ "
-						+ decimalFormat.format(quote.getCost()));
-				priceLabelsArea.setVisibility(VISIBLE);
-				buyPriceText.setText("$ "
-						+ decimalFormat.format(quote.buyPrice));
-				sellPriceText.setText("$ "
-						+ decimalFormat.format(quote.sellPrice));
-				priceValuesArea.setVisibility(VISIBLE);
-				netArea.setVisibility(VISIBLE);
-				netText.setText(netTextValue);
-
-				loadingArea.setVisibility(INVISIBLE);
-				calcButton.setVisibility(VISIBLE);
+				HindStockActivity.this.quote = quote;
+				displayQuote(quote);
 			}
 
 			protected void onFailure(IOException cause) {
