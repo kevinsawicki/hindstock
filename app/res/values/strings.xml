@@ -18,5 +18,8 @@
     <string name="sell_price_label">Sell Price</string>
     <string name="profit_label">Profit</string>
     <string name="loss_label">Loss</string>
+    <string name="requesting_quote_failed">Requesting quote failed, please try again.</string>
+    <string name="error_parsing_share_amount">Error parsing share amount</string>
+    <string name="error_parsing_dollar_amount">Error parsing dollar amount</string>
 
 </resources>

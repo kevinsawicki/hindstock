@@ -123,10 +123,10 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		netArea = (LinearLayout) findViewById(id.ll_net);
 		netLabel = (TextView) findViewById(id.tv_net_label);
 		netText = (TextView) findViewById(id.tv_net);
+		calcButton = (Button) findViewById(id.b_calculate);
 
 		buyDate.add(YEAR, -1);
 
-		calcButton = (Button) findViewById(id.b_calculate);
 		calcButton.setOnClickListener(this);
 
 		sellDateText.setOnClickListener(new OnClickListener() {
@@ -193,8 +193,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 			public void run() {
 				Toast.makeText(getApplicationContext(),
-						"Requesting quote failed, please try again",
-						LENGTH_LONG).show();
+						string.requesting_quote_failed, LENGTH_LONG).show();
 			}
 		});
 	}
@@ -217,7 +216,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 			return Float.parseFloat(text);
 		} catch (NumberFormatException nfe) {
 			Toast.makeText(getApplicationContext(),
-					"Error parsing share amount", LENGTH_LONG);
+					string.error_parsing_share_amount, LENGTH_LONG);
 			return -1;
 		}
 	}
@@ -231,7 +230,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 			return Float.parseFloat(text);
 		} catch (NumberFormatException nfe) {
 			Toast.makeText(getApplicationContext(),
-					"Error parsing dollar amount", LENGTH_LONG);
+					string.error_parsing_dollar_amount, LENGTH_LONG);
 			return -1;
 		}
 	}
