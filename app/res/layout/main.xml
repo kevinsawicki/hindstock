@@ -245,6 +245,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="50"
                     android:editable="false"
+                    android:focusable="false"
                     android:gravity="center"
                     android:hint="@string/buy_date_hint"
                     android:inputType="none" />
@@ -257,6 +258,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_weight="50"
                     android:editable="false"
+                    android:focusable="false"
                     android:gravity="center"
                     android:hint="@string/sell_date_hint"
                     android:inputType="none" />

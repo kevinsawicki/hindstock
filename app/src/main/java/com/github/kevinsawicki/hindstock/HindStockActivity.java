@@ -30,7 +30,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnFocusChangeListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -136,25 +135,11 @@ public class HindStockActivity extends Activity implements OnClickListener {
 				showDialog(ID_SELL_DATE);
 			}
 		});
-		sellDateText.setOnFocusChangeListener(new OnFocusChangeListener() {
-
-			public void onFocusChange(View v, boolean hasFocus) {
-				if (hasFocus)
-					showDialog(ID_SELL_DATE);
-			}
-		});
 
 		buyDateText.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
 				showDialog(ID_BUY_DATE);
-			}
-		});
-		buyDateText.setOnFocusChangeListener(new OnFocusChangeListener() {
-
-			public void onFocusChange(View v, boolean hasFocus) {
-				if (hasFocus)
-					showDialog(ID_BUY_DATE);
 			}
 		});
 
