@@ -242,7 +242,6 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		return new DatePickerDialog(this, new OnDateSetListener() {
 			public void onDateSet(DatePicker view, int year, int monthOfYear,
 					int dayOfMonth) {
-				Log.d("TEST", "On date set");
 				date.set(YEAR, year);
 				date.set(MONTH, monthOfYear);
 				date.set(DAY_OF_MONTH, dayOfMonth);
