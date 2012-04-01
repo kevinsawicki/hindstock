@@ -170,12 +170,14 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		loadStocks();
 	}
 
+	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 		if (quote != null)
 			outState.putSerializable(EXTRA_QUOTE, quote);
 	}
 
+	@Override
 	protected void onRestoreInstanceState(Bundle savedInstanceState) {
 		super.onRestoreInstanceState(savedInstanceState);
 
