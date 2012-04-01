@@ -1,7 +1,7 @@
-# Hind Stock - Android Stock Simulator
+# Hind Stock - Android Stock Purchase Simulator
 
 Android application to simulate stock buys and sells and display the net profit
-or loss.
+or loss along with the rate of return
 
 The source code is available under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 license.
@@ -13,7 +13,7 @@ license.
 3. Enter a buy day & sell date
 4. Click *Calculate* and see the net profit or loss
 
-![](http://img.skitch.com/20120318-jbta15rm65p623qd7119fwrx7g.png)
+![](http://img.skitch.com/20120401-nx1a3975yr4nctqf8ea9puwkx4.png)
 
 ## Dependencies
 
