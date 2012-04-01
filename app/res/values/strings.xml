@@ -23,5 +23,7 @@
     <string name="error_parsing_dollar_amount">Error parsing dollar amount</string>
     <string name="invalid_sell_date">Sell date cannot be later than today.</string>
     <string name="invalid_buy_date">Buy date cannot be later than sell date.</string>
+    <string name="no_quote_for_buy_date">Stock quote unavailable for selected buy date. Please select a later date.</string>
+    <string name="no_quote_for_sell_date">Stock quote unavailable for selected sell date. Please select a later date.</string>
 
 </resources>

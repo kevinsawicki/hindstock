@@ -221,11 +221,20 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 	private void showQuoteException(final IOException e) {
 		Log.d(TAG, "Exception requesting quote", e);
+
+		final int message;
+		if (e instanceof InvalidBuyDateException)
+			message = string.no_quote_for_buy_date;
+		else if (e instanceof InvalidSellDateException)
+			message = string.no_quote_for_sell_date;
+		else
+			message = string.requesting_quote_failed;
+
 		runOnUiThread(new Runnable() {
 
 			public void run() {
-				Toast.makeText(getApplicationContext(),
-						string.requesting_quote_failed, LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), message, LENGTH_LONG)
+						.show();
 			}
 		});
 	}

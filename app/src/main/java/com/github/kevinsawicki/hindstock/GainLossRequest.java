@@ -154,29 +154,37 @@ public abstract class GainLossRequest extends AsyncTask<Void, Integer, Quote> {
 		StockQuoteRequest buyRequest = new StockQuoteRequest();
 		buyRequest.setStartDate(DateUtils.addDays(-7, buyDate))
 				.setEndDate(buyDate).setSymbol(symbol);
+
 		try {
 			if (!buyRequest.next())
-				throw new IOException();
-			float price = buyRequest.getOpen();
-			if (price == 0.0F)
-				price = buyRequest.getClose();
-			return price;
+				throw new InvalidBuyDateException();
 		} catch (HttpRequestException e) {
 			throw e.getCause();
 		}
+
+		float price = buyRequest.getOpen();
+		if (price == 0.0F)
+			price = buyRequest.getClose();
+		return price;
+
 	}
 
 	private float getSellPrice() throws IOException {
 		StockQuoteRequest sellRequest = new StockQuoteRequest();
 		sellRequest.setStartDate(DateUtils.addDays(-7, sellDate))
 				.setEndDate(sellDate).setSymbol(symbol);
+
 		try {
 			if (!sellRequest.next())
-				throw new IOException();
-			return sellRequest.getClose();
+				throw new InvalidSellDateException();
 		} catch (HttpRequestException e) {
 			throw e.getCause();
 		}
+
+		float price = sellRequest.getClose();
+		if (price == 0.0F)
+			price = sellRequest.getOpen();
+		return price;
 	}
 
 	@Override
