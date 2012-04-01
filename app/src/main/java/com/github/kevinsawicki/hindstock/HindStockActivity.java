@@ -27,6 +27,7 @@ import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -75,8 +76,6 @@ public class HindStockActivity extends Activity implements OnClickListener {
 	private final NumberFormat decimalFormat = new DecimalFormat("0.00");
 
 	private final DateFormat dateFormat = DateFormat.getDateInstance(SHORT);
-
-	private final Calendar today = new GregorianCalendar();
 
 	private Calendar buyDate = new GregorianCalendar();
 
@@ -282,6 +281,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 					int dayOfMonth) {
 				Calendar updated = new GregorianCalendar(year, monthOfYear,
 						dayOfMonth);
+				Calendar today = new GregorianCalendar();
 				if (updated.after(today)) {
 					Toast.makeText(getApplicationContext(),
 							string.invalid_sell_date, LENGTH_LONG).show();
