@@ -286,6 +286,8 @@ public class HindStockActivity extends Activity implements OnClickListener {
 					Toast.makeText(getApplicationContext(),
 							string.invalid_sell_date, LENGTH_LONG).show();
 					updated = today;
+					if (TextUtils.isEmpty(sellDateText.getText()))
+						return;
 				}
 
 				sellDate.setTimeInMillis(updated.getTimeInMillis());
