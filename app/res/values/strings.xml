@@ -21,5 +21,7 @@
     <string name="requesting_quote_failed">Requesting quote failed, please try again.</string>
     <string name="error_parsing_share_amount">Error parsing share amount</string>
     <string name="error_parsing_dollar_amount">Error parsing dollar amount</string>
+    <string name="invalid_sell_date">Sell date cannot be later than today.</string>
+    <string name="invalid_buy_date">Buy date cannot be later than sell date.</string>
 
 </resources>

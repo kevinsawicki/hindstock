@@ -58,7 +58,7 @@ import java.util.GregorianCalendar;
 
 /**
  * Main activity to compute the net gain/loss on a theoretical stock purchase of
- * either a quantity of shares or dollar figure investment.
+ * either a quantity of shares or dollar amount investment.
  */
 public class HindStockActivity extends Activity implements OnClickListener {
 
@@ -75,6 +75,8 @@ public class HindStockActivity extends Activity implements OnClickListener {
 	private final NumberFormat decimalFormat = new DecimalFormat("0.00");
 
 	private final DateFormat dateFormat = DateFormat.getDateInstance(SHORT);
+
+	private final Calendar today = new GregorianCalendar();
 
 	private Calendar buyDate = new GregorianCalendar();
 
@@ -265,17 +267,41 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		}
 	}
 
-	private DatePickerDialog createDateDialog(final Calendar date,
-			final EditText field) {
+	private DatePickerDialog createSellDateDialog() {
 		return new DatePickerDialog(this, new OnDateSetListener() {
 			public void onDateSet(DatePicker view, int year, int monthOfYear,
 					int dayOfMonth) {
-				date.set(YEAR, year);
-				date.set(MONTH, monthOfYear);
-				date.set(DAY_OF_MONTH, dayOfMonth);
-				field.setText(dateFormat.format(date.getTime()));
+				Calendar updated = new GregorianCalendar(year, monthOfYear,
+						dayOfMonth);
+				if (updated.after(today)) {
+					Toast.makeText(getApplicationContext(),
+							string.invalid_sell_date, LENGTH_LONG).show();
+					updated = today;
+				}
+
+				sellDate.setTimeInMillis(updated.getTimeInMillis());
+				sellDateText.setText(dateFormat.format(sellDate.getTime()));
 			}
-		}, date.get(YEAR), date.get(MONTH), date.get(DAY_OF_MONTH));
+		}, sellDate.get(YEAR), sellDate.get(MONTH), sellDate.get(DAY_OF_MONTH));
+	}
+
+	private DatePickerDialog createBuyDateDialog() {
+		return new DatePickerDialog(this, new OnDateSetListener() {
+			public void onDateSet(DatePicker view, int year, int monthOfYear,
+					int dayOfMonth) {
+				Calendar updated = new GregorianCalendar(year, monthOfYear,
+						dayOfMonth);
+				if (updated.after(sellDate)) {
+					Toast.makeText(getApplicationContext(),
+							string.invalid_buy_date, LENGTH_LONG).show();
+					updated.setTimeInMillis(sellDate.getTimeInMillis());
+					updated.add(DAY_OF_MONTH, -1);
+				}
+
+				buyDate.setTimeInMillis(updated.getTimeInMillis());
+				buyDateText.setText(dateFormat.format(buyDate.getTime()));
+			}
+		}, buyDate.get(YEAR), buyDate.get(MONTH), buyDate.get(DAY_OF_MONTH));
 	}
 
 	@Override
@@ -299,9 +325,9 @@ public class HindStockActivity extends Activity implements OnClickListener {
 	protected Dialog onCreateDialog(final int dialogId, final Bundle args) {
 		switch (dialogId) {
 		case ID_BUY_DATE:
-			return createDateDialog(buyDate, buyDateText);
+			return createBuyDateDialog();
 		case ID_SELL_DATE:
-			return createDateDialog(sellDate, sellDateText);
+			return createSellDateDialog();
 		default:
 			return super.onCreateDialog(dialogId, args);
 		}
