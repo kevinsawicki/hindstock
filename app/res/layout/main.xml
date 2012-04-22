@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
     <LinearLayout
         android:id="@+id/ll_header"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="@drawable/header_bg"
@@ -13,8 +13,8 @@
 
         <TextView
             style="@style/shadowLabelStyle"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:paddingBottom="5dp"
             android:paddingLeft="15dp"
             android:paddingTop="5dp"
@@ -24,14 +24,14 @@
             android:textSize="20sp" />
 
         <View
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="2px"
             android:background="@drawable/header_spacer" />
     </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/ll_bottom"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@drawable/bottom_bg"
@@ -40,7 +40,7 @@
 
         <View
             android:id="@+id/v_separator"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_alignParentTop="true"
             android:layout_marginBottom="5dp"
@@ -48,7 +48,7 @@
 
         <LinearLayout
             android:id="@+id/ll_loading"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/v_separator"
             android:gravity="center"
@@ -74,7 +74,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/v_separator"
             android:gravity="center" >
@@ -90,20 +90,20 @@
     </RelativeLayout>
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_above="@id/ll_bottom"
         android:layout_below="@id/ll_header"
         android:background="@color/background" >
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="10dp" >
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
@@ -119,46 +119,46 @@
                 <AutoCompleteTextView
                     android:id="@+id/actv_stock"
                     style="@style/textStyle"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/symbol_hint" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingTop="5dp" >
 
                 <RadioGroup
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
+                    android:layout_height="match_parent"
                     android:orientation="vertical" >
 
                     <RadioButton
                         android:id="@+id/rb_shares"
                         style="@style/labelStyle"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:checked="true" />
 
                     <RadioButton
                         android:id="@+id/rb_dollars"
                         style="@style/labelStyle"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </RadioGroup>
 
                 <LinearLayout
                     android:layout_width="0dp"
-                    android:layout_height="fill_parent"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:orientation="vertical" >
 
                     <EditText
                         android:id="@+id/et_shares"
                         style="@style/textStyle"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:gravity="center_vertical"
@@ -168,7 +168,7 @@
                     <EditText
                         android:id="@+id/et_dollars"
                         style="@style/textStyle"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:enabled="false"
@@ -179,12 +179,12 @@
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
+                    android:layout_height="match_parent"
                     android:orientation="vertical" >
 
                     <TextView
                         style="@style/shadowLabelStyle"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="50"
                         android:gravity="center_vertical"
@@ -194,7 +194,7 @@
 
                     <TextView
                         style="@style/shadowLabelStyle"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="50"
                         android:gravity="center_vertical"
@@ -205,7 +205,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingTop="5dp" >
@@ -232,7 +232,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingTop="5dp" >
@@ -266,7 +266,7 @@
 
             <LinearLayout
                 android:id="@+id/ll_price_labels"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingTop="5dp"
@@ -295,7 +295,7 @@
 
             <LinearLayout
                 android:id="@+id/ll_price_values"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:visibility="gone" >
@@ -325,7 +325,7 @@
 
             <LinearLayout
                 android:id="@+id/ll_net"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingTop="10dp"
@@ -334,7 +334,7 @@
                 <TextView
                     android:id="@+id/tv_net_label"
                     style="@style/shadowLabelStyle"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="20sp" />
@@ -342,7 +342,7 @@
                 <TextView
                     android:id="@+id/tv_net"
                     style="@style/shadowLabelStyle"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:textSize="30sp"
