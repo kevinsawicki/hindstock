@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <gradient
-        android:angle="270"
-        android:endColor="@color/header_bg_end"
-        android:startColor="@color/header_bg_start" />
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/header_bottom" />
+        </shape>
+    </item>
+    <item android:bottom="1px">
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/header_shadow" />
+        </shape>
+    </item>
+    <item android:bottom="2px">
+        <shape>
+            <gradient
+                android:angle="270"
+                android:endColor="@color/header_bg_end"
+                android:startColor="@color/header_bg_start" />
+        </shape>
+    </item>
 
-    <corners android:radius="0dp" />
-
-</shape>
+</layer-list>
