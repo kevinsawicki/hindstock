@@ -52,8 +52,7 @@
                 android:singleLine="true"
                 android:text="@string/calculating"
                 android:textColor="@color/text"
-                android:textSize="20sp" >
-            </TextView>
+                android:textSize="20sp" />
         </LinearLayout>
 
         <Button
