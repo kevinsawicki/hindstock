@@ -6,6 +6,4 @@
         android:endColor="@color/background"
         android:startColor="@color/background_dark" />
 
-    <corners android:radius="0dp" />
-
 </shape>
