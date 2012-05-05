@@ -135,19 +135,25 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 		calcButton.setOnClickListener(this);
 
-		sellDateText.setOnClickListener(new OnClickListener() {
+		OnClickListener sellDateListener = new OnClickListener() {
 
+			@SuppressWarnings("deprecation")
 			public void onClick(View v) {
 				showDialog(ID_SELL_DATE);
 			}
-		});
+		};
+		findViewById(id.tv_sell_date).setOnClickListener(sellDateListener);
+		sellDateText.setOnClickListener(sellDateListener);
 
-		buyDateText.setOnClickListener(new OnClickListener() {
+		OnClickListener buyDateListener = new OnClickListener() {
 
+			@SuppressWarnings("deprecation")
 			public void onClick(View v) {
 				showDialog(ID_BUY_DATE);
 			}
-		});
+		};
+		findViewById(id.tv_buy_date).setOnClickListener(buyDateListener);
+		buyDateText.setOnClickListener(buyDateListener);
 
 		((RadioButton) findViewById(id.rb_dollars))
 				.setOnCheckedChangeListener(new OnCheckedChangeListener() {

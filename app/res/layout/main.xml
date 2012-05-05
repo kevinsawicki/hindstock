@@ -211,6 +211,7 @@
                 android:paddingTop="5dp" >
 
                 <TextView
+                    android:id="@+id/tv_buy_date"
                     style="@style/shadowLabelStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -221,6 +222,7 @@
                     android:text="@string/buy_date_label" />
 
                 <TextView
+                    android:id="@+id/tv_sell_date"
                     style="@style/shadowLabelStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
