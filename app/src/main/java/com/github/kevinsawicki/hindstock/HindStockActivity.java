@@ -114,6 +114,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 		setContentView(layout.main);
 
 		symbolText = (AutoCompleteTextView) findViewById(id.actv_stock);
@@ -135,6 +136,13 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 		calcButton.setOnClickListener(this);
 
+		setupDateArea();
+		setupQuantityArea();
+
+		loadStocks();
+	}
+
+	private void setupDateArea() {
 		OnClickListener sellDateListener = new OnClickListener() {
 
 			@SuppressWarnings("deprecation")
@@ -154,26 +162,54 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		};
 		findViewById(id.tv_buy_date).setOnClickListener(buyDateListener);
 		buyDateText.setOnClickListener(buyDateListener);
+	}
 
-		((RadioButton) findViewById(id.rb_dollars))
-				.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+	private void setupQuantityArea() {
+		final RadioButton dollarsButton = (RadioButton) findViewById(id.rb_dollars);
+		dollarsButton.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
-					public void onCheckedChanged(CompoundButton buttonView,
-							boolean isChecked) {
-						dollarText.setEnabled(isChecked);
-					}
-				});
+			public void onCheckedChanged(CompoundButton buttonView,
+					boolean isChecked) {
+				dollarText.setEnabled(isChecked);
+				if (isChecked)
+					dollarText.requestFocus();
+				else
+					dollarText.clearFocus();
+			}
+		});
 
-		((RadioButton) findViewById(id.rb_shares))
-				.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+		final RadioButton sharesButton = (RadioButton) findViewById(id.rb_shares);
+		sharesButton.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
-					public void onCheckedChanged(CompoundButton buttonView,
-							boolean isChecked) {
-						shareText.setEnabled(isChecked);
-					}
-				});
+			public void onCheckedChanged(CompoundButton buttonView,
+					boolean isChecked) {
+				shareText.setEnabled(isChecked);
+				if (isChecked)
+					shareText.requestFocus();
+				else
+					shareText.clearFocus();
+			}
+		});
 
-		loadStocks();
+		OnClickListener sharesListener = new OnClickListener() {
+
+			public void onClick(View v) {
+				dollarsButton.setChecked(false);
+				sharesButton.setChecked(true);
+			}
+		};
+		findViewById(id.tv_shares).setOnClickListener(sharesListener);
+		shareText.setOnClickListener(sharesListener);
+
+		OnClickListener dollarsListener = new OnClickListener() {
+
+			public void onClick(View v) {
+				sharesButton.setChecked(false);
+				dollarsButton.setChecked(true);
+			}
+		};
+		findViewById(id.tv_dollars).setOnClickListener(dollarsListener);
+		dollarText.setOnClickListener(dollarsListener);
 	}
 
 	@Override
