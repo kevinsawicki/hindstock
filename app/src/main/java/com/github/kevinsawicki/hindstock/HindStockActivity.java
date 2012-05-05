@@ -334,6 +334,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		return dialog;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onPrepareDialog(final int id, final Dialog dialog,
 			final Bundle args) {
@@ -351,6 +352,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected Dialog onCreateDialog(final int dialogId, final Bundle args) {
 		switch (dialogId) {
