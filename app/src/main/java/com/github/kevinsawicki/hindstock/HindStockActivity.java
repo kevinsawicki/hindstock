@@ -284,43 +284,54 @@ public class HindStockActivity extends Activity implements OnClickListener {
 	}
 
 	private DatePickerDialog createSellDateDialog() {
-		return new DatePickerDialog(this, new OnDateSetListener() {
-			public void onDateSet(DatePicker view, int year, int monthOfYear,
-					int dayOfMonth) {
-				Calendar updated = new GregorianCalendar(year, monthOfYear,
-						dayOfMonth);
-				Calendar today = new GregorianCalendar();
-				if (updated.after(today)) {
-					Toast.makeText(getApplicationContext(),
-							string.invalid_sell_date, LENGTH_LONG).show();
-					updated = today;
-					if (TextUtils.isEmpty(sellDateText.getText()))
-						return;
-				}
+		DatePickerDialog dialog = new DatePickerDialog(this,
+				new OnDateSetListener() {
+					public void onDateSet(DatePicker view, int year,
+							int monthOfYear, int dayOfMonth) {
+						Calendar updated = new GregorianCalendar(year,
+								monthOfYear, dayOfMonth);
+						Calendar today = new GregorianCalendar();
+						if (updated.after(today)) {
+							Toast.makeText(getApplicationContext(),
+									string.invalid_sell_date, LENGTH_LONG)
+									.show();
+							updated = today;
+							if (TextUtils.isEmpty(sellDateText.getText()))
+								return;
+						}
 
-				sellDate.setTimeInMillis(updated.getTimeInMillis());
-				sellDateText.setText(dateFormat.format(sellDate.getTime()));
-			}
-		}, sellDate.get(YEAR), sellDate.get(MONTH), sellDate.get(DAY_OF_MONTH));
+						sellDate.setTimeInMillis(updated.getTimeInMillis());
+						sellDateText.setText(dateFormat.format(sellDate
+								.getTime()));
+					}
+				}, sellDate.get(YEAR), sellDate.get(MONTH),
+				sellDate.get(DAY_OF_MONTH));
+		dialog.setTitle(string.set_sell_date);
+		return dialog;
 	}
 
 	private DatePickerDialog createBuyDateDialog() {
-		return new DatePickerDialog(this, new OnDateSetListener() {
-			public void onDateSet(DatePicker view, int year, int monthOfYear,
-					int dayOfMonth) {
-				Calendar updated = new GregorianCalendar(year, monthOfYear,
-						dayOfMonth);
-				if (updated.after(sellDate)) {
-					Toast.makeText(getApplicationContext(),
-							string.invalid_buy_date, LENGTH_LONG).show();
-					updated.setTimeInMillis(sellDate.getTimeInMillis());
-					updated.add(DAY_OF_MONTH, -1);
-				}
+		DatePickerDialog dialog = new DatePickerDialog(this,
+				new OnDateSetListener() {
+					public void onDateSet(DatePicker view, int year,
+							int monthOfYear, int dayOfMonth) {
+						Calendar updated = new GregorianCalendar(year,
+								monthOfYear, dayOfMonth);
+						if (updated.after(sellDate)) {
+							Toast.makeText(getApplicationContext(),
+									string.invalid_buy_date, LENGTH_LONG)
+									.show();
+							updated.setTimeInMillis(sellDate.getTimeInMillis());
+							updated.add(DAY_OF_MONTH, -1);
+						}
 
-				buyDate.setTimeInMillis(updated.getTimeInMillis());
-				buyDateText.setText(dateFormat.format(buyDate.getTime()));
-			}
-		}, buyDate.get(YEAR), buyDate.get(MONTH), buyDate.get(DAY_OF_MONTH));
+						buyDate.setTimeInMillis(updated.getTimeInMillis());
+						buyDateText.setText(dateFormat.format(buyDate.getTime()));
+					}
+				}, buyDate.get(YEAR), buyDate.get(MONTH), buyDate
+						.get(DAY_OF_MONTH));
+		dialog.setTitle(string.set_buy_date);
+		return dialog;
 	}
 
 	@Override
