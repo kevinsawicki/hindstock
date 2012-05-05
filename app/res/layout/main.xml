@@ -150,6 +150,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:enabled="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
                         android:gravity="center_vertical"
                         android:hint="@string/dollars_hint"
                         android:inputType="number" />

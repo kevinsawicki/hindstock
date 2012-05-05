@@ -171,10 +171,10 @@ public class HindStockActivity extends Activity implements OnClickListener {
 			public void onCheckedChanged(CompoundButton buttonView,
 					boolean isChecked) {
 				dollarText.setEnabled(isChecked);
+				dollarText.setFocusable(isChecked);
+				dollarText.setFocusableInTouchMode(isChecked);
 				if (isChecked)
 					dollarText.requestFocus();
-				else
-					dollarText.clearFocus();
 			}
 		});
 
@@ -184,10 +184,10 @@ public class HindStockActivity extends Activity implements OnClickListener {
 			public void onCheckedChanged(CompoundButton buttonView,
 					boolean isChecked) {
 				shareText.setEnabled(isChecked);
+				shareText.setFocusable(isChecked);
+				shareText.setFocusableInTouchMode(isChecked);
 				if (isChecked)
 					shareText.requestFocus();
-				else
-					shareText.clearFocus();
 			}
 		});
 
