@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <gradient
-        android:angle="270"
-        android:endColor="@color/background"
-        android:startColor="@color/background_dark" />
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/background_light" />
+        </shape>
+    </item>
+    <item android:top="1px">
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/separator" />
+        </shape>
+    </item>
+    <item android:top="2px">
+        <shape android:shape="rectangle" >
+            <gradient
+                android:angle="270"
+                android:endColor="@color/background"
+                android:startColor="@color/background_dark" />
+        </shape>
+    </item>
 
-</shape>
+</layer-list>
