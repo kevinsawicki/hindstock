@@ -15,8 +15,11 @@
  */
 package com.github.kevinsawicki.hindstock;
 
+import static android.view.KeyEvent.ACTION_DOWN;
+import static android.view.KeyEvent.KEYCODE_ENTER;
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
+import static android.view.inputmethod.EditorInfo.IME_ACTION_DONE;
 import static android.widget.Toast.LENGTH_LONG;
 import static java.text.DateFormat.SHORT;
 import static java.util.Calendar.DAY_OF_MONTH;
@@ -29,13 +32,16 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnKeyListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.TextView.OnEditorActionListener;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -135,6 +141,32 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		buyDate.add(YEAR, -1);
 
 		calcButton.setOnClickListener(this);
+
+		symbolText.setOnKeyListener(new OnKeyListener() {
+
+			public boolean onKey(View v, int keyCode, KeyEvent event) {
+				if (event != null && ACTION_DOWN == event.getAction()
+						&& keyCode == KEYCODE_ENTER
+						&& calcButton.getVisibility() == VISIBLE) {
+					onClick(calcButton);
+					return true;
+				} else
+					return false;
+			}
+		});
+
+		symbolText.setOnEditorActionListener(new OnEditorActionListener() {
+
+			public boolean onEditorAction(TextView v, int actionId,
+					KeyEvent event) {
+				if (actionId == IME_ACTION_DONE
+						&& calcButton.getVisibility() == VISIBLE) {
+					onClick(calcButton);
+					return true;
+				}
+				return false;
+			}
+		});
 
 		setupDateArea();
 		setupQuantityArea();
