@@ -6,6 +6,10 @@ or loss along with the rate of return
 The source code is available under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 license.
 
+<a href="https://play.google.com/store/apps/details?id=com.github.kevinsawicki.hindstock" alt="Download from Google Play">
+  <img src="http://www.android.com/images/brand/android_app_on_play_large.png">
+</a>
+
 ## Usage
 
 1. Enter a stock symbol
