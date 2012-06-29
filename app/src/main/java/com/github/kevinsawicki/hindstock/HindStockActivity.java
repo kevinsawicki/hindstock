@@ -265,7 +265,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		super.onRestoreInstanceState(savedInstanceState);
 
 		String initialBuyDate = buyDateText.getText().toString();
-		if (initialBuyDate.length() > 0)
+		if (!TextUtils.isEmpty(initialBuyDate))
 			try {
 				buyDate.setTime(dateFormat.parse(initialBuyDate));
 			} catch (ParseException e) {
@@ -279,7 +279,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		}
 
 		String initialSellDate = sellDateText.getText().toString();
-		if (initialSellDate.length() > 0)
+		if (!TextUtils.isEmpty(initialSellDate))
 			try {
 				sellDate.setTime(dateFormat.parse(initialSellDate));
 			} catch (ParseException e) {
@@ -329,12 +329,12 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 	private String getSymbol() {
 		String symbol = symbolText.getText().toString().trim();
-		return symbol.length() > 0 ? symbol : "GOOG";
+		return !TextUtils.isEmpty(symbol) ? symbol : "GOOG";
 	}
 
 	private float getShares() {
 		String text = shareText.getText().toString().trim();
-		if (text.length() == 0)
+		if (TextUtils.isEmpty(text))
 			return 100;
 
 		try {
@@ -348,7 +348,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 	private float getDollars() {
 		String text = dollarText.getText().toString().trim();
-		if (text.length() == 0)
+		if (TextUtils.isEmpty(text))
 			return 1000;
 
 		try {
