@@ -363,6 +363,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 	private DatePickerDialog createSellDateDialog() {
 		DatePickerDialog dialog = new DatePickerDialog(this,
 				new OnDateSetListener() {
+
 					public void onDateSet(DatePicker view, int year,
 							int monthOfYear, int dayOfMonth) {
 						Calendar updated = new GregorianCalendar(year,
@@ -390,6 +391,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 	private DatePickerDialog createBuyDateDialog() {
 		DatePickerDialog dialog = new DatePickerDialog(this,
 				new OnDateSetListener() {
+
 					public void onDateSet(DatePicker view, int year,
 							int monthOfYear, int dayOfMonth) {
 						Calendar updated = new GregorianCalendar(year,
