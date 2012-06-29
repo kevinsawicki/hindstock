@@ -143,7 +143,8 @@
                         android:gravity="center_vertical"
                         android:hint="@string/shares_hint"
                         android:imeOptions="actionDone"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:singleLine="true" />
 
                     <EditText
                         android:id="@+id/et_dollars"
@@ -157,7 +158,8 @@
                         android:gravity="center_vertical"
                         android:hint="@string/dollars_hint"
                         android:imeOptions="actionDone"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:singleLine="true" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -235,7 +237,8 @@
                     android:focusableInTouchMode="false"
                     android:gravity="center"
                     android:hint="@string/buy_date_hint"
-                    android:inputType="none" />
+                    android:inputType="none"
+                    android:singleLine="true" />
 
                 <EditText
                     android:id="@+id/et_sell_date"
@@ -248,7 +251,8 @@
                     android:focusableInTouchMode="false"
                     android:gravity="center"
                     android:hint="@string/sell_date_hint"
-                    android:inputType="none" />
+                    android:inputType="none"
+                    android:singleLine="true" />
             </LinearLayout>
 
             <LinearLayout
