@@ -341,7 +341,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 			return Float.parseFloat(text);
 		} catch (NumberFormatException nfe) {
 			Toast.makeText(getApplicationContext(),
-					string.error_parsing_share_amount, LENGTH_LONG);
+					string.error_parsing_share_amount, LENGTH_LONG).show();
 			return -1;
 		}
 	}
@@ -355,7 +355,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 			return Float.parseFloat(text);
 		} catch (NumberFormatException nfe) {
 			Toast.makeText(getApplicationContext(),
-					string.error_parsing_dollar_amount, LENGTH_LONG);
+					string.error_parsing_dollar_amount, LENGTH_LONG).show();
 			return -1;
 		}
 	}
