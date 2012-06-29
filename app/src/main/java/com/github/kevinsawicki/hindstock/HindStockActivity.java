@@ -109,9 +109,11 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 	private TextView sellPriceText;
 
-	private LinearLayout loadingArea;
+	private View loadingArea;
 
-	private LinearLayout netArea;
+	private View quoteArea;
+
+	private View netArea;
 
 	private TextView netLabel;
 
@@ -130,15 +132,16 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		dollarText = (EditText) findViewById(id.et_dollars);
 		buyDateText = (EditText) findViewById(id.et_buy_date);
 		sellDateText = (EditText) findViewById(id.et_sell_date);
-		loadingArea = (LinearLayout) findViewById(id.ll_loading);
+		loadingArea = findViewById(id.ll_loading);
 		priceLabelsArea = (LinearLayout) findViewById(id.ll_price_labels);
 		priceValuesArea = (LinearLayout) findViewById(id.ll_price_values);
 		buyPriceText = (TextView) findViewById(id.tv_buy_price);
 		sellPriceText = (TextView) findViewById(id.tv_sell_price);
-		netArea = (LinearLayout) findViewById(id.ll_net);
+		netArea = findViewById(id.ll_net);
 		netLabel = (TextView) findViewById(id.tv_net_label);
 		netText = (TextView) findViewById(id.tv_net);
 		calcButton = (Button) findViewById(id.b_calculate);
+		quoteArea = findViewById(id.ll_quote);
 
 		buyDate.add(YEAR, -1);
 
@@ -496,6 +499,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		priceValuesArea.setVisibility(VISIBLE);
 		netArea.setVisibility(VISIBLE);
 		netText.setText(netTextValue);
+		quoteArea.setVisibility(VISIBLE);
 
 		showCalculating(false);
 	}
