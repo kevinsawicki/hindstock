@@ -89,6 +89,8 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 	private Quote quote;
 
+	private boolean calculating;
+
 	private AutoCompleteTextView symbolText;
 
 	private EditText shareText;
@@ -188,7 +190,8 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 			@SuppressWarnings("deprecation")
 			public void onClick(View v) {
-				showDialog(ID_SELL_DATE);
+				if (!calculating)
+					showDialog(ID_SELL_DATE);
 			}
 		};
 		findViewById(id.tv_sell_date).setOnClickListener(sellDateListener);
@@ -198,7 +201,8 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 			@SuppressWarnings("deprecation")
 			public void onClick(View v) {
-				showDialog(ID_BUY_DATE);
+				if (!calculating)
+					showDialog(ID_BUY_DATE);
 			}
 		};
 		findViewById(id.tv_buy_date).setOnClickListener(buyDateListener);
@@ -493,8 +497,23 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		netArea.setVisibility(VISIBLE);
 		netText.setText(netTextValue);
 
-		loadingArea.setVisibility(INVISIBLE);
-		calcButton.setVisibility(VISIBLE);
+		showCalculating(false);
+	}
+
+	private void showCalculating(boolean calculating) {
+		this.calculating = calculating;
+
+		if (calculating) {
+			loadingArea.setVisibility(VISIBLE);
+			calcButton.setVisibility(INVISIBLE);
+		} else {
+			loadingArea.setVisibility(INVISIBLE);
+			calcButton.setVisibility(VISIBLE);
+		}
+
+		symbolText.setEnabled(!calculating);
+		shareText.setEnabled(!calculating);
+		dollarText.setEnabled(!calculating);
 	}
 
 	public void onClick(View v) {
@@ -511,8 +530,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 			shares = getShares();
 		}
 
-		calcButton.setVisibility(INVISIBLE);
-		loadingArea.setVisibility(VISIBLE);
+		showCalculating(true);
 		new GainLossRequest(symbol, shares, dollars, buyDate, sellDate) {
 
 			@Override
@@ -523,8 +541,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 			@Override
 			protected void onFailure(IOException cause) {
-				loadingArea.setVisibility(INVISIBLE);
-				calcButton.setVisibility(VISIBLE);
+				showCalculating(false);
 				showQuoteException(cause);
 			}
 		}.execute();
