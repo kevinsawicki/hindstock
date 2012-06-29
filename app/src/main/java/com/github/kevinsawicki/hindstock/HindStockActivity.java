@@ -41,12 +41,12 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.TextView.OnEditorActionListener;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
 import com.github.kevinsawicki.hindstock.GainLossRequest.Quote;
@@ -142,7 +142,15 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 		calcButton.setOnClickListener(this);
 
-		symbolText.setOnKeyListener(new OnKeyListener() {
+		setupDateArea();
+		setupQuantityArea();
+		setupDoneListeners();
+
+		loadStocks();
+	}
+
+	private void setupDoneListeners() {
+		OnKeyListener doneKeyListener = new OnKeyListener() {
 
 			public boolean onKey(View v, int keyCode, KeyEvent event) {
 				if (event != null && ACTION_DOWN == event.getAction()
@@ -153,9 +161,12 @@ public class HindStockActivity extends Activity implements OnClickListener {
 				} else
 					return false;
 			}
-		});
+		};
+		symbolText.setOnKeyListener(doneKeyListener);
+		shareText.setOnKeyListener(doneKeyListener);
+		dollarText.setOnKeyListener(doneKeyListener);
 
-		symbolText.setOnEditorActionListener(new OnEditorActionListener() {
+		OnEditorActionListener doneEditorActionListener = new OnEditorActionListener() {
 
 			public boolean onEditorAction(TextView v, int actionId,
 					KeyEvent event) {
@@ -163,15 +174,13 @@ public class HindStockActivity extends Activity implements OnClickListener {
 						&& calcButton.getVisibility() == VISIBLE) {
 					onClick(calcButton);
 					return true;
-				}
-				return false;
+				} else
+					return false;
 			}
-		});
-
-		setupDateArea();
-		setupQuantityArea();
-
-		loadStocks();
+		};
+		symbolText.setOnEditorActionListener(doneEditorActionListener);
+		shareText.setOnEditorActionListener(doneEditorActionListener);
+		dollarText.setOnEditorActionListener(doneEditorActionListener);
 	}
 
 	private void setupDateArea() {

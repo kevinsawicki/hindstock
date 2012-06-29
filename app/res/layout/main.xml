@@ -142,6 +142,7 @@
                         android:layout_marginLeft="5dp"
                         android:gravity="center_vertical"
                         android:hint="@string/shares_hint"
+                        android:imeOptions="actionDone"
                         android:inputType="number" />
 
                     <EditText
@@ -155,6 +156,7 @@
                         android:focusableInTouchMode="false"
                         android:gravity="center_vertical"
                         android:hint="@string/dollars_hint"
+                        android:imeOptions="actionDone"
                         android:inputType="number" />
                 </LinearLayout>
 
