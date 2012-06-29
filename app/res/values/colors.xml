@@ -8,6 +8,7 @@
     <color name="background_light">#FFFFFF</color>
     <color name="background">#EFEFEF</color>
     <color name="background_dark">#E1E1E1</color>
+    <color name="background_quote">#F2F2F2</color>
     <color name="header_shadow">#1F272C</color>
     <color name="header_bottom">#FFFFFF</color>
     <color name="header_bg_start">#7B9EB0</color>
