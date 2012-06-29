@@ -513,11 +513,13 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		loadingArea.setVisibility(VISIBLE);
 		new GainLossRequest(symbol, shares, dollars, buyDate, sellDate) {
 
+			@Override
 			protected void onSuccess(Quote quote) {
 				HindStockActivity.this.quote = quote;
 				displayQuote(quote);
 			}
 
+			@Override
 			protected void onFailure(IOException cause) {
 				loadingArea.setVisibility(INVISIBLE);
 				calcButton.setVisibility(VISIBLE);
