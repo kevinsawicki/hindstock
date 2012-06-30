@@ -121,6 +121,10 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 	private Button calcButton;
 
+	private RadioButton sharesButton;
+
+	private RadioButton dollarsButton;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -142,6 +146,8 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		netText = (TextView) findViewById(id.tv_net);
 		calcButton = (Button) findViewById(id.b_calculate);
 		quoteArea = findViewById(id.ll_quote);
+		sharesButton = (RadioButton) findViewById(id.rb_shares);
+		dollarsButton = (RadioButton) findViewById(id.rb_dollars);
 
 		buyDate.add(YEAR, -1);
 
@@ -212,32 +218,30 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		buyDateText.setOnClickListener(buyDateListener);
 	}
 
+	/**
+	 * Bind the given radio button to enable and set focus to the given text
+	 * view when the button is checked
+	 *
+	 * @param button
+	 * @param text
+	 */
+	private void bindButtonToText(final RadioButton button, final TextView text) {
+		button.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+
+			public void onCheckedChanged(CompoundButton buttonView,
+					boolean isChecked) {
+				text.setEnabled(isChecked);
+				text.setFocusable(isChecked);
+				text.setFocusableInTouchMode(isChecked);
+				if (isChecked)
+					text.requestFocus();
+			}
+		});
+	}
+
 	private void setupQuantityArea() {
-		final RadioButton dollarsButton = (RadioButton) findViewById(id.rb_dollars);
-		dollarsButton.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
-			public void onCheckedChanged(CompoundButton buttonView,
-					boolean isChecked) {
-				dollarText.setEnabled(isChecked);
-				dollarText.setFocusable(isChecked);
-				dollarText.setFocusableInTouchMode(isChecked);
-				if (isChecked)
-					dollarText.requestFocus();
-			}
-		});
-
-		final RadioButton sharesButton = (RadioButton) findViewById(id.rb_shares);
-		sharesButton.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
-			public void onCheckedChanged(CompoundButton buttonView,
-					boolean isChecked) {
-				shareText.setEnabled(isChecked);
-				shareText.setFocusable(isChecked);
-				shareText.setFocusableInTouchMode(isChecked);
-				if (isChecked)
-					shareText.requestFocus();
-			}
-		});
+		bindButtonToText(sharesButton, shareText);
+		bindButtonToText(dollarsButton, dollarText);
 
 		OnClickListener sharesListener = new OnClickListener() {
 
@@ -526,7 +530,7 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		String symbol = getSymbol();
 		float dollars;
 		float shares;
-		if (dollarText.isEnabled()) {
+		if (dollarsButton.isChecked()) {
 			dollars = getDollars();
 			shares = -1;
 		} else {
