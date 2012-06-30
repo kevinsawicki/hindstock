@@ -307,6 +307,8 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 	private void loadStocks() {
 		new StockListLoader(this) {
+
+			@Override
 			protected void onPostExecute(Stock[] result) {
 				symbolText.setAdapter(new StockListAdapter(layout.stock,
 						getLayoutInflater(), result));

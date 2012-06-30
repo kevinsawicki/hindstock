@@ -62,6 +62,7 @@ public class StockListAdapter extends ItemListAdapter<Stock> implements
 		super(viewId, inflater, elements);
 	}
 
+	@Override
 	protected ItemView<Stock> createItemView(View view) {
 		return new StockView(view);
 	}
@@ -80,6 +81,7 @@ public class StockListAdapter extends ItemListAdapter<Stock> implements
 				return true;
 			}
 
+			@Override
 			protected FilterResults performFiltering(CharSequence prefix) {
 				FilterResults results = new FilterResults();
 				final Stock[] initial = getInitialElements();
