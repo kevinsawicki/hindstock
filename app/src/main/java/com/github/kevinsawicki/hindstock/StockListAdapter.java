@@ -47,8 +47,8 @@ public class StockListAdapter extends ItemListAdapter<Stock> implements
 		}
 
 		public void update(Stock item) {
-			symbolText.setText(item.getSymbol());
-			nameText.setText(item.getName());
+			symbolText.setText(item.symbol);
+			nameText.setText(item.name);
 		}
 	}
 
@@ -91,10 +91,10 @@ public class StockListAdapter extends ItemListAdapter<Stock> implements
 					List<Stock> filteredSymbols = new ArrayList<Stock>();
 					List<Stock> filteredNames = new ArrayList<Stock>();
 					for (Stock stock : initial)
-						if (stock.getSymbol().startsWith(upperPrefix))
+						if (stock.symbol.startsWith(upperPrefix))
 							filteredSymbols.add(stock);
 						else {
-							String name = stock.getName();
+							String name = stock.name;
 							int nameLength = name.length();
 							int prefixLength = upperPrefix.length();
 							int index = 0;

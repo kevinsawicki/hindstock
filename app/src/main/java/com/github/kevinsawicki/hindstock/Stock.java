@@ -20,9 +20,15 @@ package com.github.kevinsawicki.hindstock;
  */
 public class Stock {
 
-	private final String name;
+	/**
+	 * Name of stock
+	 */
+	public final String name;
 
-	private final String symbol;
+	/**
+	 * Stock symbol
+	 */
+	public final String symbol;
 
 	/**
 	 * Create stock
@@ -33,20 +39,6 @@ public class Stock {
 	public Stock(final String symbol, final String name) {
 		this.symbol = symbol;
 		this.name = name;
-	}
-
-	/**
-	 * @return name
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @return symbol
-	 */
-	public String getSymbol() {
-		return symbol;
 	}
 
 	public String toString() {
