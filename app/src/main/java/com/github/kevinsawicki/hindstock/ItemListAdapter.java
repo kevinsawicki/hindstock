@@ -132,10 +132,9 @@ public abstract class ItemListAdapter<V> extends BaseAdapter {
 	public View getView(final int position, View convertView,
 			final ViewGroup parent) {
 		V item = getItem(position);
-		ItemView<V> itemView = null;
-		if (convertView != null)
-			itemView = (ItemView<V>) convertView.getTag();
-		else {
+		ItemView<V> itemView = convertView != null ? (ItemView<V>) convertView
+				.getTag() : null;
+		if (itemView == null) {
 			convertView = inflater.inflate(viewId, null);
 			itemView = createItemView(convertView);
 			convertView.setTag(itemView);
