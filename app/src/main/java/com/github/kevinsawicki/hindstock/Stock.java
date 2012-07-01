@@ -53,4 +53,12 @@ public class Stock implements Serializable {
 	public int hashCode() {
 		return symbol.hashCode();
 	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (o == this)
+			return true;
+		else
+			return o instanceof Stock && symbol.equals(((Stock) o).symbol);
+	}
 }
