@@ -17,7 +17,6 @@ package com.github.kevinsawicki.hindstock;
 
 import static android.view.KeyEvent.ACTION_DOWN;
 import static android.view.KeyEvent.KEYCODE_ENTER;
-import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 import static android.view.inputmethod.EditorInfo.IME_ACTION_DONE;
 import static android.widget.Toast.LENGTH_LONG;
@@ -25,7 +24,6 @@ import static java.text.DateFormat.SHORT;
 import static java.util.Calendar.DAY_OF_MONTH;
 import static java.util.Calendar.MONTH;
 import static java.util.Calendar.YEAR;
-import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
@@ -38,7 +36,6 @@ import android.view.View.OnClickListener;
 import android.view.View.OnKeyListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.DatePicker;
@@ -49,10 +46,14 @@ import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
 import com.github.kevinsawicki.hindstock.GainLossRequest.Quote;
 import com.github.kevinsawicki.hindstock.R.color;
 import com.github.kevinsawicki.hindstock.R.id;
 import com.github.kevinsawicki.hindstock.R.layout;
+import com.github.kevinsawicki.hindstock.R.menu;
 import com.github.kevinsawicki.hindstock.R.string;
 
 import java.io.IOException;
@@ -67,7 +68,7 @@ import java.util.GregorianCalendar;
  * Main activity to compute the net gain/loss on a theoretical stock purchase of
  * either a quantity of shares or dollar amount investment.
  */
-public class HindStockActivity extends Activity implements OnClickListener {
+public class HindStockActivity extends SherlockActivity {
 
 	private static final String TAG = "HindStock";
 
@@ -109,8 +110,6 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 	private TextView sellPriceText;
 
-	private View loadingArea;
-
 	private View quoteArea;
 
 	private View netArea;
@@ -119,11 +118,29 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 	private TextView netText;
 
-	private Button calcButton;
-
 	private RadioButton sharesButton;
 
 	private RadioButton dollarsButton;
+
+	private MenuItem calculateItem;
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu optionsMenu) {
+		getSupportMenuInflater().inflate(menu.main, optionsMenu);
+		calculateItem = optionsMenu.findItem(id.m_calculate);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case id.m_calculate:
+			calculate();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -136,7 +153,6 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		dollarText = (EditText) findViewById(id.et_dollars);
 		buyDateText = (EditText) findViewById(id.et_buy_date);
 		sellDateText = (EditText) findViewById(id.et_sell_date);
-		loadingArea = findViewById(id.ll_loading);
 		priceLabelsArea = (LinearLayout) findViewById(id.ll_price_labels);
 		priceValuesArea = (LinearLayout) findViewById(id.ll_price_values);
 		buyPriceText = (TextView) findViewById(id.tv_buy_price);
@@ -144,14 +160,11 @@ public class HindStockActivity extends Activity implements OnClickListener {
 		netArea = findViewById(id.ll_net);
 		netLabel = (TextView) findViewById(id.tv_net_label);
 		netText = (TextView) findViewById(id.tv_net);
-		calcButton = (Button) findViewById(id.b_calculate);
 		quoteArea = findViewById(id.ll_quote);
 		sharesButton = (RadioButton) findViewById(id.rb_shares);
 		dollarsButton = (RadioButton) findViewById(id.rb_dollars);
 
 		buyDate.add(YEAR, -1);
-
-		calcButton.setOnClickListener(this);
 
 		setupDateArea();
 		setupQuantityArea();
@@ -165,9 +178,8 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 			public boolean onKey(View v, int keyCode, KeyEvent event) {
 				if (event != null && ACTION_DOWN == event.getAction()
-						&& keyCode == KEYCODE_ENTER
-						&& calcButton.getVisibility() == VISIBLE) {
-					onClick(calcButton);
+						&& keyCode == KEYCODE_ENTER && canCalculate()) {
+					calculate();
 					return true;
 				} else
 					return false;
@@ -181,9 +193,8 @@ public class HindStockActivity extends Activity implements OnClickListener {
 
 			public boolean onEditorAction(TextView v, int actionId,
 					KeyEvent event) {
-				if (actionId == IME_ACTION_DONE
-						&& calcButton.getVisibility() == VISIBLE) {
-					onClick(calcButton);
+				if (actionId == IME_ACTION_DONE && canCalculate()) {
+					calculate();
 					return true;
 				} else
 					return false;
@@ -513,20 +524,19 @@ public class HindStockActivity extends Activity implements OnClickListener {
 	private void showCalculating(boolean calculating) {
 		this.calculating = calculating;
 
-		if (calculating) {
-			loadingArea.setVisibility(VISIBLE);
-			calcButton.setVisibility(INVISIBLE);
-		} else {
-			loadingArea.setVisibility(INVISIBLE);
-			calcButton.setVisibility(VISIBLE);
-		}
+		if (calculateItem != null)
+			calculateItem.setEnabled(!calculating);
 
 		symbolText.setEnabled(!calculating);
 		shareText.setEnabled(!calculating);
 		dollarText.setEnabled(!calculating);
 	}
 
-	public void onClick(View v) {
+	private boolean canCalculate() {
+		return calculateItem != null && calculateItem.isEnabled();
+	}
+
+	private void calculate() {
 		hideKeyboard();
 
 		String symbol = getSymbol();

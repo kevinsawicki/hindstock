@@ -1,204 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/tv_header"
-        style="@style/shadowLabelStyle"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/header_bg"
-        android:paddingBottom="5dp"
-        android:paddingLeft="15dp"
-        android:paddingTop="5dp"
-        android:shadowColor="@color/header_shadow"
-        android:text="@string/app_name"
-        android:textColor="@color/background"
-        android:textSize="20sp" />
-
-    <RelativeLayout
-        android:id="@+id/ll_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/bottom_bg"
-        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:paddingTop="5dp" >
+        android:padding="10dp" >
 
         <LinearLayout
-            android:id="@+id/ll_loading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingTop="10dp"
-            android:visibility="invisible" >
-
-            <ProgressBar
-                android:layout_width="20sp"
-                android:layout_height="20sp"
-                android:indeterminateOnly="true" />
+            android:orientation="horizontal" >
 
             <TextView
                 style="@style/shadowLabelStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
                 android:singleLine="true"
-                android:text="@string/calculating"
-                android:textColor="@color/text"
-                android:textSize="20sp" />
+                android:text="@string/symbol_label" />
+
+            <AutoCompleteTextView
+                android:id="@+id/actv_stock"
+                style="@style/textStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/symbol_hint"
+                android:imeOptions="actionDone"
+                android:inputType="text" />
         </LinearLayout>
-
-        <Button
-            android:id="@+id/b_calculate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:text="@string/calculate"
-            android:textColor="@color/text"
-            android:textSize="20dp" />
-    </RelativeLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/ll_bottom"
-        android:layout_below="@id/tv_header"
-        android:background="@color/background" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp" >
+            android:orientation="horizontal"
+            android:paddingTop="5dp" >
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/rb_shares"
+                    style="@style/labelStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/rb_dollars"
+                    style="@style/labelStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
 
-                <TextView
-                    style="@style/shadowLabelStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:paddingRight="10dp"
-                    android:singleLine="true"
-                    android:text="@string/symbol_label" />
-
-                <AutoCompleteTextView
-                    android:id="@+id/actv_stock"
+                <EditText
+                    android:id="@+id/et_shares"
                     style="@style/textStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/symbol_hint"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/shares_hint"
                     android:imeOptions="actionDone"
-                    android:inputType="text" />
+                    android:inputType="number"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/et_dollars"
+                    style="@style/textStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center_vertical"
+                    android:hint="@string/dollars_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:singleLine="true" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="5dp" >
-
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical" >
-
-                    <RadioButton
-                        android:id="@+id/rb_shares"
-                        style="@style/labelStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:checked="true" />
-
-                    <RadioButton
-                        android:id="@+id/rb_dollars"
-                        style="@style/labelStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </RadioGroup>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical" >
-
-                    <EditText
-                        android:id="@+id/et_shares"
-                        style="@style/textStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:gravity="center_vertical"
-                        android:hint="@string/shares_hint"
-                        android:imeOptions="actionDone"
-                        android:inputType="number"
-                        android:singleLine="true" />
-
-                    <EditText
-                        android:id="@+id/et_dollars"
-                        style="@style/textStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:enabled="false"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
-                        android:gravity="center_vertical"
-                        android:hint="@string/dollars_hint"
-                        android:imeOptions="actionDone"
-                        android:inputType="number"
-                        android:singleLine="true" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical" >
-
-                    <TextView
-                        android:id="@+id/tv_shares"
-                        style="@style/shadowLabelStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="50"
-                        android:gravity="center_vertical"
-                        android:paddingLeft="10dp"
-                        android:singleLine="true"
-                        android:text="@string/shares_label" />
-
-                    <TextView
-                        android:id="@+id/tv_dollars"
-                        style="@style/shadowLabelStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="50"
-                        android:gravity="center_vertical"
-                        android:paddingLeft="10dp"
-                        android:singleLine="true"
-                        android:text="@string/dollars_label" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="5dp" >
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
 
                 <TextView
-                    android:id="@+id/tv_buy_date"
+                    android:id="@+id/tv_shares"
+                    style="@style/shadowLabelStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:text="@string/shares_label" />
+
+                <TextView
+                    android:id="@+id/tv_dollars"
+                    style="@style/shadowLabelStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:text="@string/dollars_label" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/tv_buy_date"
+                style="@style/shadowLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:text="@string/buy_date_label" />
+
+            <TextView
+                android:id="@+id/tv_sell_date"
+                style="@style/shadowLabelStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="@string/sell_date_label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp" >
+
+            <EditText
+                android:id="@+id/et_buy_date"
+                style="@style/textStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="50"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:hint="@string/buy_date_hint"
+                android:inputType="none"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/et_sell_date"
+                style="@style/textStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="50"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:gravity="center"
+                android:hint="@string/sell_date_hint"
+                android:inputType="none"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_quote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/quote_bg"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="invisible" >
+
+            <LinearLayout
+                android:id="@+id/ll_price_labels"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
                     style="@style/shadowLabelStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -206,10 +210,9 @@
                     android:gravity="center"
                     android:paddingRight="5dp"
                     android:singleLine="true"
-                    android:text="@string/buy_date_label" />
+                    android:text="@string/buy_price_label" />
 
                 <TextView
-                    android:id="@+id/tv_sell_date"
                     style="@style/shadowLabelStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -217,139 +220,65 @@
                     android:gravity="center"
                     android:paddingLeft="5dp"
                     android:singleLine="true"
-                    android:text="@string/sell_date_label" />
+                    android:text="@string/sell_price_label" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_price_values"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingTop="5dp" >
+                android:visibility="gone" >
 
-                <EditText
-                    android:id="@+id/et_buy_date"
-                    style="@style/textStyle"
+                <TextView
+                    android:id="@+id/tv_buy_price"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
                     android:layout_weight="50"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
                     android:gravity="center"
-                    android:hint="@string/buy_date_hint"
-                    android:inputType="none"
-                    android:singleLine="true" />
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/et_sell_date"
-                    style="@style/textStyle"
+                <TextView
+                    android:id="@+id/tv_sell_price"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
                     android:layout_weight="50"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
                     android:gravity="center"
-                    android:hint="@string/sell_date_hint"
-                    android:inputType="none"
-                    android:singleLine="true" />
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ll_quote"
+                android:id="@+id/ll_net"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/quote_bg"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="5dp"
-                android:visibility="invisible" >
+                android:paddingTop="10dp"
+                android:visibility="gone" >
 
-                <LinearLayout
-                    android:id="@+id/ll_price_labels"
+                <TextView
+                    android:id="@+id/tv_net_label"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:visibility="gone" >
+                    android:gravity="center"
+                    android:textSize="20sp" />
 
-                    <TextView
-                        style="@style/shadowLabelStyle"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center"
-                        android:paddingRight="5dp"
-                        android:singleLine="true"
-                        android:text="@string/buy_price_label" />
-
-                    <TextView
-                        style="@style/shadowLabelStyle"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center"
-                        android:paddingLeft="5dp"
-                        android:singleLine="true"
-                        android:text="@string/sell_price_label" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ll_price_values"
+                <TextView
+                    android:id="@+id/tv_net"
+                    style="@style/shadowLabelStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:visibility="gone" >
-
-                    <TextView
-                        android:id="@+id/tv_buy_price"
-                        style="@style/shadowLabelStyle"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center"
-                        android:paddingRight="5dp"
-                        android:singleLine="true"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tv_sell_price"
-                        style="@style/shadowLabelStyle"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="50"
-                        android:gravity="center"
-                        android:paddingLeft="5dp"
-                        android:singleLine="true"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ll_net"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingTop="10dp"
-                    android:visibility="gone" >
-
-                    <TextView
-                        android:id="@+id/tv_net_label"
-                        style="@style/shadowLabelStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/tv_net"
-                        style="@style/shadowLabelStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>
