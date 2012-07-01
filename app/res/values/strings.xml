@@ -27,5 +27,6 @@
     <string name="no_quote_for_sell_date">Stock quote unavailable for selected sell date. Please select a later date.</string>
     <string name="set_buy_date">Set Buy Date</string>
     <string name="set_sell_date">Set Sell Date</string>
+    <string name="main_subtitle">Stock Purchase Simulator</string>
 
 </resources>

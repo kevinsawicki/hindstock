@@ -46,6 +46,7 @@ import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
+import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
@@ -147,6 +148,10 @@ public class HindStockActivity extends SherlockActivity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(layout.main);
+
+		ActionBar actionBar = getSupportActionBar();
+		actionBar.setTitle(string.app_name);
+		actionBar.setSubtitle(string.main_subtitle);
 
 		symbolText = (AutoCompleteTextView) findViewById(id.actv_stock);
 		shareText = (EditText) findViewById(id.et_shares);
