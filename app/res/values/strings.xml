@@ -28,5 +28,6 @@
     <string name="set_buy_date">Set Buy Date</string>
     <string name="set_sell_date">Set Sell Date</string>
     <string name="main_subtitle">Stock Purchase Simulator</string>
+    <string name="title_select_stock">Select a Stock</string>
 
 </resources>

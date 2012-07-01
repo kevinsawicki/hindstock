@@ -20,6 +20,7 @@ import static android.view.KeyEvent.KEYCODE_ENTER;
 import static android.view.View.VISIBLE;
 import static android.view.inputmethod.EditorInfo.IME_ACTION_DONE;
 import static android.widget.Toast.LENGTH_LONG;
+import static com.github.kevinsawicki.hindstock.IntentConstant.EXTRA_STOCK;
 import static java.text.DateFormat.SHORT;
 import static java.util.Calendar.DAY_OF_MONTH;
 import static java.util.Calendar.MONTH;
@@ -27,6 +28,7 @@ import static java.util.Calendar.YEAR;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -35,7 +37,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnKeyListener;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AutoCompleteTextView;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.DatePicker;
@@ -79,6 +80,8 @@ public class HindStockActivity extends SherlockActivity {
 
 	private static final String EXTRA_QUOTE = "quote";
 
+	private static final int REQUEST_SELECT_STOCK = 1;
+
 	private final NumberFormat numberFormat = NumberFormat.getIntegerInstance();
 
 	private final NumberFormat decimalFormat = new DecimalFormat("0.00");
@@ -93,7 +96,7 @@ public class HindStockActivity extends SherlockActivity {
 
 	private boolean calculating;
 
-	private AutoCompleteTextView symbolText;
+	private EditText symbolText;
 
 	private EditText shareText;
 
@@ -153,7 +156,7 @@ public class HindStockActivity extends SherlockActivity {
 		actionBar.setTitle(string.app_name);
 		actionBar.setSubtitle(string.main_subtitle);
 
-		symbolText = (AutoCompleteTextView) findViewById(id.actv_stock);
+		symbolText = (EditText) findViewById(id.et_symbol);
 		shareText = (EditText) findViewById(id.et_shares);
 		dollarText = (EditText) findViewById(id.et_dollars);
 		buyDateText = (EditText) findViewById(id.et_buy_date);
@@ -169,13 +172,20 @@ public class HindStockActivity extends SherlockActivity {
 		sharesButton = (RadioButton) findViewById(id.rb_shares);
 		dollarsButton = (RadioButton) findViewById(id.rb_dollars);
 
+		symbolText.setOnClickListener(new OnClickListener() {
+
+			public void onClick(View v) {
+				startActivityForResult(new Intent(HindStockActivity.this,
+						SelectStockActivity.class), REQUEST_SELECT_STOCK);
+			}
+		});
+
 		buyDate.add(YEAR, -1);
 
 		setupDateArea();
 		setupQuantityArea();
 		setupDoneListeners();
 
-		loadStocks();
 	}
 
 	private void setupDoneListeners() {
@@ -319,17 +329,6 @@ public class HindStockActivity extends SherlockActivity {
 		quote = (Quote) savedInstanceState.get(EXTRA_QUOTE);
 		if (quote != null)
 			displayQuote(quote);
-	}
-
-	private void loadStocks() {
-		new StockListLoader(this) {
-
-			@Override
-			protected void onPostExecute(Stock[] result) {
-				symbolText.setAdapter(new StockListAdapter(layout.stock,
-						getLayoutInflater(), result));
-			};
-		}.execute();
 	}
 
 	private void showQuoteException(final IOException e) {
@@ -570,5 +569,16 @@ public class HindStockActivity extends SherlockActivity {
 				showQuoteException(cause);
 			}
 		}.execute();
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (REQUEST_SELECT_STOCK == requestCode && resultCode == RESULT_OK
+				&& data != null) {
+			Stock stock = (Stock) data.getSerializableExtra(EXTRA_STOCK
+					.toString());
+			symbolText.setText(stock.symbol);
+		} else
+			super.onActivityResult(requestCode, resultCode, data);
 	}
 }

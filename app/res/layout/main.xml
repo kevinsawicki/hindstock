@@ -23,11 +23,13 @@
                 android:singleLine="true"
                 android:text="@string/symbol_label" />
 
-            <AutoCompleteTextView
-                android:id="@+id/actv_stock"
+            <EditText
+                android:id="@+id/et_symbol"
                 style="@style/textStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
                 android:hint="@string/symbol_hint"
                 android:imeOptions="actionDone"
                 android:inputType="text" />
