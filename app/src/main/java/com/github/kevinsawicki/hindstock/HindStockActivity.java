@@ -20,6 +20,7 @@ import static android.view.KeyEvent.KEYCODE_ENTER;
 import static android.view.View.VISIBLE;
 import static android.view.inputmethod.EditorInfo.IME_ACTION_DONE;
 import static android.widget.Toast.LENGTH_LONG;
+import static com.github.kevinsawicki.hindstock.IntentConstant.EXTRA_QUOTE;
 import static com.github.kevinsawicki.hindstock.IntentConstant.EXTRA_STOCK;
 import static java.text.DateFormat.SHORT;
 import static java.util.Calendar.DAY_OF_MONTH;
@@ -78,8 +79,6 @@ public class HindStockActivity extends SherlockActivity {
 
 	private static final int ID_SELL_DATE = 1;
 
-	private static final String EXTRA_QUOTE = "quote";
-
 	private static final int REQUEST_SELECT_STOCK = 1;
 
 	private final NumberFormat numberFormat = NumberFormat.getIntegerInstance();
@@ -94,9 +93,13 @@ public class HindStockActivity extends SherlockActivity {
 
 	private Quote quote;
 
+	private Stock stock;
+
 	private boolean calculating;
 
-	private EditText symbolText;
+	private TextView symbolText;
+
+	private TextView nameText;
 
 	private EditText shareText;
 
@@ -156,7 +159,8 @@ public class HindStockActivity extends SherlockActivity {
 		actionBar.setTitle(string.app_name);
 		actionBar.setSubtitle(string.main_subtitle);
 
-		symbolText = (EditText) findViewById(id.et_symbol);
+		symbolText = (TextView) findViewById(id.tv_symbol);
+		nameText = (TextView) findViewById(id.tv_name);
 		shareText = (EditText) findViewById(id.et_shares);
 		dollarText = (EditText) findViewById(id.et_dollars);
 		buyDateText = (EditText) findViewById(id.et_buy_date);
@@ -172,13 +176,16 @@ public class HindStockActivity extends SherlockActivity {
 		sharesButton = (RadioButton) findViewById(id.rb_shares);
 		dollarsButton = (RadioButton) findViewById(id.rb_dollars);
 
-		symbolText.setOnClickListener(new OnClickListener() {
+		findViewById(id.ll_symbol_area).setOnClickListener(
+				new OnClickListener() {
 
-			public void onClick(View v) {
-				startActivityForResult(new Intent(HindStockActivity.this,
-						SelectStockActivity.class), REQUEST_SELECT_STOCK);
-			}
-		});
+					public void onClick(View v) {
+						startActivityForResult(new Intent(
+								HindStockActivity.this,
+								SelectStockActivity.class),
+								REQUEST_SELECT_STOCK);
+					}
+				});
 
 		buyDate.add(YEAR, -1);
 
@@ -186,6 +193,7 @@ public class HindStockActivity extends SherlockActivity {
 		setupQuantityArea();
 		setupDoneListeners();
 
+		setStock(new Stock("GOOG", "Google Inc."));
 	}
 
 	private void setupDoneListeners() {
@@ -293,8 +301,10 @@ public class HindStockActivity extends SherlockActivity {
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
+
 		if (quote != null)
-			outState.putSerializable(EXTRA_QUOTE, quote);
+			outState.putSerializable(EXTRA_QUOTE.toString(), quote);
+		outState.putSerializable(EXTRA_STOCK.toString(), stock);
 	}
 
 	@Override
@@ -326,7 +336,11 @@ public class HindStockActivity extends SherlockActivity {
 		else
 			sellDate = new GregorianCalendar();
 
-		quote = (Quote) savedInstanceState.get(EXTRA_QUOTE);
+		stock = (Stock) savedInstanceState.get(EXTRA_STOCK.toString());
+		if (stock != null)
+			setStock(stock);
+
+		quote = (Quote) savedInstanceState.get(EXTRA_QUOTE.toString());
 		if (quote != null)
 			displayQuote(quote);
 	}
@@ -571,14 +585,18 @@ public class HindStockActivity extends SherlockActivity {
 		}.execute();
 	}
 
+	private void setStock(final Stock stock) {
+		this.stock = stock;
+		symbolText.setText(stock.symbol);
+		nameText.setText(stock.name);
+	}
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (REQUEST_SELECT_STOCK == requestCode && resultCode == RESULT_OK
-				&& data != null) {
-			Stock stock = (Stock) data.getSerializableExtra(EXTRA_STOCK
-					.toString());
-			symbolText.setText(stock.symbol);
-		} else
+				&& data != null)
+			setStock((Stock) data.getSerializableExtra(EXTRA_STOCK.toString()));
+		else
 			super.onActivityResult(requestCode, resultCode, data);
 	}
 }

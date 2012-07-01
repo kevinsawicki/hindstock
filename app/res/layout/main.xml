@@ -7,32 +7,51 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp" >
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
 
         <LinearLayout
+            android:id="@+id/ll_symbol_area"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="vertical" >
 
             <TextView
                 style="@style/shadowLabelStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
                 android:singleLine="true"
                 android:text="@string/symbol_label" />
 
-            <EditText
-                android:id="@+id/et_symbol"
-                style="@style/textStyle"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:hint="@string/symbol_hint"
-                android:imeOptions="actionDone"
-                android:inputType="text" />
+                android:layout_marginTop="5dp"
+                android:background="@drawable/quote_bg"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_symbol"
+                    style="@style/textStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/labelStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/text_light"
+                    android:textSize="14sp" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout

@@ -15,12 +15,19 @@
  */
 package com.github.kevinsawicki.hindstock;
 
+import com.github.kevinsawicki.hindstock.GainLossRequest.Quote;
+
 import android.content.Intent;
 
 /**
  * Constants for use with {@link Intent}s
  */
 public enum IntentConstant {
+
+	/**
+	 * Handle to a {@link Quote}
+	 */
+	EXTRA_QUOTE("quote"),
 
 	/**
 	 * Handle to a {@link Stock}

@@ -12,7 +12,7 @@
     <string name="shares_label">shares</string>
     <string name="dollars_hint">1000</string>
     <string name="symbol_hint">GOOG</string>
-    <string name="symbol_label">Symbol</string>
+    <string name="symbol_label">Stock</string>
     <string name="shares_hint">100</string>
     <string name="buy_price_label">Buy Price</string>
     <string name="sell_price_label">Sell Price</string>
