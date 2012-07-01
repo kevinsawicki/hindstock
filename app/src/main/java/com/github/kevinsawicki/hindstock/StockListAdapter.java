@@ -46,6 +46,7 @@ public class StockListAdapter extends ItemListAdapter<Stock> implements
 			nameText = (TextView) view.findViewById(id.tv_name);
 		}
 
+		@Override
 		public void update(Stock item) {
 			symbolText.setText(item.symbol);
 			nameText.setText(item.name);
