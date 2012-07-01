@@ -15,10 +15,14 @@
  */
 package com.github.kevinsawicki.hindstock;
 
+import java.io.Serializable;
+
 /**
  * Stock model class
  */
-public class Stock {
+public class Stock implements Serializable {
+
+	private static final long serialVersionUID = -1464588657421842064L;
 
 	/**
 	 * Name of stock
