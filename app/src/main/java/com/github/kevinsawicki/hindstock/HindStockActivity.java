@@ -21,7 +21,6 @@ import static android.view.View.VISIBLE;
 import static android.view.inputmethod.EditorInfo.IME_ACTION_DONE;
 import static android.widget.Toast.LENGTH_LONG;
 import static com.github.kevinsawicki.hindstock.IntentConstant.EXTRA_QUOTE;
-import static com.github.kevinsawicki.hindstock.IntentConstant.EXTRA_STOCK;
 import static java.text.DateFormat.SHORT;
 import static java.util.Calendar.DAY_OF_MONTH;
 import static java.util.Calendar.MONTH;
@@ -29,7 +28,6 @@ import static java.util.Calendar.YEAR;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -38,6 +36,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnKeyListener;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -77,8 +76,6 @@ public class HindStockActivity extends SherlockActivity {
 
 	private static final int ID_SELL_DATE = 1;
 
-	private static final int REQUEST_SELECT_STOCK = 1;
-
 	private final NumberFormat numberFormat = NumberFormat.getIntegerInstance();
 
 	private final NumberFormat decimalFormat = new DecimalFormat("0.00");
@@ -91,13 +88,9 @@ public class HindStockActivity extends SherlockActivity {
 
 	private Quote quote;
 
-	private Stock stock;
-
 	private boolean calculating;
 
-	private TextView symbolText;
-
-	private TextView nameText;
+	private AutoCompleteTextView symbolText;
 
 	private EditText amountText;
 
@@ -153,8 +146,7 @@ public class HindStockActivity extends SherlockActivity {
 		actionBar.setTitle(string.app_name);
 		actionBar.setSubtitle(string.main_subtitle);
 
-		symbolText = (TextView) findViewById(id.tv_symbol);
-		nameText = (TextView) findViewById(id.tv_name);
+		symbolText = (AutoCompleteTextView) findViewById(id.actv_stock);
 		amountText = (EditText) findViewById(id.et_amount);
 		buyDateText = (EditText) findViewById(id.et_buy_date);
 		sellDateText = (EditText) findViewById(id.et_sell_date);
@@ -168,23 +160,23 @@ public class HindStockActivity extends SherlockActivity {
 		quoteArea = findViewById(id.ll_quote);
 		dollarsButton = (RadioButton) findViewById(id.rb_dollars);
 
-		findViewById(id.ll_symbol_area).setOnClickListener(
-				new OnClickListener() {
-
-					public void onClick(View v) {
-						startActivityForResult(new Intent(
-								HindStockActivity.this,
-								SelectStockActivity.class),
-								REQUEST_SELECT_STOCK);
-					}
-				});
-
 		buyDate.add(YEAR, -1);
 
 		setupDateArea();
 		setupDoneListeners();
 
-		setStock(new Stock("GOOG", "Google Inc."));
+		loadStocks();
+	}
+
+	private void loadStocks() {
+		new StockListLoader(this) {
+
+			@Override
+			protected void onPostExecute(Stock[] result) {
+				symbolText.setAdapter(new StockListAdapter(layout.stock,
+						getLayoutInflater(), result));
+			};
+		}.execute();
 	}
 
 	private void setupDoneListeners() {
@@ -245,7 +237,6 @@ public class HindStockActivity extends SherlockActivity {
 
 		if (quote != null)
 			outState.putSerializable(EXTRA_QUOTE.toString(), quote);
-		outState.putSerializable(EXTRA_STOCK.toString(), stock);
 	}
 
 	@Override
@@ -276,10 +267,6 @@ public class HindStockActivity extends SherlockActivity {
 			}
 		else
 			sellDate = new GregorianCalendar();
-
-		stock = (Stock) savedInstanceState.get(EXTRA_STOCK.toString());
-		if (stock != null)
-			setStock(stock);
 
 		quote = (Quote) savedInstanceState.get(EXTRA_QUOTE.toString());
 		if (quote != null)
@@ -509,20 +496,5 @@ public class HindStockActivity extends SherlockActivity {
 				showQuoteException(cause);
 			}
 		}.execute();
-	}
-
-	private void setStock(final Stock stock) {
-		this.stock = stock;
-		symbolText.setText(stock.symbol);
-		nameText.setText(stock.name);
-	}
-
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (REQUEST_SELECT_STOCK == requestCode && resultCode == RESULT_OK
-				&& data != null)
-			setStock((Stock) data.getSerializableExtra(EXTRA_STOCK.toString()));
-		else
-			super.onActivityResult(requestCode, resultCode, data);
 	}
 }
