@@ -38,8 +38,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnKeyListener;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -101,9 +99,7 @@ public class HindStockActivity extends SherlockActivity {
 
 	private TextView nameText;
 
-	private EditText shareText;
-
-	private EditText dollarText;
+	private EditText amountText;
 
 	private EditText buyDateText;
 
@@ -124,8 +120,6 @@ public class HindStockActivity extends SherlockActivity {
 	private TextView netLabel;
 
 	private TextView netText;
-
-	private RadioButton sharesButton;
 
 	private RadioButton dollarsButton;
 
@@ -161,8 +155,7 @@ public class HindStockActivity extends SherlockActivity {
 
 		symbolText = (TextView) findViewById(id.tv_symbol);
 		nameText = (TextView) findViewById(id.tv_name);
-		shareText = (EditText) findViewById(id.et_shares);
-		dollarText = (EditText) findViewById(id.et_dollars);
+		amountText = (EditText) findViewById(id.et_amount);
 		buyDateText = (EditText) findViewById(id.et_buy_date);
 		sellDateText = (EditText) findViewById(id.et_sell_date);
 		priceLabelsArea = (LinearLayout) findViewById(id.ll_price_labels);
@@ -173,7 +166,6 @@ public class HindStockActivity extends SherlockActivity {
 		netLabel = (TextView) findViewById(id.tv_net_label);
 		netText = (TextView) findViewById(id.tv_net);
 		quoteArea = findViewById(id.ll_quote);
-		sharesButton = (RadioButton) findViewById(id.rb_shares);
 		dollarsButton = (RadioButton) findViewById(id.rb_dollars);
 
 		findViewById(id.ll_symbol_area).setOnClickListener(
@@ -190,7 +182,6 @@ public class HindStockActivity extends SherlockActivity {
 		buyDate.add(YEAR, -1);
 
 		setupDateArea();
-		setupQuantityArea();
 		setupDoneListeners();
 
 		setStock(new Stock("GOOG", "Google Inc."));
@@ -208,9 +199,7 @@ public class HindStockActivity extends SherlockActivity {
 					return false;
 			}
 		};
-		symbolText.setOnKeyListener(doneKeyListener);
-		shareText.setOnKeyListener(doneKeyListener);
-		dollarText.setOnKeyListener(doneKeyListener);
+		amountText.setOnKeyListener(doneKeyListener);
 
 		OnEditorActionListener doneEditorActionListener = new OnEditorActionListener() {
 
@@ -223,9 +212,7 @@ public class HindStockActivity extends SherlockActivity {
 					return false;
 			}
 		};
-		symbolText.setOnEditorActionListener(doneEditorActionListener);
-		shareText.setOnEditorActionListener(doneEditorActionListener);
-		dollarText.setOnEditorActionListener(doneEditorActionListener);
+		amountText.setOnEditorActionListener(doneEditorActionListener);
 	}
 
 	private void setupDateArea() {
@@ -250,52 +237,6 @@ public class HindStockActivity extends SherlockActivity {
 		};
 		findViewById(id.tv_buy_date).setOnClickListener(buyDateListener);
 		buyDateText.setOnClickListener(buyDateListener);
-	}
-
-	/**
-	 * Bind the given radio button to enable and set focus to the given text
-	 * view when the button is checked
-	 *
-	 * @param button
-	 * @param text
-	 */
-	private void bindButtonToText(final RadioButton button, final TextView text) {
-		button.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
-			public void onCheckedChanged(CompoundButton buttonView,
-					boolean isChecked) {
-				text.setEnabled(isChecked);
-				text.setFocusable(isChecked);
-				text.setFocusableInTouchMode(isChecked);
-				if (isChecked)
-					text.requestFocus();
-			}
-		});
-	}
-
-	private void setupQuantityArea() {
-		bindButtonToText(sharesButton, shareText);
-		bindButtonToText(dollarsButton, dollarText);
-
-		OnClickListener sharesListener = new OnClickListener() {
-
-			public void onClick(View v) {
-				dollarsButton.setChecked(false);
-				sharesButton.setChecked(true);
-			}
-		};
-		findViewById(id.tv_shares).setOnClickListener(sharesListener);
-		shareText.setOnClickListener(sharesListener);
-
-		OnClickListener dollarsListener = new OnClickListener() {
-
-			public void onClick(View v) {
-				sharesButton.setChecked(false);
-				dollarsButton.setChecked(true);
-			}
-		};
-		findViewById(id.tv_dollars).setOnClickListener(dollarsListener);
-		dollarText.setOnClickListener(dollarsListener);
 	}
 
 	@Override
@@ -374,8 +315,8 @@ public class HindStockActivity extends SherlockActivity {
 		return !TextUtils.isEmpty(symbol) ? symbol : "GOOG";
 	}
 
-	private float getShares() {
-		String text = shareText.getText().toString().trim();
+	private float getAmount() {
+		String text = amountText.getText().toString().trim();
 		if (TextUtils.isEmpty(text))
 			return 100;
 
@@ -383,21 +324,7 @@ public class HindStockActivity extends SherlockActivity {
 			return Float.parseFloat(text);
 		} catch (NumberFormatException nfe) {
 			Toast.makeText(getApplicationContext(),
-					string.error_parsing_share_amount, LENGTH_LONG).show();
-			return -1;
-		}
-	}
-
-	private float getDollars() {
-		String text = dollarText.getText().toString().trim();
-		if (TextUtils.isEmpty(text))
-			return 1000;
-
-		try {
-			return Float.parseFloat(text);
-		} catch (NumberFormatException nfe) {
-			Toast.makeText(getApplicationContext(),
-					string.error_parsing_dollar_amount, LENGTH_LONG).show();
+					string.error_parsing_amount, LENGTH_LONG).show();
 			return -1;
 		}
 	}
@@ -546,8 +473,7 @@ public class HindStockActivity extends SherlockActivity {
 			calculateItem.setEnabled(!calculating);
 
 		symbolText.setEnabled(!calculating);
-		shareText.setEnabled(!calculating);
-		dollarText.setEnabled(!calculating);
+		amountText.setEnabled(!calculating);
 	}
 
 	private boolean canCalculate() {
@@ -561,11 +487,11 @@ public class HindStockActivity extends SherlockActivity {
 		float dollars;
 		float shares;
 		if (dollarsButton.isChecked()) {
-			dollars = getDollars();
+			dollars = getAmount();
 			shares = -1;
 		} else {
 			dollars = -1;
-			shares = getShares();
+			shares = getAmount();
 		}
 
 		showCalculating(true);
