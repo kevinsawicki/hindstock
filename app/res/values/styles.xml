@@ -9,7 +9,6 @@
     <style name="labelStyle">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/text</item>
-        <item name="android:typeface">serif</item>
     </style>
 
     <style name="shadowLabelStyle" parent="labelStyle">
