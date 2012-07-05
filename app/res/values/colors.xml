@@ -8,12 +8,12 @@
     <color name="cursor">#B0B0B0</color>
     <color name="hint">#B0B0B0</color>
     <color name="background_light">#FFFFFF</color>
-    <color name="background">#F2F2F2</color>
-    <color name="background_edit_text">#F6F6F6</color>
+    <color name="background">#EFEFEF</color>
+    <color name="background_edit_text">#F2F2F2</color>
     <color name="header_shadow">#1F272C</color>
     <color name="header_bottom">#FFFFFF</color>
     <color name="header_bg_start">#679D67</color>
     <color name="header_bg_end">#355E35</color>
-    <color name="separator">#B2B2B2</color>
+    <color name="outline">#AEAEAE</color>
 
 </resources>
