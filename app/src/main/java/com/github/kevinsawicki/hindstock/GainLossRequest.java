@@ -163,7 +163,7 @@ public abstract class GainLossRequest extends AsyncTask<Void, Integer, Quote> {
 		}
 
 		float price = buyRequest.getOpen();
-		if (price == 0.0F)
+		if (price <= 0.0F)
 			price = buyRequest.getClose();
 		return price;
 
@@ -182,7 +182,7 @@ public abstract class GainLossRequest extends AsyncTask<Void, Integer, Quote> {
 		}
 
 		float price = sellRequest.getClose();
-		if (price == 0.0F)
+		if (price <= 0.0F)
 			price = sellRequest.getOpen();
 		return price;
 	}
