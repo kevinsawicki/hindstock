@@ -11,17 +11,13 @@
 
     <TextView
         android:id="@+id/tv_symbol"
-        style="@style/textStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/textView"
         android:paddingBottom="5dp"
         android:singleLine="true" />
 
     <TextView
         android:id="@+id/tv_name"
-        style="@style/labelStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/textView"
         android:singleLine="true"
         android:textColor="@color/text_light"
         android:textSize="14sp" />

@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="textStyle">
+    <style name="global">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="textView" parent="global">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/text</item>
     </style>
 
-    <style name="labelStyle">
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/text</item>
-    </style>
-
-    <style name="shadowLabelStyle" parent="labelStyle">
+    <style name="shadowTextView" parent="textView">
         <item name="android:shadowDx">1</item>
         <item name="android:shadowDy">1</item>
         <item name="android:shadowRadius">1</item>
         <item name="android:shadowColor">@color/background_light</item>
+    </style>
+
+    <style name="editText" parent="global">
+        <item name="android:background">@drawable/edit_text_bg</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text</item>
     </style>
 
 </resources>

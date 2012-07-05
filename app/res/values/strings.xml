@@ -6,8 +6,8 @@
     <string name="calculate">Calculate</string>
     <string name="sell_date_hint">today</string>
     <string name="buy_date_hint">1 year ago</string>
-    <string name="sell_date_label">Sell</string>
-    <string name="buy_date_label">Buy</string>
+    <string name="sell_date_label">Sell Date</string>
+    <string name="buy_date_label">Buy Date</string>
     <string name="dollars_label">dollars</string>
     <string name="shares_label">shares</string>
     <string name="dollars_hint">1000</string>
