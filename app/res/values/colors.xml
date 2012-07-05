@@ -5,6 +5,8 @@
     <color name="loss">#8F1114</color>
     <color name="text">#111111</color>
     <color name="text_light">#888888</color>
+    <color name="cursor">#B0B0B0</color>
+    <color name="hint">#B0B0B0</color>
     <color name="background_light">#FFFFFF</color>
     <color name="background">#F2F2F2</color>
     <color name="background_quote">#F6F6F6</color>
