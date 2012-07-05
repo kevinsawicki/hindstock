@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Hind Stock</string>
+    <string name="app_name">Stocky</string>
     <string name="calculating">Calculating…</string>
     <string name="calculate">Calculate</string>
     <string name="sell_date_hint">today</string>

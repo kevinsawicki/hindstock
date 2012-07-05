@@ -68,7 +68,7 @@ import java.util.GregorianCalendar;
  * Main activity to compute the net gain/loss on a theoretical stock purchase of
  * either a quantity of shares or dollar amount investment.
  */
-public class HindStockActivity extends SherlockActivity {
+public class PurchaseActivity extends SherlockActivity {
 
 	private static final String TAG = "HindStock";
 
@@ -486,7 +486,7 @@ public class HindStockActivity extends SherlockActivity {
 
 			@Override
 			protected void onSuccess(Quote quote) {
-				HindStockActivity.this.quote = quote;
+				PurchaseActivity.this.quote = quote;
 				displayQuote(quote);
 			}
 
