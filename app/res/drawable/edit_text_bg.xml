@@ -25,7 +25,7 @@
         android:right="2dp"
         android:top="2dp">
         <shape>
-            <solid android:color="@color/background_quote" />
+            <solid android:color="@color/background_edit_text" />
 
             <corners android:radius="1dp" />
         </shape>
