@@ -17,12 +17,11 @@ package com.github.kevinsawicki.hindstock;
 
 import static java.util.Locale.US;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.TextView;
 
 import com.github.kevinsawicki.hindstock.R.id;
+import com.github.kevinsawicki.wishlist.SingleTypeAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,42 +29,21 @@ import java.util.List;
 /**
  * Adapter to display a list of stocks
  */
-public class StockListAdapter extends ItemListAdapter<Stock> implements
+public class StockListAdapter extends SingleTypeAdapter<Stock> implements
 		Filterable {
 
-	private static class StockView extends ItemView<Stock> {
-
-		private final TextView symbolText;
-		private final TextView nameText;
-
-		/**
-		 * @param view
-		 */
-		public StockView(View view) {
-			symbolText = (TextView) view.findViewById(id.tv_symbol);
-			nameText = (TextView) view.findViewById(id.tv_name);
-		}
-
-		@Override
-		public void update(Stock item) {
-			symbolText.setText(item.symbol);
-			nameText.setText(item.name);
-		}
-	}
+	private final Stock[] initialItems;
 
 	/**
-	 * @param viewId
+	 * @param layoutId
 	 * @param inflater
-	 * @param elements
+	 * @param items
 	 */
-	public StockListAdapter(int viewId, LayoutInflater inflater,
-			Stock[] elements) {
-		super(viewId, inflater, elements);
-	}
+	public StockListAdapter(int layoutId, LayoutInflater inflater, Stock[] items) {
+		super(inflater, layoutId);
 
-	@Override
-	protected ItemView<Stock> createItemView(View view) {
-		return new StockView(view);
+		this.initialItems = items;
+		setItems(items);
 	}
 
 	public Filter getFilter() {
@@ -85,13 +63,12 @@ public class StockListAdapter extends ItemListAdapter<Stock> implements
 			@Override
 			protected FilterResults performFiltering(CharSequence prefix) {
 				FilterResults results = new FilterResults();
-				final Stock[] initial = getInitialElements();
 
 				if (prefix != null && prefix.length() > 0) {
 					String upperPrefix = prefix.toString().toUpperCase(US);
 					List<Stock> filteredSymbols = new ArrayList<Stock>();
 					List<Stock> filteredNames = new ArrayList<Stock>();
-					for (Stock stock : initial)
+					for (Stock stock : initialItems)
 						if (stock.symbol.startsWith(upperPrefix))
 							filteredSymbols.add(stock);
 						else {
@@ -114,8 +91,8 @@ public class StockListAdapter extends ItemListAdapter<Stock> implements
 					results.values = filteredSymbols.toArray();
 					results.count = filteredSymbols.size();
 				} else {
-					results.values = initial;
-					results.count = initial.length;
+					results.values = initialItems;
+					results.count = initialItems.length;
 				}
 
 				return results;
@@ -131,5 +108,16 @@ public class StockListAdapter extends ItemListAdapter<Stock> implements
 					notifyDataSetInvalidated();
 			}
 		};
+	}
+
+	@Override
+	protected int[] getChildViewIds() {
+		return new int[] { id.tv_symbol, id.tv_name };
+	}
+
+	@Override
+	protected void update(int position, Stock item) {
+		setText(id.tv_symbol, item.symbol);
+		setText(id.tv_name, item.name);
 	}
 }
