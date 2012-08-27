@@ -15,10 +15,7 @@
  */
 package com.github.kevinsawicki.hindstock;
 
-import static android.view.KeyEvent.ACTION_DOWN;
-import static android.view.KeyEvent.KEYCODE_ENTER;
 import static android.view.View.VISIBLE;
-import static android.view.inputmethod.EditorInfo.IME_ACTION_DONE;
 import static android.widget.Toast.LENGTH_LONG;
 import static com.github.kevinsawicki.hindstock.IntentConstant.EXTRA_QUOTE;
 import static java.text.DateFormat.SHORT;
@@ -31,10 +28,8 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnKeyListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
@@ -42,7 +37,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -55,6 +49,8 @@ import com.github.kevinsawicki.hindstock.R.id;
 import com.github.kevinsawicki.hindstock.R.layout;
 import com.github.kevinsawicki.hindstock.R.menu;
 import com.github.kevinsawicki.hindstock.R.string;
+import com.github.kevinsawicki.wishlist.EditTextUtils;
+import com.github.kevinsawicki.wishlist.EditTextUtils.BooleanRunnable;
 import com.github.kevinsawicki.wishlist.ViewFinder;
 
 import java.io.IOException;
@@ -182,31 +178,16 @@ public class PurchaseActivity extends SherlockActivity {
 	}
 
 	private void setupDoneListeners() {
-		OnKeyListener doneKeyListener = new OnKeyListener() {
+		EditTextUtils.onDone(amountText, new BooleanRunnable() {
 
-			public boolean onKey(View v, int keyCode, KeyEvent event) {
-				if (event != null && ACTION_DOWN == event.getAction()
-						&& keyCode == KEYCODE_ENTER && canCalculate()) {
+			public boolean run() {
+				if (canCalculate()) {
 					calculate();
 					return true;
 				} else
 					return false;
 			}
-		};
-		amountText.setOnKeyListener(doneKeyListener);
-
-		OnEditorActionListener doneEditorActionListener = new OnEditorActionListener() {
-
-			public boolean onEditorAction(TextView v, int actionId,
-					KeyEvent event) {
-				if (actionId == IME_ACTION_DONE && canCalculate()) {
-					calculate();
-					return true;
-				} else
-					return false;
-			}
-		};
-		amountText.setOnEditorActionListener(doneEditorActionListener);
+		});
 	}
 
 	private void setupDateArea() {
