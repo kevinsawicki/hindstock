@@ -68,6 +68,13 @@
     </dependency>
 
     <dependency>
+      <groupId>com.github.kevinsawicki</groupId>
+      <artifactId>wishlist</artifactId>
+      <version>0.2</version>
+      <type>apklib</type>
+    </dependency>
+
+    <dependency>
       <groupId>com.actionbarsherlock</groupId>
       <artifactId>library</artifactId>
       <version>4.1.0</version>

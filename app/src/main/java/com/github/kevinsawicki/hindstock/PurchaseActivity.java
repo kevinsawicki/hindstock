@@ -55,6 +55,7 @@ import com.github.kevinsawicki.hindstock.R.id;
 import com.github.kevinsawicki.hindstock.R.layout;
 import com.github.kevinsawicki.hindstock.R.menu;
 import com.github.kevinsawicki.hindstock.R.string;
+import com.github.kevinsawicki.wishlist.ViewFinder;
 
 import java.io.IOException;
 import java.text.DateFormat;
@@ -146,19 +147,20 @@ public class PurchaseActivity extends SherlockActivity {
 		actionBar.setTitle(string.app_name);
 		actionBar.setSubtitle(string.main_subtitle);
 
-		symbolText = (AutoCompleteTextView) findViewById(id.actv_stock);
-		amountText = (EditText) findViewById(id.et_amount);
-		buyDateText = (EditText) findViewById(id.et_buy_date);
-		sellDateText = (EditText) findViewById(id.et_sell_date);
-		priceLabelsArea = (LinearLayout) findViewById(id.ll_price_labels);
-		priceValuesArea = (LinearLayout) findViewById(id.ll_price_values);
-		buyPriceText = (TextView) findViewById(id.tv_buy_price);
-		sellPriceText = (TextView) findViewById(id.tv_sell_price);
-		netArea = findViewById(id.ll_net);
-		netLabel = (TextView) findViewById(id.tv_net_label);
-		netText = (TextView) findViewById(id.tv_net);
-		quoteArea = findViewById(id.ll_quote);
-		dollarsButton = (RadioButton) findViewById(id.rb_dollars);
+		ViewFinder finder = new ViewFinder(this);
+		symbolText = finder.find(id.actv_stock);
+		amountText = finder.find(id.et_amount);
+		buyDateText = finder.find(id.et_buy_date);
+		sellDateText = finder.find(id.et_sell_date);
+		priceLabelsArea = finder.find(id.ll_price_labels);
+		priceValuesArea = finder.find(id.ll_price_values);
+		buyPriceText = finder.find(id.tv_buy_price);
+		sellPriceText = finder.find(id.tv_sell_price);
+		netArea = finder.find(id.ll_net);
+		netLabel = finder.find(id.tv_net_label);
+		netText = finder.find(id.tv_net);
+		quoteArea = finder.find(id.ll_quote);
+		dollarsButton = finder.find(id.rb_dollars);
 
 		buyDate.add(YEAR, -1);
 
