@@ -30,7 +30,7 @@ import java.util.List;
  */
 public class StockListLoader extends AsyncTask<Void, Void, Stock[]> {
 
-	private static final String TAG = "SLL";
+	private static final String TAG = "StockListLoader";
 
 	private final Context context;
 
