@@ -17,6 +17,7 @@ package com.github.kevinsawicki.hindstock;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.text.TextUtils;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -55,7 +56,7 @@ public class StockListLoader extends AsyncTask<Void, Void, Stock[]> {
 				if (symbol.length() == 0)
 					continue;
 				String name = reader.readLine();
-				if (name == null || name.length() == 0)
+				if (TextUtils.isEmpty(name))
 					continue;
 				stocks.add(new Stock(symbol, name));
 			}
