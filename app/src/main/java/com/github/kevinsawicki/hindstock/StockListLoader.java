@@ -44,6 +44,7 @@ public class StockListLoader extends AsyncTask<Void, Void, Stock[]> {
 		this.context = context;
 	}
 
+	@Override
 	protected Stock[] doInBackground(Void... params) {
 		List<Stock> stocks = new ArrayList<Stock>();
 		BufferedReader reader = null;
