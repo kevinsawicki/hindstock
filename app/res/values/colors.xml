@@ -12,8 +12,12 @@
     <color name="background_edit_text">#F2F2F2</color>
     <color name="header_shadow">#1F272C</color>
     <color name="header_bottom">#FFFFFF</color>
-    <color name="header_bg_start">#679D67</color>
-    <color name="header_bg_end">#355E35</color>
     <color name="outline">#AEAEAE</color>
+    <color name="actionbar_background_top1">#085010</color>
+    <color name="actionbar_background_top2">#5DB367</color>
+    <color name="actionbar_background_bottom1">#26572C</color>
+    <color name="actionbar_background_bottom2">#90C697</color>
+    <color name="actionbar_background_end">#37703E</color>
+    <color name="actionbar_background_start">#51A05A</color>
 
 </resources>

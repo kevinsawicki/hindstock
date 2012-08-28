@@ -8,8 +8,8 @@
     </style>
 
     <style name="Widget.Styled.ActionBar" parent="Widget.Sherlock.ActionBar.Solid">
-        <item name="background">@drawable/header_bg</item>
-        <item name="android:background">@drawable/header_bg</item>
+        <item name="background">@drawable/actionbar_background</item>
+        <item name="android:background">@drawable/actionbar_background</item>
     </style>
 
 </resources>

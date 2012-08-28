@@ -3,20 +3,34 @@
 
     <item>
         <shape android:shape="rectangle" >
-            <solid android:color="@color/header_bottom" />
+            <solid android:color="@color/actionbar_background_top1" />
         </shape>
     </item>
-    <item android:bottom="1px">
+    <item android:top="1dp">
         <shape android:shape="rectangle" >
-            <solid android:color="@color/header_shadow" />
+            <solid android:color="@color/actionbar_background_top2" />
         </shape>
     </item>
-    <item android:bottom="2px">
+    <item android:top="2dp">
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/actionbar_background_bottom2" />
+        </shape>
+    </item>
+    <item
+        android:bottom="1dp"
+        android:top="2dp">
+        <shape android:shape="rectangle" >
+            <solid android:color="@color/actionbar_background_bottom1" />
+        </shape>
+    </item>
+    <item
+        android:bottom="3dp"
+        android:top="2dp">
         <shape>
             <gradient
                 android:angle="270"
-                android:endColor="@color/header_bg_end"
-                android:startColor="@color/header_bg_start" />
+                android:endColor="@color/actionbar_background_end"
+                android:startColor="@color/actionbar_background_start" />
         </shape>
     </item>
 
