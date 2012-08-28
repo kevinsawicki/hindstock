@@ -16,7 +16,6 @@
 package com.github.kevinsawicki.hindstock;
 
 import static android.view.View.VISIBLE;
-import static android.widget.Toast.LENGTH_LONG;
 import static com.github.kevinsawicki.hindstock.IntentConstant.EXTRA_QUOTE;
 import static java.text.DateFormat.SHORT;
 import static java.util.Calendar.DAY_OF_MONTH;
@@ -37,7 +36,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
@@ -51,6 +49,7 @@ import com.github.kevinsawicki.hindstock.R.menu;
 import com.github.kevinsawicki.hindstock.R.string;
 import com.github.kevinsawicki.wishlist.EditTextUtils;
 import com.github.kevinsawicki.wishlist.EditTextUtils.BooleanRunnable;
+import com.github.kevinsawicki.wishlist.Toaster;
 import com.github.kevinsawicki.wishlist.ViewFinder;
 
 import java.io.IOException;
@@ -267,13 +266,7 @@ public class PurchaseActivity extends SherlockActivity {
 		else
 			message = string.requesting_quote_failed;
 
-		runOnUiThread(new Runnable() {
-
-			public void run() {
-				Toast.makeText(getApplicationContext(), message, LENGTH_LONG)
-						.show();
-			}
-		});
+		Toaster.showLong(this, message);
 	}
 
 	private int getColor(final int id) {
@@ -293,8 +286,7 @@ public class PurchaseActivity extends SherlockActivity {
 		try {
 			return Float.parseFloat(text);
 		} catch (NumberFormatException nfe) {
-			Toast.makeText(getApplicationContext(),
-					string.error_parsing_amount, LENGTH_LONG).show();
+			Toaster.showLong(this, string.error_parsing_amount);
 			return -1;
 		}
 	}
@@ -309,9 +301,8 @@ public class PurchaseActivity extends SherlockActivity {
 								monthOfYear, dayOfMonth);
 						Calendar today = new GregorianCalendar();
 						if (updated.after(today)) {
-							Toast.makeText(getApplicationContext(),
-									string.invalid_sell_date, LENGTH_LONG)
-									.show();
+							Toaster.showLong(PurchaseActivity.this,
+									string.invalid_sell_date);
 							updated = today;
 							if (TextUtils.isEmpty(sellDateText.getText()))
 								return;
@@ -336,9 +327,8 @@ public class PurchaseActivity extends SherlockActivity {
 						Calendar updated = new GregorianCalendar(year,
 								monthOfYear, dayOfMonth);
 						if (updated.after(sellDate)) {
-							Toast.makeText(getApplicationContext(),
-									string.invalid_buy_date, LENGTH_LONG)
-									.show();
+							Toaster.showLong(PurchaseActivity.this,
+									string.invalid_buy_date);
 							updated.setTimeInMillis(sellDate.getTimeInMillis());
 							updated.add(DAY_OF_MONTH, -1);
 						}
