@@ -67,7 +67,7 @@ import java.util.GregorianCalendar;
  */
 public class PurchaseActivity extends SherlockActivity {
 
-	private static final String TAG = "HindStock";
+	private static final String TAG = "PurchaseActivity";
 
 	private static final int ID_BUY_DATE = 0;
 
