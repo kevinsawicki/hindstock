@@ -117,7 +117,7 @@ public class StockListAdapter extends SingleTypeAdapter<Stock> implements
 
 	@Override
 	protected void update(int position, Stock item) {
-		setText(id.tv_symbol, item.symbol);
-		setText(id.tv_name, item.name);
+		setText(0, item.symbol);
+		setText(1, item.name);
 	}
 }
