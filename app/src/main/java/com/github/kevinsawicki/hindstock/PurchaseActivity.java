@@ -177,7 +177,7 @@ public class PurchaseActivity extends SherlockActivity {
 
 		buyDate.add(YEAR, -1);
 
-		setupDateArea();
+		setupDateArea(finder);
 		setupDoneListeners();
 
 		loadStocks();
@@ -207,7 +207,7 @@ public class PurchaseActivity extends SherlockActivity {
 		});
 	}
 
-	private void setupDateArea() {
+	private void setupDateArea(ViewFinder finder) {
 		OnClickListener sellDateListener = new OnClickListener() {
 
 			@SuppressWarnings("deprecation")
@@ -216,7 +216,7 @@ public class PurchaseActivity extends SherlockActivity {
 					showDialog(ID_SELL_DATE);
 			}
 		};
-		findViewById(id.tv_sell_date).setOnClickListener(sellDateListener);
+		finder.onClick(id.tv_sell_date, sellDateListener);
 		sellDateText.setOnClickListener(sellDateListener);
 
 		OnClickListener buyDateListener = new OnClickListener() {
@@ -227,7 +227,7 @@ public class PurchaseActivity extends SherlockActivity {
 					showDialog(ID_BUY_DATE);
 			}
 		};
-		findViewById(id.tv_buy_date).setOnClickListener(buyDateListener);
+		finder.onClick(id.tv_buy_date, buyDateListener);
 		buyDateText.setOnClickListener(buyDateListener);
 	}
 
