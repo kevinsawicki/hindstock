@@ -25,6 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ViewStocksActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/select_a_stock" />
     </application>
 
 </manifest>

@@ -17,6 +17,7 @@ package com.github.kevinsawicki.hindstock;
 
 import static android.view.View.VISIBLE;
 import static com.github.kevinsawicki.hindstock.IntentConstant.EXTRA_QUOTE;
+import static com.github.kevinsawicki.hindstock.IntentConstant.EXTRA_STOCK;
 import static java.text.DateFormat.SHORT;
 import static java.util.Calendar.DAY_OF_MONTH;
 import static java.util.Calendar.MONTH;
@@ -24,6 +25,10 @@ import static java.util.Calendar.YEAR;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnDismissListener;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -59,6 +64,7 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Main activity to compute the net gain/loss on a theoretical stock purchase of
@@ -67,6 +73,8 @@ import java.util.GregorianCalendar;
 public class PurchaseActivity extends SherlockActivity {
 
 	private static final String TAG = "PurchaseActivity";
+
+	private static final int REQUEST_BROWSE = 1;
 
 	private static final int ID_BUY_DATE = 0;
 
@@ -81,6 +89,8 @@ public class PurchaseActivity extends SherlockActivity {
 	private Calendar buyDate = new GregorianCalendar();
 
 	private Calendar sellDate = new GregorianCalendar();
+
+	private Calendar dialogDate = new GregorianCalendar();
 
 	private Quote quote;
 
@@ -156,6 +166,14 @@ public class PurchaseActivity extends SherlockActivity {
 		netText = finder.find(id.tv_net);
 		quoteArea = finder.find(id.ll_quote);
 		dollarsButton = finder.find(id.rb_dollars);
+
+		finder.onClick(id.tv_browse, new Runnable() {
+
+			public void run() {
+				startActivityForResult(new Intent(getApplicationContext(),
+						ViewStocksActivity.class), REQUEST_BROWSE);
+			}
+		});
 
 		buyDate.add(YEAR, -1);
 
@@ -291,54 +309,20 @@ public class PurchaseActivity extends SherlockActivity {
 		}
 	}
 
-	private DatePickerDialog createSellDateDialog() {
+	private DatePickerDialog createDateDialog(Calendar date, int title) {
 		DatePickerDialog dialog = new DatePickerDialog(this,
 				new OnDateSetListener() {
 
 					public void onDateSet(DatePicker view, int year,
 							int monthOfYear, int dayOfMonth) {
-						Calendar updated = new GregorianCalendar(year,
-								monthOfYear, dayOfMonth);
-						Calendar today = new GregorianCalendar();
-						if (updated.after(today)) {
-							Toaster.showLong(PurchaseActivity.this,
-									string.invalid_sell_date);
-							updated = today;
-							if (TextUtils.isEmpty(sellDateText.getText()))
-								return;
-						}
-
-						sellDate.setTimeInMillis(updated.getTimeInMillis());
-						sellDateText.setText(dateFormat.format(sellDate
-								.getTime()));
+						dialogDate.set(YEAR, year);
+						dialogDate.set(MONTH, monthOfYear);
+						dialogDate.set(DAY_OF_MONTH, dayOfMonth);
 					}
-				}, sellDate.get(YEAR), sellDate.get(MONTH),
-				sellDate.get(DAY_OF_MONTH));
-		dialog.setTitle(string.set_sell_date);
-		return dialog;
-	}
-
-	private DatePickerDialog createBuyDateDialog() {
-		DatePickerDialog dialog = new DatePickerDialog(this,
-				new OnDateSetListener() {
-
-					public void onDateSet(DatePicker view, int year,
-							int monthOfYear, int dayOfMonth) {
-						Calendar updated = new GregorianCalendar(year,
-								monthOfYear, dayOfMonth);
-						if (updated.after(sellDate)) {
-							Toaster.showLong(PurchaseActivity.this,
-									string.invalid_buy_date);
-							updated.setTimeInMillis(sellDate.getTimeInMillis());
-							updated.add(DAY_OF_MONTH, -1);
-						}
-
-						buyDate.setTimeInMillis(updated.getTimeInMillis());
-						buyDateText.setText(dateFormat.format(buyDate.getTime()));
-					}
-				}, buyDate.get(YEAR), buyDate.get(MONTH), buyDate
-						.get(DAY_OF_MONTH));
-		dialog.setTitle(string.set_buy_date);
+				}, date.get(YEAR), date.get(MONTH), date.get(DAY_OF_MONTH));
+		dialog.setTitle(title);
+		dialog.setCancelable(true);
+		dialog.setCanceledOnTouchOutside(true);
 		return dialog;
 	}
 
@@ -350,10 +334,51 @@ public class PurchaseActivity extends SherlockActivity {
 
 		switch (id) {
 		case ID_BUY_DATE:
+			final AtomicBoolean buyCancelled = new AtomicBoolean(false);
+			dialog.setOnCancelListener(new OnCancelListener() {
+
+				public void onCancel(DialogInterface dialog) {
+					buyCancelled.set(true);
+				}
+			});
+			dialog.setOnDismissListener(new OnDismissListener() {
+
+				public void onDismiss(DialogInterface dialog) {
+					if (buyCancelled.get())
+						return;
+
+					if (dialogDate.after(sellDate)) {
+						Toaster.showLong(PurchaseActivity.this,
+								string.invalid_buy_date);
+						dialogDate.setTimeInMillis(sellDate.getTimeInMillis());
+						dialogDate.add(DAY_OF_MONTH, -1);
+					}
+
+					buyDate.setTimeInMillis(dialogDate.getTimeInMillis());
+					buyDateText.setText(dateFormat.format(buyDate.getTime()));
+				}
+			});
 			((DatePickerDialog) dialog).updateDate(buyDate.get(YEAR),
 					buyDate.get(MONTH), buyDate.get(DAY_OF_MONTH));
 			break;
 		case ID_SELL_DATE:
+			final AtomicBoolean sellCancelled = new AtomicBoolean(false);
+			dialog.setOnCancelListener(new OnCancelListener() {
+
+				public void onCancel(DialogInterface dialog) {
+					sellCancelled.set(true);
+				}
+			});
+			dialog.setOnDismissListener(new OnDismissListener() {
+
+				public void onDismiss(DialogInterface dialog) {
+					if (sellCancelled.get())
+						return;
+
+					sellDate.setTimeInMillis(dialogDate.getTimeInMillis());
+					sellDateText.setText(dateFormat.format(sellDate.getTime()));
+				}
+			});
 			((DatePickerDialog) dialog).updateDate(sellDate.get(YEAR),
 					sellDate.get(MONTH), sellDate.get(DAY_OF_MONTH));
 			break;
@@ -365,9 +390,9 @@ public class PurchaseActivity extends SherlockActivity {
 	protected Dialog onCreateDialog(final int dialogId, final Bundle args) {
 		switch (dialogId) {
 		case ID_BUY_DATE:
-			return createBuyDateDialog();
+			return createDateDialog(buyDate, string.set_buy_date);
 		case ID_SELL_DATE:
-			return createSellDateDialog();
+			return createDateDialog(sellDate, string.set_sell_date);
 		default:
 			return super.onCreateDialog(dialogId, args);
 		}
@@ -469,5 +494,20 @@ public class PurchaseActivity extends SherlockActivity {
 				showQuoteException(cause);
 			}
 		}.execute();
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode == REQUEST_BROWSE && resultCode == RESULT_OK
+				&& data != null) {
+			Stock stock = (Stock) data.getSerializableExtra(EXTRA_STOCK.name());
+			if (stock != null) {
+				symbolText.setText(stock.symbol);
+				symbolText.dismissDropDown();
+			}
+			return;
+		}
+
+		super.onActivityResult(requestCode, resultCode, data);
 	}
 }
