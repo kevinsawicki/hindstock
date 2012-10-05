@@ -31,50 +31,51 @@ import java.util.List;
  */
 public class StockListLoader extends AsyncTask<Void, Void, Stock[]> {
 
-	private static final String TAG = "StockListLoader";
+  private static final String TAG = "StockListLoader";
 
-	private final Context context;
+  private final Context context;
 
-	/**
-	 * Create stock list loader
-	 *
-	 * @param context
-	 */
-	public StockListLoader(final Context context) {
-		this.context = context;
-	}
+  /**
+   * Create stock list loader
+   *
+   * @param context
+   */
+  public StockListLoader(final Context context) {
+    this.context = context;
+  }
 
-	@Override
-	protected Stock[] doInBackground(Void... params) {
-		List<Stock> stocks = new ArrayList<Stock>();
-		BufferedReader reader = null;
-		final long start = System.currentTimeMillis();
-		try {
-			reader = new BufferedReader(new InputStreamReader(context
-					.getAssets().open("stocks.txt")), 8192 * 2);
-			String symbol;
-			while ((symbol = reader.readLine()) != null) {
-				if (symbol.length() == 0)
-					continue;
-				String name = reader.readLine();
-				if (TextUtils.isEmpty(name))
-					continue;
-				stocks.add(new Stock(symbol, name));
-			}
-		} catch (IOException e) {
-			Log.d(TAG, "Exception loading stock list", e);
-			return new Stock[0];
-		} finally {
-			Log.d(TAG,
-					"Stock loaded: " + stocks.size() + " Time: "
-							+ (System.currentTimeMillis() - start));
-			if (reader != null)
-				try {
-					reader.close();
-				} catch (IOException ignored) {
-					// Ignored
-				}
-		}
-		return stocks.toArray(new Stock[stocks.size()]);
-	}
+  @Override
+  protected Stock[] doInBackground(Void... params) {
+    List<Stock> stocks = new ArrayList<Stock>();
+    BufferedReader reader = null;
+    final long start = System.currentTimeMillis();
+    try {
+      reader = new BufferedReader(new InputStreamReader(context.getAssets()
+          .open("stocks.txt")), 8192 * 2);
+      String symbol;
+      while ((symbol = reader.readLine()) != null) {
+        if (symbol.length() == 0)
+          continue;
+        String name = reader.readLine();
+        if (TextUtils.isEmpty(name))
+          continue;
+        stocks.add(new Stock(symbol, name));
+      }
+    } catch (IOException e) {
+      Log.d(TAG, "Exception loading stock list", e);
+      return new Stock[0];
+    } finally {
+      Log.d(
+          TAG,
+          "Stock loaded: " + stocks.size() + " Time: "
+              + (System.currentTimeMillis() - start));
+      if (reader != null)
+        try {
+          reader.close();
+        } catch (IOException ignored) {
+          // Ignored
+        }
+    }
+    return stocks.toArray(new Stock[stocks.size()]);
+  }
 }

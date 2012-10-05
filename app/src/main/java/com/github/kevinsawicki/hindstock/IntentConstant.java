@@ -24,24 +24,24 @@ import android.content.Intent;
  */
 public enum IntentConstant {
 
-	/**
-	 * Handle to a {@link Quote}
-	 */
-	EXTRA_QUOTE("quote"),
+  /**
+   * Handle to a {@link Quote}
+   */
+  EXTRA_QUOTE("quote"),
 
-	/**
-	 * Handle to a {@link Stock}
-	 */
-	EXTRA_STOCK("stock");
+  /**
+   * Handle to a {@link Stock}
+   */
+  EXTRA_STOCK("stock");
 
-	private final String value;
+  private final String value;
 
-	private IntentConstant(final String value) {
-		this.value = value;
-	}
+  private IntentConstant(final String value) {
+    this.value = value;
+  }
 
-	@Override
-	public String toString() {
-		return value;
-	}
+  @Override
+  public String toString() {
+    return value;
+  }
 }

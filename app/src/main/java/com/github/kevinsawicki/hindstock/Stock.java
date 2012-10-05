@@ -22,44 +22,44 @@ import java.io.Serializable;
  */
 public class Stock implements Serializable {
 
-	private static final long serialVersionUID = -1464588657421842064L;
+  private static final long serialVersionUID = -1464588657421842064L;
 
-	/**
-	 * Name of stock
-	 */
-	public final String name;
+  /**
+   * Name of stock
+   */
+  public final String name;
 
-	/**
-	 * Stock symbol
-	 */
-	public final String symbol;
+  /**
+   * Stock symbol
+   */
+  public final String symbol;
 
-	/**
-	 * Create stock
-	 *
-	 * @param symbol
-	 * @param name
-	 */
-	public Stock(final String symbol, final String name) {
-		this.symbol = symbol;
-		this.name = name;
-	}
+  /**
+   * Create stock
+   *
+   * @param symbol
+   * @param name
+   */
+  public Stock(final String symbol, final String name) {
+    this.symbol = symbol;
+    this.name = name;
+  }
 
-	@Override
-	public String toString() {
-		return symbol;
-	}
+  @Override
+  public String toString() {
+    return symbol;
+  }
 
-	@Override
-	public int hashCode() {
-		return symbol.hashCode();
-	}
+  @Override
+  public int hashCode() {
+    return symbol.hashCode();
+  }
 
-	@Override
-	public boolean equals(Object o) {
-		if (o == this)
-			return true;
-		else
-			return o instanceof Stock && symbol.equals(((Stock) o).symbol);
-	}
+  @Override
+  public boolean equals(Object o) {
+    if (o == this)
+      return true;
+    else
+      return o instanceof Stock && symbol.equals(((Stock) o).symbol);
+  }
 }

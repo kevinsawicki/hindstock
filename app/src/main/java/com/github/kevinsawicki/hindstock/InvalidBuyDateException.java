@@ -22,5 +22,5 @@ import java.io.IOException;
  */
 public class InvalidBuyDateException extends IOException {
 
-	private static final long serialVersionUID = 74422034988127896L;
+  private static final long serialVersionUID = 74422034988127896L;
 }

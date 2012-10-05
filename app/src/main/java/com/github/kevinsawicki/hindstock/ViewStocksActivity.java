@@ -34,49 +34,49 @@ import com.github.kevinsawicki.wishlist.ViewFinder;
  * Activity to view and select a stock
  */
 public class ViewStocksActivity extends SherlockActivity implements
-		OnItemClickListener {
+    OnItemClickListener {
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
 
-		setContentView(layout.stocks);
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    setContentView(layout.stocks);
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-		ViewFinder finder = new ViewFinder(this);
-		ListView list = finder.find(android.R.id.list);
-		final StockListAdapter adapter = new StockListAdapter(layout.stock,
-				getLayoutInflater(), new Stock[0]);
-		list.setAdapter(adapter);
-		list.setOnItemClickListener(this);
-		new StockListLoader(this) {
+    ViewFinder finder = new ViewFinder(this);
+    ListView list = finder.find(android.R.id.list);
+    final StockListAdapter adapter = new StockListAdapter(layout.stock,
+        getLayoutInflater(), new Stock[0]);
+    list.setAdapter(adapter);
+    list.setOnItemClickListener(this);
+    new StockListLoader(this) {
 
-			@Override
-			protected void onPostExecute(Stock[] result) {
-				adapter.setItems(result);
-			}
-		}.execute();
-	}
+      @Override
+      protected void onPostExecute(Stock[] result) {
+        adapter.setItems(result);
+      }
+    }.execute();
+  }
 
-	public void onItemClick(AdapterView<?> parent, View view, int position,
-			long id) {
-		Stock stock = (Stock) parent.getItemAtPosition(position);
-		Intent data = new Intent();
-		data.putExtra(EXTRA_STOCK.name(), stock);
-		setResult(RESULT_OK, data);
-		finish();
-	}
+  public void onItemClick(AdapterView<?> parent, View view, int position,
+      long id) {
+    Stock stock = (Stock) parent.getItemAtPosition(position);
+    Intent data = new Intent();
+    data.putExtra(EXTRA_STOCK.name(), stock);
+    setResult(RESULT_OK, data);
+    finish();
+  }
 
-	@Override
-	public boolean onOptionsItemSelected(final MenuItem item) {
-		switch (item.getItemId()) {
-		case android.R.id.home:
-			Intent intent = new Intent(this, PurchaseActivity.class);
-			intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_SINGLE_TOP);
-			startActivity(intent);
-			return true;
-		default:
-			return super.onOptionsItemSelected(item);
-		}
-	}
+  @Override
+  public boolean onOptionsItemSelected(final MenuItem item) {
+    switch (item.getItemId()) {
+    case android.R.id.home:
+      Intent intent = new Intent(this, PurchaseActivity.class);
+      intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_SINGLE_TOP);
+      startActivity(intent);
+      return true;
+    default:
+      return super.onOptionsItemSelected(item);
+    }
+  }
 }
