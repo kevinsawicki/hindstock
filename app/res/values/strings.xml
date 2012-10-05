@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Stocky</string>
-    <string name="calculating">Calculating…</string>
-    <string name="calculate">Calculate</string>
-    <string name="sell_date_hint">today</string>
-    <string name="buy_date_hint">1 year ago</string>
-    <string name="sell_date_label">Sell Date</string>
-    <string name="buy_date_label">Buy Date</string>
-    <string name="dollars_label">dollars</string>
-    <string name="shares_label">shares</string>
-    <string name="dollars_hint">1000</string>
-    <string name="symbol_hint">GOOG</string>
-    <string name="symbol_label">Stock Symbol</string>
-    <string name="amount_label">Amount</string>
-    <string name="dates_label">Dates</string>
-    <string name="shares_hint">100</string>
-    <string name="buy_price_label">Buy Price</string>
-    <string name="sell_price_label">Sell Price</string>
-    <string name="profit_label">Profit</string>
-    <string name="loss_label">Loss</string>
-    <string name="requesting_quote_failed">Requesting quote failed, please try again.</string>
-    <string name="error_parsing_amount">Error parsing amount</string>
-    <string name="invalid_sell_date">Sell date cannot be later than today.</string>
-    <string name="invalid_buy_date">Buy date cannot be later than sell date.</string>
-    <string name="no_quote_for_buy_date">Stock quote unavailable for selected buy date. Please select a later date.</string>
-    <string name="no_quote_for_sell_date">Stock quote unavailable for selected sell date. Please select a later date.</string>
-    <string name="set_buy_date">Set Buy Date</string>
-    <string name="set_sell_date">Set Sell Date</string>
-    <string name="main_subtitle">Stock Calculator</string>
-    <string name="title_select_stock">Select a Stock</string>
-    <string name="select_a_stock">Select A Stock</string>
-    <string name="browse">Browse</string>
+  <string name="app_name">Stocky</string>
+  <string name="calculating">Calculating…</string>
+  <string name="calculate">Calculate</string>
+  <string name="sell_date_hint">today</string>
+  <string name="buy_date_hint">1 year ago</string>
+  <string name="sell_date_label">Sell Date</string>
+  <string name="buy_date_label">Buy Date</string>
+  <string name="dollars_label">dollars</string>
+  <string name="shares_label">shares</string>
+  <string name="dollars_hint">1000</string>
+  <string name="symbol_hint">GOOG</string>
+  <string name="symbol_label">Stock Symbol</string>
+  <string name="amount_label">Amount</string>
+  <string name="dates_label">Dates</string>
+  <string name="shares_hint">100</string>
+  <string name="buy_price_label">Buy Price</string>
+  <string name="sell_price_label">Sell Price</string>
+  <string name="profit_label">Profit</string>
+  <string name="loss_label">Loss</string>
+  <string name="requesting_quote_failed">Requesting quote failed, please try again.</string>
+  <string name="error_parsing_amount">Error parsing amount</string>
+  <string name="invalid_sell_date">Sell date cannot be later than today.</string>
+  <string name="invalid_buy_date">Buy date cannot be later than sell date.</string>
+  <string name="no_quote_for_buy_date">Stock quote unavailable for selected buy date. Please select a later date.</string>
+  <string name="no_quote_for_sell_date">Stock quote unavailable for selected sell date. Please select a later date.</string>
+  <string name="set_buy_date">Set Buy Date</string>
+  <string name="set_sell_date">Set Sell Date</string>
+  <string name="main_subtitle">Stock Calculator</string>
+  <string name="title_select_stock">Select a Stock</string>
+  <string name="select_a_stock">Select A Stock</string>
+  <string name="browse">Browse</string>
 
 </resources>
