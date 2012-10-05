@@ -296,13 +296,14 @@ public class PurchaseActivity extends SherlockActivity {
 
   private String getSymbol() {
     String symbol = symbolText.getText().toString().trim();
-    return !TextUtils.isEmpty(symbol) ? symbol : "GOOG";
+    return !TextUtils.isEmpty(symbol) ? symbol : symbolText.getHint()
+        .toString();
   }
 
   private float getAmount() {
     String text = amountText.getText().toString().trim();
     if (TextUtils.isEmpty(text))
-      return 100;
+      text = amountText.getHint().toString();
 
     try {
       return Float.parseFloat(text);
