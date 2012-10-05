@@ -17,82 +17,17 @@ package com.github.kevinsawicki.hindstock;
 
 import android.os.AsyncTask;
 
-import com.github.kevinsawicki.hindstock.GainLossRequest.Quote;
 import com.github.kevinsawicki.http.HttpRequest.HttpRequestException;
 import com.github.kevinsawicki.stocks.DateUtils;
 import com.github.kevinsawicki.stocks.StockQuoteRequest;
 
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.Calendar;
 
 /**
  * Request class to compute the gain/loss
  */
 public abstract class GainLossRequest extends AsyncTask<Void, Integer, Quote> {
-
-  /**
-   * Quote containing price and share amount
-   */
-  public static class Quote implements Serializable {
-
-    private static final long serialVersionUID = -5079891859032286157L;
-
-    /**
-     * Share price bought at
-     */
-    public final float buyPrice;
-
-    /**
-     * Share price sold at
-     */
-    public final float sellPrice;
-
-    /**
-     * Number of shares
-     */
-    public final float shares;
-
-    /**
-     * Create stock quote
-     *
-     * @param buyPrice
-     * @param sellPrice
-     * @param shares
-     */
-    public Quote(final float buyPrice, final float sellPrice, final float shares) {
-      this.buyPrice = buyPrice;
-      this.sellPrice = sellPrice;
-      this.shares = shares;
-    }
-
-    /**
-     * Get amount paid for shares
-     *
-     * @return purchase cost
-     */
-    public float getCost() {
-      return buyPrice * shares;
-    }
-
-    /**
-     * Get net process
-     *
-     * @return net amount
-     */
-    public float getNet() {
-      return (sellPrice - buyPrice) * shares;
-    }
-
-    /**
-     * Get return rate
-     *
-     * @return rate
-     */
-    public float getRate() {
-      return (getNet() / getCost()) * 100F;
-    }
-  }
 
   private final String symbol;
 
