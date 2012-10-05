@@ -19,5 +19,8 @@
     <color name="actionbar_background_bottom2">#90C697</color>
     <color name="actionbar_background_end">#37703E</color>
     <color name="actionbar_background_start">#51A05A</color>
+    <color name="edit_text_background">#F8F8F8</color>
+    <color name="edit_text_inner">#EDEDED</color>
+    <color name="edit_text_outer">#959595</color>
 
 </resources>
