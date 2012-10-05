@@ -317,6 +317,7 @@ public class PurchaseActivity extends SherlockActivity {
     DatePickerDialog dialog = new DatePickerDialog(this,
         new OnDateSetListener() {
 
+          @Override
           public void onDateSet(DatePicker view, int year, int monthOfYear,
               int dayOfMonth) {
             dialogDate.set(YEAR, year);
