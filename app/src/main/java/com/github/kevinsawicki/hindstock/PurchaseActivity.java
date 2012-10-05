@@ -47,7 +47,6 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.github.kevinsawicki.hindstock.GainLossRequest.Quote;
 import com.github.kevinsawicki.hindstock.R.color;
 import com.github.kevinsawicki.hindstock.R.id;
 import com.github.kevinsawicki.hindstock.R.layout;

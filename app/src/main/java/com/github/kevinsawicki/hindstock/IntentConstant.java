@@ -15,8 +15,6 @@
  */
 package com.github.kevinsawicki.hindstock;
 
-import com.github.kevinsawicki.hindstock.GainLossRequest.Quote;
-
 import android.content.Intent;
 
 /**

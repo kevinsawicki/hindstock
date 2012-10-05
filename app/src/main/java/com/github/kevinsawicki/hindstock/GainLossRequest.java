@@ -142,5 +142,4 @@ public abstract class GainLossRequest extends AsyncTask<Void, Integer, Quote> {
    * @param cause
    */
   protected abstract void onFailure(IOException cause);
-
 }
