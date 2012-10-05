@@ -58,6 +58,7 @@ public class ViewStocksActivity extends SherlockActivity implements
     }.execute();
   }
 
+  @Override
   public void onItemClick(AdapterView<?> parent, View view, int position,
       long id) {
     Stock stock = (Stock) parent.getItemAtPosition(position);

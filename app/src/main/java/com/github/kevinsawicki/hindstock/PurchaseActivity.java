@@ -170,6 +170,7 @@ public class PurchaseActivity extends SherlockActivity {
 
     finder.onClick(id.tv_browse, new Runnable() {
 
+      @Override
       public void run() {
         startActivityForResult(new Intent(getApplicationContext(),
             ViewStocksActivity.class), REQUEST_BROWSE);
@@ -198,6 +199,7 @@ public class PurchaseActivity extends SherlockActivity {
   private void setupDoneListeners() {
     EditTextUtils.onDone(amountText, new BooleanRunnable() {
 
+      @Override
       public boolean run() {
         if (canCalculate()) {
           calculate();
@@ -338,12 +340,14 @@ public class PurchaseActivity extends SherlockActivity {
       final AtomicBoolean buyCancelled = new AtomicBoolean(false);
       dialog.setOnCancelListener(new OnCancelListener() {
 
+        @Override
         public void onCancel(DialogInterface dialog) {
           buyCancelled.set(true);
         }
       });
       dialog.setOnDismissListener(new OnDismissListener() {
 
+        @Override
         public void onDismiss(DialogInterface dialog) {
           if (buyCancelled.get())
             return;
@@ -365,12 +369,14 @@ public class PurchaseActivity extends SherlockActivity {
       final AtomicBoolean sellCancelled = new AtomicBoolean(false);
       dialog.setOnCancelListener(new OnCancelListener() {
 
+        @Override
         public void onCancel(DialogInterface dialog) {
           sellCancelled.set(true);
         }
       });
       dialog.setOnDismissListener(new OnDismissListener() {
 
+        @Override
         public void onDismiss(DialogInterface dialog) {
           if (sellCancelled.get())
             return;
