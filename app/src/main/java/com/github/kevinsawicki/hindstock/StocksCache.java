@@ -71,7 +71,7 @@ public class StocksCache extends SQLiteOpenHelper {
 
         values.put("symbol", symbol);
         values.put("name", name);
-        db.replace("stocks", null, values);
+        db.insert("stocks", null, values);
         count++;
       }
       db.setTransactionSuccessful();
@@ -124,6 +124,7 @@ public class StocksCache extends SQLiteOpenHelper {
     SQLiteDatabase db = getReadable();
     if (db == null)
       return null;
+
     SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
     builder.setTables("stocks");
     return builder.query(db, new String[] { "stocks._id", "stocks.symbol",
