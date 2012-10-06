@@ -19,6 +19,8 @@ import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
 import static com.github.kevinsawicki.hindstock.IntentConstant.EXTRA_STOCK;
 import android.content.Intent;
+import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -44,24 +46,30 @@ public class ViewStocksActivity extends SherlockActivity implements
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     ViewFinder finder = new ViewFinder(this);
-    ListView list = finder.find(android.R.id.list);
-    final StockListAdapter adapter = new StockListAdapter(layout.stock,
-        getLayoutInflater(), new Stock[0]);
-    list.setAdapter(adapter);
+    final ListView list = finder.find(android.R.id.list);
     list.setOnItemClickListener(this);
-    new StockListLoader(this) {
+
+    new AsyncTask<Void, Void, Cursor>() {
 
       @Override
-      protected void onPostExecute(Stock[] result) {
-        adapter.setItems(result);
+      protected Cursor doInBackground(Void... params) {
+        StocksCache loader = new StocksCache(getApplicationContext());
+        return loader.getStocks();
       }
+
+      @Override
+      protected void onPostExecute(Cursor result) {
+        if (result != null)
+          list.setAdapter(new StockListAdapter(getApplicationContext(), result));
+      }
+
     }.execute();
   }
 
   @Override
   public void onItemClick(AdapterView<?> parent, View view, int position,
       long id) {
-    Stock stock = (Stock) parent.getItemAtPosition(position);
+    Stock stock = ((StockListAdapter) parent.getAdapter()).getStock(position);
     Intent data = new Intent();
     data.putExtra(EXTRA_STOCK.name(), stock);
     setResult(RESULT_OK, data);

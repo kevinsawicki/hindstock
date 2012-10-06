@@ -25,10 +25,12 @@ import static java.util.Calendar.YEAR;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.FloatMath;
@@ -185,12 +187,18 @@ public class PurchaseActivity extends SherlockActivity {
   }
 
   private void loadStocks() {
-    new StockListLoader(this) {
+    new StocksLoader(getApplicationContext()) {
 
       @Override
-      protected void onPostExecute(Stock[] result) {
-        symbolText.setAdapter(new StockListAdapter(layout.stock,
-            getLayoutInflater(), result));
+      protected void onPostExecute(Cursor cursor) {
+        if (cursor == null)
+          return;
+
+        Context context = getApplicationContext();
+        StockListAdapter adapter = new StockListAdapter(context, cursor);
+        adapter.setFilterQueryProvider(new StocksFilter(context));
+        symbolText.setAdapter(adapter);
+
       };
     }.execute();
   }
@@ -509,6 +517,7 @@ public class PurchaseActivity extends SherlockActivity {
       Stock stock = (Stock) data.getSerializableExtra(EXTRA_STOCK.name());
       if (stock != null) {
         symbolText.setText(stock.symbol);
+        symbolText.setSelection(stock.symbol.length());
         symbolText.dismissDropDown();
       }
       return;
