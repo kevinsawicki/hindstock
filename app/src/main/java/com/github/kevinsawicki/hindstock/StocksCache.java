@@ -44,7 +44,7 @@ public class StocksCache extends SQLiteOpenHelper {
    * @param context
    */
   public StocksCache(final Context context) {
-    super(context, "stocks.db", null, 1);
+    super(context, "stocks.db", null, 2);
 
     this.context = context;
   }
