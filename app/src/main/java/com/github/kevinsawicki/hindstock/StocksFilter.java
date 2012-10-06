@@ -37,7 +37,7 @@ public class StocksFilter implements FilterQueryProvider {
   }
 
   @Override
-  public Cursor runQuery(CharSequence constraint) {
+  public Cursor runQuery(final CharSequence constraint) {
     if (!TextUtils.isEmpty(constraint))
       return cache.getFilteredStocks(constraint.toString());
     else
