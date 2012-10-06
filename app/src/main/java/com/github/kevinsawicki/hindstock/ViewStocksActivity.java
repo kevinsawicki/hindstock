@@ -54,8 +54,7 @@ public class ViewStocksActivity extends SherlockActivity implements
 
       @Override
       protected Cursor doInBackground(Void... params) {
-        StocksCache loader = new StocksCache(getApplicationContext());
-        return loader.getStocks();
+        return new StocksCache(getApplicationContext()).getStocks();
       }
 
       @Override
