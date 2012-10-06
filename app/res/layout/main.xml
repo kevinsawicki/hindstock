@@ -42,6 +42,7 @@
         style="@style/editText"
         android:layout_width="match_parent"
         android:layout_marginTop="2dp"
+        android:completionThreshold="1"
         android:hint="@string/symbol_hint"
         android:imeOptions="actionDone"
         android:inputType="text"
