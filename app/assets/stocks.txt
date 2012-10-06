@@ -1,3 +1,5 @@
+A
+Agilent Technologies, Inc.
 AA
 Alcoa Inc.
 AAC
@@ -9,7 +11,7 @@ Australia Acquisition Corp.
 AACOW
 Australia Acquisition Corp.
 AAIT
-iShares Trust iShares MSCI All Country Asia Information Technology Index Fund
+iShares Trust iShares MSCI All Country Asia Information Techno
 AAME
 Atlantic American Corporation
 AAN
@@ -44,14 +46,10 @@ ABCD
 Cambium Learning Group, Inc.
 ABCO
 The Advisory Board Company
-ABD
-Acco Brands Corporation
 ABFS
 Arkansas Best Corporation
 ABG
 Asbury Automotive Group Inc
-ABH
-AbitibiBowater Inc.
 ABIO
 ARCA biopharma, Inc.
 ABM
@@ -70,8 +68,6 @@ ABV/C
 Companhia de Bebidas das Americas - AmBev
 ABVA
 Alliance Bankshares Corporation
-ABVT
-Abovenet Inc
 ABX
 Barrick Gold Corporation
 ACAD
@@ -84,6 +80,8 @@ ACC
 American Campus Communities Inc
 ACCL
 Accelrys, Inc.
+ACCO
+Acco Brands Corporation
 ACE
 Ace Limited
 ACET
@@ -110,6 +108,8 @@ ACLS
 Axcelis Technologies, Inc.
 ACM
 Aecom Technology Corporation
+ACMP
+Access Midstream Partmers, L.P.
 ACN
 Accenture plc.
 ACNB
@@ -117,15 +117,15 @@ ACNB Corporation
 ACO
 Amcol International Corporation
 ACOM          
-Ancestry.com, Inc.
+Ancestry.com Inc.
 ACOR
 Acorda Therapeutics, Inc.
 ACP
 Avenue Income Credit Strategies Fund
 ACPW
 Active Power, Inc.
-ACP~
-Avenue Income Credit Strategies Fund
+ACRE
+Ares Commercial Real Estate Corporation
 ACRX
 AcelRx Pharmaceuticals, Inc.
 ACTG
@@ -160,14 +160,14 @@ ADES
 ADA-ES, Inc.
 ADGE
 American DG Energy Inc.
-ADGF
-Adams Golf, Inc.
 ADI
 Analog Devices, Inc.
 ADK
 Adcare Health Systems Inc
 ADM
 Archer-Daniels-Midland Company
+ADNC
+Audience, Inc.
 ADP
 Automatic Data Processing, Inc.
 ADRA
@@ -182,6 +182,8 @@ ADS
 Alliance Data Systems Corporation
 ADSK
 Autodesk, Inc.
+ADT
+ADT Corporation
 ADTN
 ADTRAN, Inc.
 ADUS
@@ -194,8 +196,6 @@ ADY
 Feihe International, Inc.
 AE
 Adams Resources & Energy, Inc.
-AEA
-Advance America, Cash Advance Centers, Inc.
 AEB
 Aegon NV
 AEC
@@ -245,25 +245,23 @@ Aegon NV
 AEY
 ADDvantage Technologies Group, Inc.
 AEZS
-AEterna Zentaris, Inc.
+AEterna Zentaris Inc.
 AF
 Astoria Financial Corporation
+AFA
+American Financial Group, Inc.
 AFAM
 Almost Family Inc
 AFB
 Alliance National Municipal Income Fund Inc
 AFC
-Allied Capital Corporation
+Ares Capital Corporation
 AFCB
 Athens Bancshares Corporation
 AFCE
 AFC Enterprises, Inc.
-AFE
-American Financial Group, Inc.
 AFF
 American International Group, Inc.
-AFFM
-Affirmative Insurance Holdings, Inc.
 AFFX
 Affymetrix, Inc.
 AFFY
@@ -276,10 +274,14 @@ AFOP
 Alliance Fiber Optic Products, Inc.
 AFQ
 American Financial Group, Inc.
+AFSD
+Aflac Incorporated
 AFSI
 AmTrust Financial Services, Inc.
 AFT
 Apollo Senior Floating Rate Fund Inc.
+AFW
+American Financial Group, Inc.
 AG
 First Majestic Silver Corp.
 AGC
@@ -292,8 +294,8 @@ AGEN
 Agenus Inc.
 AGII
 Argo Group International Holdings, Ltd.
-AGILENT TECHNOLOGIES, INC.
-43.72
+AGIIL
+Argo Group International Holdings, Ltd.
 AGM
 Federal Agricultural Mortgage Corporation
 AGM/A
@@ -301,6 +303,8 @@ Federal Agricultural Mortgage Corporation
 AGN
 Allergan, Inc.
 AGNC
+American Capital Agency Corp.
+AGNCP
 American Capital Agency Corp.
 AGO
 Assured Guaranty Ltd.
@@ -350,8 +354,6 @@ AIRM
 Air Methods Corporation
 AIRT
 Air T, Inc.
-AIS
-Antares Pharma, Inc.
 AIT
 Applied Industrial Technologies, Inc.
 AIV
@@ -384,10 +386,12 @@ ALC
 Assisted Living Concepts, Inc. New
 ALCO
 Alico, Inc.
+ALCS
+ALCO Stores, Inc.
 ALE
 Allete, Inc.
 ALEX
-Alexander & Baldwin, Inc.
+Alexander & Baldwin Holdings, Inc.
 ALG
 Alamo Group, Inc.
 ALGN
@@ -406,12 +410,8 @@ ALL
 Allstate Corporation (The)
 ALLB
 Alliance Bancorp, Inc. of Pennsylvania
-ALLEGHANY CORPORATION
-328.5
 ALLT
 Allot Communications Ltd.
-ALM/CL
-Alabama Power Company
 ALN
 American Lorain Corporation
 ALNC
@@ -428,10 +428,10 @@ ALRN
 American Learning Corporation
 ALSK
 Alaska Communications Systems Group, Inc.
+ALSN
+Allison Transmission Holdings, Inc.
 ALTE
 Alterra Capital Holdings Limited
-ALTH
-Allos Therapeutics, Inc.
 ALTI
 Altair Nanotechnologies Inc.
 ALTR
@@ -484,8 +484,6 @@ AMID
 American Midstream Partners, LP
 AMKR
 Amkor Technology, Inc.
-AMLN
-Amylin Pharmaceuticals, Inc.
 AMNB
 American National Bankshares, Inc.
 AMOT
@@ -501,7 +499,9 @@ Ampal-American Israel Corporation
 AMRB
 American River Bankshares
 AMRC
-Ameresco, Inc
+Ameresco, Inc.
+AMRE
+AmREIT, Inc.
 AMRI
 Albany Molecular Research, Inc.
 AMRN
@@ -520,10 +520,6 @@ AMSWA
 American Software, Inc.
 AMT
 American Tower Corporation (REIT)
-AMTC
-Ameritrans Capital Corporation
-AMTCP
-Ameritrans Capital Corporation
 AMTD
 TD Ameritrade Holding Corporation
 AMTG
@@ -548,6 +544,12 @@ ANCI
 American Caresource Holdings Inc
 ANCX
 Access National Corporation
+ANDA
+Andina Acquisition Corporation
+ANDAU
+Andina Acquisition Corporation
+ANDAW
+Andina Acquisition Corporation
 ANDE
 The Andersons, Inc.
 ANEN
@@ -556,8 +558,6 @@ ANF
 Abercrombie & Fitch Company
 ANGI
 Angie's List, Inc.
-ANGN
-Angeion Corporation
 ANGO
 AngioDynamics, Inc.
 ANH
@@ -570,8 +570,6 @@ ANN
 ANN INC.
 ANNB
 Annapolis Bancorp Inc.
-ANO
-Anooraq Resources Corporation
 ANR
 Alpha Natural Resources, inc.
 ANSS
@@ -581,13 +579,11 @@ Anthera Pharmaceuticals, Inc.
 ANTP
 PHAZAR CORP
 ANV
-Allied Nevada Gold Corp
+Allied Nevada Gold Corp.
 ANW
 Aegean Marine Petroleum Network Inc.
 ANX
 ADVENTRX Pharmaceuticals, Inc.
-AOB
-American Oriental Bioengineering, Inc.
 AOD
 Alpine Total Dynamic Dividend Fund
 AOI
@@ -595,7 +591,7 @@ Alliance One International, Inc.
 AOL
 AOL Inc.
 AON
-Aon Corporation
+Aon plc
 AONE
 A123 Systems, Inc.
 AOS
@@ -650,22 +646,20 @@ APU
 AmeriGas Partners, L.P.
 APWC
 Asia Pacific Wire & Cable Corporation Limited
+AQ            
+Acquity Group Limited
 AQQ
 American Spectrum Realty, Inc.
 ARAY
 Accuray Incorporated
 ARB
 Arbitron Inc.
-ARBA
-Ariba, Inc.
 ARC
 American Reprographics Company
 ARCC
 Ares Capital Corporation
 ARCI
 Appliance Recycling Centers of America, Inc.
-ARCL
-Archipelago Learning, Inc.
 ARCO
 Arcos Dorados Holdings Inc.
 ARCP
@@ -673,7 +667,7 @@ American Realty Capital Properties, Inc.
 ARCT          
 American Realty Capital Trust, Inc.
 ARCW
-Arc Wireless Solutions, Inc.
+ARC Group Worldwide, Inc.
 ARDNA
 Arden Group, Inc.
 ARE
@@ -682,10 +676,6 @@ AREX
 Approach Resources Inc.
 ARG
 Airgas, Inc.
-ARGN
-Amerigon Incorporated
-ARGS
-Argos Therapeutics, Inc.
 ARI
 Apollo Commercial Real Estate Finance
 ARIA
@@ -710,7 +700,7 @@ ARO
 Aeropostale Inc
 AROW
 Arrow Financial Corporation
-ARP$
+ARP
 Atlas Resource Partners, L.P.
 ARQL
 ArQule, Inc.
@@ -808,8 +798,6 @@ ASYS
 Amtech Systems, Inc.
 AT
 Atlantic Power Corporation
-AT&T INC.
-30.87
 ATAI
 ATA Inc.
 ATAX
@@ -830,11 +818,11 @@ ATI
 Allegheny Technologies Incorporated
 ATK
 Alliant Techsystems Inc.
+ATL
+Atlatsa Resources Corporation
 ATLO
 Ames National Corporation
 ATLS
-Atlas Energy, L.P.
-ATLS$
 Atlas Energy, L.P.
 ATMI
 ATMI Inc.
@@ -846,8 +834,8 @@ ATNY
 API Technologies Corp.
 ATO
 Atmos Energy Corporation
-ATPG
-ATP Oil & Gas Corporation
+ATOS
+Atossa Genetics Inc.
 ATR
 AptarGroup, Inc.
 ATRC
@@ -858,10 +846,12 @@ ATRM
 Aetrium Incorporated
 ATRO
 Astronics Corporation
-ATSC
-ATS Corporation
+ATRS
+Antares Pharma, Inc.
 ATSG
 Air Transport Services Group, Inc
+ATTU
+Attunity Ltd.
 ATU
 Actuant Corporation
 ATV
@@ -873,23 +863,21 @@ Atwood Oceanics, Inc.
 ATX
 Cross (A.T.) Company
 AU
-AngloGold Ashanti Ltd.
+AngloGold Ashanti Limited
 AUBN
 Auburn National Bancorporation, Inc.
 AUDC
 AudioCodes Ltd.
 AUMN
-Golden Minerals Co.
+Golden Minerals Company
 AUO
 AU Optronics Corp
 AUQ
 AuRico Gold Inc.
-AUTH
-AuthenTec, Inc.
 AUXL
 Auxilium Pharmaceuticals, Inc.
 AUY
-Yamana Gold, Inc.
+Yamana Gold Inc.
 AV
 Aviva plc
 AVA
@@ -914,8 +902,6 @@ AVHI
 A V Homes, Inc.
 AVID
 Avid Technology, Inc.
-AVII
-AVI BioPharma, Inc.
 AVK
 Advent Claymore Convertible Securities and Income Fund
 AVL
@@ -961,13 +947,13 @@ Anixter International Inc.
 AXFN
 iShares MSCI ACWI ex US Financials Sector Index Fund
 AXJS
-iShares Trust iShares MSCI All Country Asia ex Japan Small Cap Index Fund
+iShares Trust iShares MSCI All Country Asia ex Japan Small Cap
 AXK
 Accelr8 Technology Corporation
 AXL
 American Axle & Manufacturing Holdings, Inc.
 AXN
-China Aoxing Pharmaceutical Company, Inc.
+Aoxing Pharmaceutical Company, Inc.
 AXP
 American Express Company
 AXR
@@ -978,6 +964,8 @@ AXTI
 AXT Inc
 AXU
 Alexco Resource Corp
+AXX
+Alderon Iron Ore Corp.
 AYI
 Acuity Brands Inc
 AYN
@@ -996,6 +984,8 @@ AZPN
 Aspen Technology, Inc.
 AZZ
 AZZ Incorporated
+B
+Barnes Group, Inc.
 BA
 Boeing Company (The)
 BAA
@@ -1024,6 +1014,8 @@ BAMM
 Books-A-Million, Inc.
 BANC
 First PacTrust Bancorp, Inc.
+BANCL
+First PacTrust Bancorp, Inc.
 BANF
 BancFirst Corporation
 BANFP
@@ -1032,8 +1024,6 @@ BANR
 Banner Corporation
 BAP
 Credicorp Ltd.
-BARNES GROUP, INC.
-26.57
 BAS
 Basic Energy Services, Inc.
 BASI
@@ -1045,6 +1035,8 @@ Bed Bath & Beyond Inc.
 BBCN
 BBCN Bancorp, Inc.
 BBD
+Banco Bradesco Sa
+BBDO
 Banco Bradesco Sa
 BBEP
 BreitBurn Energy Partners, L.P.
@@ -1075,17 +1067,13 @@ Banco Bilbao Viscaya Argentaria S.A.
 BBW
 Build-A-Bear Workshop, Inc.
 BBX
-BankAtlantic Bancorp, Inc.
-BBXT
-BankAtlantic Bancorp, Inc.
+BBX Capital Corporation
 BBY
 Best Buy Co., Inc.
 BC
 Brunswick Corporation
 BCA
 Corpbanca
-BCAR
-Bank of the Carolinas Corporation
 BCBP
 BCB Bancorp, Inc. (NJ)
 BCDS
@@ -1102,6 +1090,8 @@ BCO
 Brink's Company (The)
 BCOM
 B Communications Ltd.
+BCOR
+Blucora, Inc.
 BCOV
 Brightcove Inc.
 BCPC
@@ -1143,7 +1133,7 @@ Beam Inc.
 BEAT
 CardioNet, Inc.
 BEAV
-BE Aerospace, Inc.
+B/E Aerospace, Inc.
 BEBE
 bebe stores, inc.
 BECN
@@ -1158,8 +1148,8 @@ BEN
 Franklin Resources, Inc.
 BERK
 Berkshire Bancorp, Inc.
-BEST
-Shiner International, Inc.
+BERY
+BPC Acquisition Corp
 BF/A
 Brown Forman Corporation
 BF/B
@@ -1184,8 +1174,12 @@ BFZ
 BlackRock California Municipal Income Trust
 BG
 Bunge Limited
+BGB
+Blackstone / GSO Strategic Credit Fund
 BGC
 General Cable Corporation
+BGCA
+BGC Partners, Inc.
 BGCP
 BGC Partners, Inc.
 BGFV
@@ -1198,6 +1192,12 @@ BGR
 BlackRock Energy and Resources Trust
 BGS
 B&G Foods Holdings Corp.
+BGSC
+BGS Acquisition Corp.
+BGSCU
+BGS Acquisition Corp.
+BGSCW
+BGS Acquisition Corp.
 BGT
 Blackrock Global
 BGX
@@ -1229,7 +1229,7 @@ Blackrock High Yield Trust (The)
 BIB
 ProShares Trust ProShares Ultra Nasdaq Biotechnology
 BICK
-First Trust Exchange-Traded Fund II First Trust BICK Index Fund
+First Trust Exchange-Traded Fund II First Trust BICK Index Fun
 BID
 Sotheby's
 BIDU
@@ -1256,6 +1256,8 @@ BIOD
 Biodel Inc.
 BIOF
 BioFuel Energy Corp.
+BIOL
+Biolase, Inc.
 BIOS
 BioScrip, Inc.
 BIP
@@ -1266,16 +1268,12 @@ BIS
 ProShares Trust ProShares UltraShort Nasdaq Biotechnology
 BITA
 Bitauto Holdings Limited
-BITS
-Bitstream Inc.
 BJRI
 BJ's Restaurants, Inc.
 BJZ
 Blackrock California Municipal 2018 Term Trust
 BK
 Bank Of New York Mellon Corporation (The)
-BKBK
-Britton & Koontz Capital Corporation
 BKCC
 BlackRock Kelso Capital Corporation
 BKD
@@ -1310,12 +1308,12 @@ BKT
 BlackRock Income Trust Inc. (The)
 BKU
 BankUnited, Inc.
+BKW
+Burger King Worldwide Inc.
 BKYF
 The Bank of Kentucky Financial Corp.
 BLC
 Belo Corporation
-BLD
-Baldwin Technology Company, Inc.
 BLDP
 Ballard Power Systems, Inc.
 BLDR
@@ -1334,14 +1332,16 @@ BLKB
 Blackbaud, Inc.
 BLL
 Ball Corporation
+BLMN
+Bloomin' Brands, Inc.
 BLMT
 BSB Bancorp, Inc.
+BLOX
+Infoblox Inc.
 BLRX
 BioLineRx Ltd.
 BLT
 Blount International, Inc.
-BLTI
-BioLase Technology, Inc.
 BLW
 Citigroup Inc.
 BLX
@@ -1378,10 +1378,10 @@ BNCL
 Beneficial Mutual Bancorp, Inc.
 BNCN
 BNC Bancorp
-BNHN
-Benihana Inc.
 BNJ
 BlackRock New Jersey Municipal Income Trust
+BNNY
+Annie's, Inc.
 BNS
 Bank of Nova Scotia (The)
 BNSO
@@ -1412,8 +1412,6 @@ BONT
 The Bon-Ton Stores, Inc.
 BOOM
 Dynamic Materials Corporation
-BOOT
-LaCrosse Footwear, Inc.
 BORN
 China New Borun Corporation
 BOSC
@@ -1460,8 +1458,6 @@ BPZ
 BPZ Resources, Inc
 BQH
 Blackrock New York Municipal Bond Trust
-BQI
-Oilsands Quest Inc
 BQR
 BlackRock Ecosolutions Investment Trust
 BQY
@@ -1478,6 +1474,8 @@ BRD
 Apollo Gold Corporation
 BRE
 BRE Properties, Inc.
+BREW
+Craft Brew Alliance, Inc.
 BRFS
 BRF-Brasil Foods S.A.
 BRID
@@ -1506,6 +1504,8 @@ BRT
 BRT Realty Trust
 BRY
 Berry Petroleum Company
+BSAC
+Banco Santiago, S.A.
 BSBR
 Banco Santander Brasil SA
 BSD
@@ -1522,6 +1522,8 @@ BSI
 Alon Holdings - Blue Square Israel Ltd.
 BSL
 Blackstone GSO Senior Floating Rate Term Fund
+BSMX
+Grupo Financiero Santander Mexico S.A. B. de C.V.
 BSP
 American Strategic Income Portfolio II
 BSPM
@@ -1550,14 +1552,12 @@ BTH
 Blyth, Inc.
 BTI
 British American Tobacco  Industries, p.l.c.
-BTM
-Oi S.A.
-BTM/C
-Oi S.A.
 BTN
 Ballantyne Strong, Inc
 BTO
 John Hancock Bank and Thrift Fund
+BTT
+BlackRock Municipal Target Term Trust Inc. (The)
 BTU
 Peabody Energy Corporation
 BTUI
@@ -1577,7 +1577,7 @@ First Busey Corporation
 BV
 Bazaarvoice, Inc.
 BVN
-Compania Mina Buenaventura, S.A.
+Buenaventura Mining Company Inc.
 BVSN
 BroadVision, Inc.
 BVX
@@ -1590,6 +1590,8 @@ BWEN
 Broadwind Energy, Inc.
 BWF
 Wells Fargo & Company
+BWG
+Legg Mason BW Global Income Opportunities Fund Inc.
 BWINA
 Baldwin & Lyons, Inc.
 BWINB
@@ -1612,6 +1614,8 @@ BX
 The Blackstone Group L.P.
 BXC
 BlueLinx Holdings Inc.
+BXE
+Bellatrix Exploration Ltd
 BXG
 Bluegreen Corporation
 BXP
@@ -1636,8 +1640,12 @@ BZM
 BlackRock Maryland Municipal Bond Trust
 BZMD
 Beazer Homes USA, Inc.
+BZT
+Beazer Homes USA, Inc.
 BZU
 Beazer Homes USA, Inc.
+C
+Citigroup Inc.
 C/WS/A
 Citigroup Inc.
 C/WS/B
@@ -1705,7 +1713,7 @@ Carolina Trust Bank
 CARV
 Carver Bancorp, Inc.
 CARZ
-First Trust Exchange-Traded Fund II First Trust NASDAQ Global Auto Index Fund
+First Trust Exchange-Traded Fund II First Trust NASDAQ Global
 CAS
 Castle (A.M.) & Co.
 CASC
@@ -1716,8 +1724,6 @@ CASM
 CAS Medical Systems, Inc.
 CASS
 Cass Information Systems, Inc
-CAST
-ChinaCast Education Corporation
 CASY
 Caseys General Stores, Inc.
 CAT
@@ -1732,12 +1738,6 @@ CAVM
 Cavium, Inc.
 CAW
 CCA Industries, Inc.
-CAZA
-Cazador Acquisition Corporation Ltd.
-CAZAU
-Cazador Acquisition Corporation Ltd.
-CAZAW
-Cazador Acquisition Corporation Ltd.
 CB
 Chubb Corporation (The)
 CBAK
@@ -1752,6 +1752,8 @@ CBE
 Cooper Industries, plc.
 CBEY
 Cbeyond, Inc.
+CBF
+Capital Bank Financial Corp.
 CBG
 CBRE Group, Inc.
 CBI
@@ -1760,8 +1762,6 @@ CBIN
 Community Bank Shares of Indiana, Inc.
 CBK
 Christopher & Banks Corporation
-CBKN
-Capital Bank Corporation
 CBL
 CBL & Associates Properties, Inc.
 CBLI
@@ -1854,16 +1854,12 @@ CCRN
 Cross Country Healthcare, Inc.
 CCRT
 CompuCredit Holdings Corporation
-CCS
-Comcast Corporation
 CCSC
 Country Style Cooking
 CCU
 Compania Cervecerias Unidas, S.A.
 CCUR
 Concurrent Computer Corporation
-CCW
-Comcast Corporation
 CCXI
 ChemoCentryx, Inc.
 CCZ
@@ -1872,8 +1868,6 @@ CDE
 Coeur d'Alene Mines Corporation
 CDI
 CDI Corporation
-CDII
-China Direct Industries, Inc.
 CDNS
 Cadence Design Systems, Inc.
 CDR
@@ -1890,6 +1884,8 @@ CE
 Celanese Corporation
 CEA
 China Eastern Airlines Corporation Ltd.
+CEB
+The Corporate Executive Board Company
 CEBK
 Central Bancorp, Inc
 CEC
@@ -1906,8 +1902,6 @@ CEE
 Central Europe and Russia Fund, Inc. (The)
 CEF
 Central Fund of Canada Limited
-CEG
-Constellation Energy Group, Inc.
 CEL
 Cellcom Israel, Ltd.
 CELG
@@ -1918,6 +1912,8 @@ CELL
 Brightpoint, Inc.
 CEM
 ClearBridge Energy MLP Fund Inc.
+CEMI
+Chembio Diagnostics, Inc.
 CEMP
 Cempra, Inc.
 CENT
@@ -1957,11 +1953,9 @@ Community Financial Corp.
 CFFI
 C&F Financial Corporation
 CFFN
-Capitol Federal Financial
+Capitol Federal Financial, Inc.
 CFI
 Culp, Inc.
-CFK
-CE Franklin Ltd.
 CFN
 CareFusion Corporation
 CFNB
@@ -1974,6 +1968,8 @@ CFR
 Cullen/Frost Bankers, Inc.
 CFX
 Colfax Corporation
+CG
+The Carlyle Group L.P.
 CGA
 China Green Agriculture, Inc.
 CGEI
@@ -2005,7 +2001,7 @@ China Hydroelectric Corporation
 CHC/WS
 China Hydroelectric Corporation
 CHCI
-Comstock Homebuilding Companies, Inc.
+Comstock Holding Companies, Inc.
 CHCO
 City Holding Company
 CHD
@@ -2036,8 +2032,6 @@ CHK
 Chesapeake Energy Corporation
 CHKE
 Cherokee Inc.
-CHKM
-Chesapeake Midstream Partmers, L.P.
 CHKP
 Check Point Software Technologies Ltd.
 CHKR
@@ -2046,30 +2040,22 @@ CHL
 China Mobile (Hong Kong) Ltd.
 CHLN
 China Housing & Land Development, Inc.
-CHMP
-Champion Industries, Inc.
 CHMT
 Chemtura Corp.
 CHN
 China Fund, Inc. (The)
-CHNG
-China Natural Gas, Inc.
 CHNR
 China Natural Resources, Inc.
 CHOP
 China Gerui Advanced Materials Group Limited
 CHRM
 Charm Communications Inc.
-CHRS
-Charming Shoppes, Inc.
 CHRW
 C.H. Robinson Worldwide, Inc.
 CHS
 Chico's FAS, Inc.
 CHSCP
 CHS Inc
-CHSI
-Catalyst Health Solutions, Inc
 CHSP
 Chesapeake Lodging Trust
 CHT
@@ -2080,10 +2066,12 @@ CHTR
 Charter Communications, Inc.
 CHU
 China Unicom (Hong Kong) Ltd
-CHUX
-O'Charley's Inc.
+CHUY
+Chuy's Holdings, Inc.
 CHW
 Calamos Global Dynamic Income Fund
+CHXF
+WisdomTree Trust WisdomTree China Dividend Ex-Financials Fund
 CHY
 Calamos Convertible and High Income Fund
 CHYR
@@ -2106,8 +2094,6 @@ CIG
 Comp En De Mn Cemig ADS
 CIG/C
 Comp En De Mn Cemig ADS
-CIGX
-Star Scientific, Inc.
 CII
 Blackrock Capital and Income Strategies Fund Inc
 CIK
@@ -2126,8 +2112,6 @@ CISG
 CNinsure Inc.
 CIT
 CIT Group Inc (DEL)
-CITIGROUP INC.
-34.1
 CITZ
 CFS Bancorp, Inc.
 CIX
@@ -2138,10 +2122,6 @@ CJES
 C&J Energy Services, Inc.
 CJJD
 China Jo-Jo Drugstores, Inc.
-CJS
-Vale Cap Ltd
-CJT
-Vale Cap Ltd
 CKEC
 Carmike Cinemas, Inc.
 CKH
@@ -2167,7 +2147,7 @@ Cloud Peak Energy Inc
 CLDT
 Chatham Lodging Trust (REIT)
 CLDX
-Celldex Therapeutics, Inc
+Celldex Therapeutics, Inc.
 CLF
 Cliffs Natural Resources Inc.
 CLFD
@@ -2178,6 +2158,8 @@ CLH
 Clean Harbors, Inc.
 CLI
 Mack-Cali Realty Corporation
+CLIR
+ClearSign Combustion Corporation
 CLM
 Cornerstone Strategic Value Fund, Inc.
 CLMS
@@ -2196,6 +2178,8 @@ CLR
 Continental Resources, Inc.
 CLRO
 ClearOne Communications Inc.
+CLRX
+CollabRx, Inc.
 CLS
 Celestica, Inc.
 CLSN
@@ -2228,12 +2212,12 @@ CMCSK
 Comcast Corporation
 CME
 CME Group Inc.
-CMFB
-COMMERCEFIRST BANCORP INC
 CMFO
 China Marine Food Group Limited
 CMG
 Chipotle Mexican Grill, Inc.
+CMGE
+China Mobile Games and Entertainment Group Limited
 CMI
 Cummins Inc.
 CMK
@@ -2242,8 +2226,6 @@ CMLP
 Crestwood Midstream Partners LP
 CMLS
 Cumulus Media Inc.
-CMM
-China Mass Media Corp
 CMN
 Cantel Medical Corp.
 CMO
@@ -2268,8 +2250,6 @@ CMVT
 Comverse Technology, Inc.
 CNA
 CNA Financial Corporation
-CNAF
-Commercial National Financial Corporation
 CNAM
 China Armco Metals, Inc.
 CNBC
@@ -2278,12 +2258,12 @@ CNBKA
 Century Bancorp, Inc.
 CNC
 Centene Corporation
+CNCO
+Cencosud S.A.
 CNDO
 Coronado Biosciences, Inc.
 CNET
 ChinaNet Online Holdings, Inc.
-CNGL
-China Nutrifruit Group Limited
 CNH
 CNH Global N.V.
 CNI
@@ -2314,8 +2294,6 @@ CNTF
 China TechFaith Wireless Communication Technology Limited
 CNTY
 Century Casinos, Inc.
-CNVO
-Convio, Inc.
 CNW
 CNF, Inc.
 CNX
@@ -2358,10 +2336,6 @@ COLB
 Columbia Banking System, Inc.
 COLM
 Columbia Sportswear Company
-COMV
-Comverge, Inc.
-CONM
-Conmed Healthcare Management, Inc.
 CONN
 Conn's, Inc.
 COO
@@ -2396,6 +2370,8 @@ CPA
 Copa Holdings, S.A.
 CPAC
 Cementos Pacasmayo S.A.A.
+CPAH
+CounterPath Corporation
 CPB
 Campbell Soup Company
 CPBC
@@ -2426,8 +2402,6 @@ CPN
 Calpine Corporation
 CPNO
 Copano Energy, L.L.C.
-CPO
-Corn Products International, Inc.
 CPP
 Merrill Lynch Depositor, Inc.
 CPRT
@@ -2446,10 +2420,6 @@ CPT
 Camden Property Trust
 CPTS
 Conceptus, Inc.
-CPV/CL
-CBS Corporation
-CPWM
-Cost Plus, Inc.
 CPWR
 Compuware Corporation
 CQB
@@ -2476,8 +2446,6 @@ CRDN
 Ceradyne, Inc.
 CRDS
 Crossroads Systems, Inc.
-CRED
-Credo Petroleum Corporation
 CREE
 Cree, Inc.
 CREG
@@ -2494,8 +2462,6 @@ CRH
 CRH PLC
 CRI
 Carter's, Inc.
-CRIC
-China Real Estate Information Corporation
 CRIS
 Curis, Inc.
 CRK
@@ -2523,7 +2489,7 @@ Ceragon Networks Ltd.
 CROX
 Crocs, Inc.
 CRP
-Credit Suisse Guernsey BRH
+Credit Suisse AG
 CRR
 Carbo Ceramics, Inc.
 CRRB
@@ -2550,16 +2516,10 @@ CRWS
 Crown Crafts, Inc.
 CRY
 CryoLife, Inc.
-CRYP
-CryptoLogic Limited
 CRZO
 Carrizo Oil & Gas, Inc.
 CS
 Credit Suisse Group
-CSA
-Cogdell Spencer, Inc.
-CSBC
-Citizens South Banking Corporation
 CSBK
 Clifton Savings Bancorp, Inc.
 CSC
@@ -2586,8 +2546,6 @@ CSII
 Cardiovascular Systems, Inc.
 CSIQ
 Canadian Solar Inc.
-CSKI
-China Sky One Medical, Inc.
 CSL
 Carlisle Companies Incorporated
 CSOD
@@ -2602,6 +2560,8 @@ CSRE
 CSR plc
 CSS
 CSS Industries, Inc.
+CSTE
+CaesarStone Sdot-Yam Ltd.
 CSTR
 Coinstar, Inc.
 CSU
@@ -2620,8 +2580,6 @@ CTAS
 Cintas Corporation
 CTB
 Cooper Tire & Rubber Company
-CTBC
-The Connecticut Bank and Trust Company
 CTBI
 Community Trust Bancorp, Inc.
 CTC
@@ -2654,22 +2612,30 @@ CTP
 CTPartners Executive Search Inc.
 CTQ
 Qwest Corporation
+CTR
+ClearBridge Energy MLP Total Return Fund Inc.
 CTRN
 Citi Trends, Inc.
 CTRP
 Ctrip.com International, Ltd.
+CTRX
+Catamaran Corporation
 CTS
 CTS Corporation
 CTSH
 Cognizant Technology Solutions Corporation
+CTU
+Qwest Corporation
 CTW
 Qwest Corporation
 CTWS
 Connecticut Water Service, Inc.
+CTX
+Qwest Corporation
 CTXS
 Citrix Systems, Inc.
 CU
-First Trust Exchange-Traded Fund II First Trust ISE Global Copper Index Fund
+First Trust Exchange-Traded Fund II First Trust ISE Global Cop
 CUB
 Cubic Corporation
 CUBA
@@ -2688,16 +2654,12 @@ CUTR
 Cutera, Inc.
 CUZ
 Cousins Properties Incorporated
-CV
-Central Vermont Pub Svc
 CVA
 Covanta Holding Corporation
 CVB
 Lehman ABS Corporation
 CVBF
 CVB Financial Corporation
-CVBK
-Central Virginia Bankshares, Inc.
 CVC
 Cablevision Systems Corporation
 CVCO
@@ -2736,8 +2698,6 @@ CVU
 CPI Aerostructures, Inc.
 CVV
 CVD Equipment Corporation
-CVVT
-China Valves Technology, Inc.
 CVX
 Chevron Corporation
 CW
@@ -2751,6 +2711,8 @@ Clayton Williams Energy, Inc.
 CWH
 CommonWealth REIT
 CWHN
+CommonWealth REIT
+CWHO
 CommonWealth REIT
 CWST
 Casella Waste Systems, Inc.
@@ -2796,8 +2758,6 @@ CYCCP
 Cyclacel Pharmaceuticals, Inc.
 CYD
 China Yuchai International Limited
-CYDE
-CyberDefender Corporation
 CYE
 Blackrock Corporate High Yield Fund III, Inc
 CYH
@@ -2832,6 +2792,8 @@ CZWI
 Citizens Community Bancorp, Inc.
 CZZ
 Cosan Limited
+D
+Dominion Resources, Inc.
 DAC
 Danaos Corporation
 DAEG
@@ -2870,6 +2832,8 @@ DCE
 Deutsche Bk Cap Fdg Tr X
 DCI
 Donaldson Company, Inc.
+DCIN
+Digital Cinema Destinations Corp.
 DCIX
 Diana Containerships Inc.
 DCM
@@ -2890,10 +2854,6 @@ DDE
 Dover Downs Gaming & Entertainment Inc
 DDF
 Delaware Investments Dividend & Income Fund, Inc.
-DDIC
-DDi Corp.
-DDMG
-Digital Domain Media Group, Inc.
 DDR
 Developers Diversified Realty Corporation
 DDS
@@ -2930,12 +2890,10 @@ DEXO
 Dex One Corporation
 DF
 Dean Foods Company
-DFG
-Delphi Financial Group, Inc.
-DFP
-Delphi Financial Group, Inc.
 DFR
 CIFC Corp.
+DFRG
+Del Frisco's Restaurant Group, Inc.
 DFS
 Discover Financial Services
 DFT
@@ -2991,11 +2949,11 @@ Diodes Incorporated
 DIS
 Walt Disney Company (The)
 DISCA
-Discovery Communications, Inc
+Discovery Communications, Inc.
 DISCB
-Discovery Communications, Inc
+Discovery Communications, Inc.
 DISCK
-Discovery Communications, Inc
+Discovery Communications, Inc.
 DISH
 DISH Network Corporation
 DIT
@@ -3006,10 +2964,6 @@ DJCO
 Daily Journal Corp. (S.C.)
 DK
 Delek US Holdings, Inc.
-DKP
-MS Structured Asset Corp Saturns GE Cap Corp Series 2002-14
-DKQ
-MS Structured Asset Corp Saturns GE Cap Corp Series 2002-14
 DKS
 Dick's Sporting Goods Inc
 DKT
@@ -3022,6 +2976,8 @@ DLB
 Dolby Laboratories
 DLGC
 Dialogic, Inc.
+DLHC
+DLH Holdings Corp.
 DLIA
 dELIA*s Inc.
 DLLR
@@ -3038,8 +2994,6 @@ DM
 Dolan Company (The)
 DMD
 Demand Media Inc.
-DMED
-D. Medical Industries Ltd.
 DMF
 Dreyfus Municipal Income, Inc.
 DMLP
@@ -3057,11 +3011,11 @@ DNB Financial Corp
 DNDN
 Dendreon Corporation
 DNI
-Dividend and Income Fund, Inc.
+Dividend and Income Fund
 DNKN
 Dunkin' Brands Group, Inc.
 DNN
-Intl Uranium Corp
+Denison Mine Corp
 DNP
 Duff & Phelps Utilities Income, Inc.
 DNR
@@ -3074,8 +3028,6 @@ DOLE
 Dole Food Company, Inc
 DOM
 Dominion Resources Black Warrior Trust
-DOMINION RESOURCES, INC.
-50.52
 DORM
 Dorman Products, Inc.
 DOV
@@ -3120,14 +3072,14 @@ DRI
 Darden Restaurants, Inc.
 DRIV
 Digital River, Inc.
-DRJ
-Dreams, Inc.
 DRL
 Doral Financial Corporation
 DRQ
 Dril-Quip, Inc.
 DRRX
 Durect Corporation
+DRTX
+Durata Therapeutics, Inc.
 DRU
 Dominion Resources, Inc.
 DRWI
@@ -3168,6 +3120,8 @@ DTK
 Deutsche Bank AG
 DTLK
 Datalink Corporation
+DTQ
+DTE Energy Company
 DTSI
 DTS, Inc.
 DTT
@@ -3180,8 +3134,6 @@ DUA
 Deutsche Bank AG
 DUC
 Duff & Phelps Utility & Corporate Bond Trust, Inc.
-DUCK
-Duckwall-Alco Stores, Inc.
 DUF
 Duff & Phelps Corporation
 DUK
@@ -3212,6 +3164,8 @@ DWA
 Dreamworks Animation SKG, Inc.
 DWCH
 Datawatch Corporation
+DWRE
+DEMANDWARE, INC.
 DWSN
 Dawson Geophysical Company
 DX
@@ -3230,18 +3184,22 @@ DY
 Dycom Industries, Inc.
 DYAX
 Dyax Corp.
-DYII
-Dynacq Healthcare, Inc.
 DYN
+Dynegy Inc.
+DYN/WS
 Dynegy Inc.
 DYNT
 Dynatronics Corporation
 DYSL
 Dynasil Corporation of America
+E
+ENI S.p.A.
 EA
 Electronic Arts Inc.
 EAA
 Entergy Arkansas, Inc.
+EAC           
+Erickson Air-Crane Incorporated
 EAD
 Wells Fargo Advantage Income Opportunities Fund
 EAGL
@@ -3270,8 +3228,6 @@ EBSB
 Meridian Interstate Bancorp, Inc.
 EBTC
 Enterprise Bancorp Inc
-EBTX
-Encore Bancshares, Inc.
 EC
 Ecopetrol S.A.
 ECA
@@ -3297,7 +3253,7 @@ Ecotality, Inc.
 ECYT
 Endocyte, Inc.
 ED
-Consolidated Edison Company of New York, Inc.
+Consolidated Edison Inc
 EDAC
 Edac Technologies Corporation
 EDAP
@@ -3308,8 +3264,8 @@ EDE
 Empire District Electric Company (The)
 EDF
 Stone Harbor Emerging Markets Income Fund
-EDGR
-EDGAR Online, Inc.
+EDG
+Edgen Group Inc.
 EDGW
 Edgewater Technology, Inc.
 EDMC
@@ -3339,13 +3295,11 @@ iShares, Inc. iShares MSCI Emerging Markets Asia Index Fund
 EEME
 iShares, Inc. iShares MSCI Emerging Markets EMEA Index Fund
 EEML
-iShares Trust iShares MSCI Emerging Markets Latin America Index Fund
+iShares Trust iShares MSCI Emerging Markets Latin America Inde
 EEP
 Enbridge Energy, L.P.
 EEQ
 Enbridge Energy Management LLC
-EF
-Edelman Financial Group Inc. (The)
 EFC
 Ellington Financial LLC
 EFII
@@ -3374,12 +3328,14 @@ EGHT
 8x8 Inc
 EGI
 Entree Gold Inc
+EGL
+Engility Holdings, Inc.
 EGLE
 Eagle Bulk Shipping Inc.
 EGN
 Energen Corporation
 EGO
-Eldorado Gold Corp
+Eldorado Gold Corporation
 EGOV
 NIC Inc.
 EGP
@@ -3388,8 +3344,6 @@ EGRW
 iShares, Inc. iShares MSCI Emerging Markets Growth Index Fund
 EGT
 Entertainment Gaming Asia Incorporated
-EGX
-Engex, Inc.
 EGY
 Vaalco Energy Inc
 EHI
@@ -3421,7 +3375,9 @@ Entergy Louisiana, Inc.
 ELB
 Entergy Louisiana, Inc.
 ELGX
-Endologix  Inc
+Endologix, Inc.
+ELJ
+Entergy Louisiana, Inc.
 ELLI
 Ellie Mae, Inc.
 ELLO
@@ -3434,6 +3390,8 @@ ELNK
 EarthLink, Inc.
 ELON
 Echelon Corporation
+ELOQ
+Eloqua, Inc.
 ELOS
 Syneron Medical Ltd.
 ELP
@@ -3444,8 +3402,6 @@ ELS
 Equity Lifestyle Properties, Inc.
 ELSE
 Electro-Sensors, Inc.
-ELT
-Elster Group SE
 ELTK
 Eltek Ltd.
 ELX
@@ -3456,6 +3412,8 @@ EMAN
 eMagin Corporation
 EMC
 EMC Corporation
+EMCB
+WisdomTree Trust WisdomTree Emerging Markets Corporate Bond Fu
 EMCF
 Emclaire Financial Corp
 EMCI
@@ -3463,11 +3421,11 @@ EMC Insurance Group, Inc.
 EMD
 Western Asset Emerging Markets Income Fund, Inc
 EMDI
-iShares, Inc. iShares MSCI Emerging Markets Consumer Discrectionary Sector Index Fund
+iShares, Inc. iShares MSCI Emerging Markets Consumer Discrecti
 EME
 EMCOR Group, Inc.
 EMEY
-iShares, Inc. iShares MSCI Emerging Markets Energy Sector Capped Index Fund
+iShares, Inc. iShares MSCI Emerging Markets Energy Sector Capp
 EMF
 Templeton Emerging Markets Fund
 EMFN
@@ -3492,6 +3450,8 @@ EMMT
 iShares MSCI Emerging Markets Materials Sector Index Fund
 EMN
 Eastman Chemical Company
+EMN/WS
+Eastman Chemical Company
 EMO
 ClearBridge Energy MLP Opportunity Fund Inc.
 EMQ
@@ -3509,21 +3469,21 @@ Enbridge Inc
 END
 Endeavor International Corporation
 ENDP
-Endo Pharmaceuticals Holdings Inc.
+Endo Health Solutions Inc.
 ENG
 ENGlobal Corporation
 ENH
 Endurance Specialty Holdings Ltd
 ENI
 Enersis S A
-ENI S.P.A.
-46.14
 ENL
 Reed Elsevier NV
 ENMD
 EntreMed, Inc.
 ENOC
 EnerNOC, Inc.
+ENPH
+Enphase Energy, Inc.
 ENR
 Energizer Holdings, Inc.
 ENS
@@ -3536,6 +3496,8 @@ ENTR
 Entropic Communications, Inc.
 ENV
 Envestnet, Inc
+ENVI
+Envivio, Inc.
 ENX
 Eaton Vance New York Municipal Bond Fund
 ENZ
@@ -3552,14 +3514,14 @@ EOI
 Eaton Vance Enhance Equity Income Fund
 EONC
 eOn Communications Corporation
+EOPN
+E2open, Inc.
 EOS
 Eaton Vance Enhanced Equity Income Fund II
-EOSPN
-EOS Preferred Corporation
 EOT
 Eaton Vance Municipal Income Trust
-EP
-El Paso Corporation
+EOX
+Emerald Oil, Inc.
 EPAM
 EPAM Systems, Inc.
 EPAX
@@ -3575,7 +3537,7 @@ Epoch Holding Corporation
 EPIQ
 EPIQ Systems, Inc.
 EPL
-Energy Partners, Ltd.
+EPL Oil & Gas, Inc.
 EPM
 Evolution Petroleum Corporation, Inc.
 EPOC
@@ -3584,6 +3546,8 @@ EPR
 Entertainment Properties Trust
 EQIX
 Equinix, Inc.
+EQM
+EQT Midstream Partners, LP
 EQR
 Equity Residential
 EQS
@@ -3594,6 +3558,8 @@ EQU
 Equal Energy Ltd.
 EQY
 Equity One, Inc.
+ERB
+ERBA Diagnostics, Inc.
 ERC
 Wells Fargo Advantage Multi-Sector Income Fund
 ERF
@@ -3610,10 +3576,6 @@ ERJ
 Embraer-Empresa Brasileira de Aeronautica
 EROC
 Eagle Rock Energy Partners, L.P.
-EROCW
-Eagle Rock Energy Partners, L.P.
-ERT
-eResearch Technology Inc.
 ES
 EnergySolutions Inc
 ESA
@@ -3621,7 +3583,7 @@ Energy Services Acquisition Corp
 ESBF
 ESB Financial Corporation
 ESBK
-The Elmira Savings Bank, FSB
+Elmira Savings Bank NY (The)
 ESC
 Emeritus Corporation
 ESCA
@@ -3636,8 +3598,6 @@ ESGR
 Enstar Group Limited
 ESI
 ITT Educational Services, Inc.
-ESIC
-EasyLink Services International Corporation
 ESIO
 Electro Scientific Industries, Inc.
 ESL
@@ -3649,7 +3609,7 @@ Escalon Medical Corp.
 ESP
 Espey Mfg. & Electronics Corp.
 ESRX
-Express Scripts, Inc.
+Express Scripts Holding Company
 ESS
 Essex Property Trust, Inc.
 ESSA
@@ -3662,6 +3622,8 @@ ESV
 ENSCO plc
 ESYS
 Elecsys Corporation
+ET
+ExactTarget, Inc.
 ETAK
 Elephant Talk Communications Inc
 ETB
@@ -3686,11 +3648,15 @@ ETO
 Eaton Vance Tax-Advantage Global Dividend Opp
 ETP
 ENERGY TRANSFER PARTNERS
+ETP$
+ENERGY TRANSFER PARTNERS
 ETR
 Entergy Corporation
 ETRM
 EnteroMedics Inc.
 ETUA
+eUnits 2 Year U.S. Market Participation Trust
+ETUB
 eUnits 2 Year U.S. Market Participation Trust
 ETV
 Eaton Vance Corporation
@@ -3702,6 +3668,8 @@ EUFN
 iShares MSCI Europe Financials Sector Index Fund
 EV
 Eaton Vance Corporation
+EVAC
+Edwards Group Limited
 EVAL
 iShares, Inc. iShares MSCI Emerging Markets Value Index Fund
 EVBN
@@ -3712,6 +3680,8 @@ EVC
 Entravision Communications Corporation
 EVEP
 EV Energy Partners, L.P.
+EVER
+EverBank Financial Corp.
 EVF
 Eaton Vance Senior Income Trust
 EVG
@@ -3744,6 +3714,8 @@ EW
 Edwards Lifesciences Corporation
 EWBC
 East West Bancorp, Inc.
+EXA
+Exa Corporation
 EXAC
 Exactech, Inc.
 EXAM
@@ -3752,8 +3724,6 @@ EXAR
 Exar Corporation
 EXAS
 EXACT Sciences Corporation
-EXBD
-The Corporate Executive Board Company
 EXC
 Exelon Corporation
 EXD
@@ -3798,6 +3768,8 @@ EZCH
 EZchip Semiconductor Limited
 EZPW
 EZCORP, Inc.
+F
+Ford Motor Company
 F/WS
 Ford Motor Company
 FABK
@@ -3822,10 +3794,12 @@ FAV
 First Trust Active Dividend Income Fund
 FAX
 Aberdeen Asia-Pacific Income Fund Inc
+FB
+Facebook, Inc.
 FBC
 Flagstar Bancorp, Inc.
 FBHS
-Beam Inc.
+Fortune Brands Home & Security, Inc.
 FBIZ
 First Business Financial Services, Inc.
 FBMI
@@ -3844,8 +3818,6 @@ FBR
 Fibria Celulose S.A.
 FBRC
 FBR & Co
-FBSI
-First Bancshares, Inc.
 FBSS
 Fauquier Bankshares, Inc.
 FC
@@ -3925,13 +3897,15 @@ Frequency Electronics, Inc.
 FELE
 Franklin Electric Co., Inc.
 FEN
-Energy Income and Growth Fund
+First Trust Energy Income and Growth Fund
 FENG
 Phoenix New Media Limited
 FEO
 First Trust/Aberdeen Emerging Opportunity Fund
 FES
 Forbes Energy Services Ltd
+FET
+Forum Energy Technologies, Inc.
 FF
 FutureFuel Corp.
 FFA
@@ -3948,14 +3922,8 @@ FFCH
 First Financial Holdings, Inc.
 FFCO
 FedFirst Financial Corporation
-FFD
-Morgan Stanley Frontier Emerging markets Fund, Inc.
-FFDF
-FFD Financial Corporation
 FFEX
 Frozen Food Express Industries, Inc.
-FFFD
-North Central Bancshares, Inc.
 FFG
 FBL Financial Group, Inc.
 FFHL
@@ -3981,8 +3949,6 @@ First Financial Northwest, Inc.
 FGB
 First Trust Specialty Finance and Financial Opportunities Fund
 FGC
-FPL Group Capital Inc
-FGE
 FPL Group Capital Inc
 FGP
 Ferrellgas Partners, L.P.
@@ -4018,6 +3984,8 @@ FITB
 Fifth Third Bancorp
 FITBP
 Fifth Third Bancorp
+FIVE
+Five Below, Inc.
 FIX
 Comfort Systems USA, Inc.
 FIZZ
@@ -4092,8 +4060,12 @@ FNFG
 First Niagara Financial Group Inc.
 FNGN
 Financial Engines, Inc.
+FNHC
+Federated National Holding Company
 FNLC
 First Bancorp, Inc (ME)
+FNP
+Fifth & Pacific Companies, Inc.
 FNSR
 Finisar Corporation
 FNV
@@ -4114,8 +4086,6 @@ FOR
 Forestar Group Inc
 FORD
 Forward Industries, Inc.
-FORD MOTOR COMPANY
-12.72
 FORM
 FormFactor, Inc.
 FORR
@@ -4127,6 +4097,8 @@ Fossil, Inc.
 FPO
 First Potomac Realty Trust
 FPP
+FieldPoint Petroleum Corporation
+FPP/WS
 FieldPoint Petroleum Corporation
 FPT
 Federated Premier Intermediate Municipal Income Fund
@@ -4142,8 +4114,6 @@ FRBK
 Republic First Bancorp, Inc.
 FRC
 FIRST REPUBLIC BANK
-FRCCO
-First Republic Preferred Capital Corporation
 FRD
 Friedman Industries Inc.
 FRED
@@ -4152,6 +4122,8 @@ FREE
 FreeSeas Inc.
 FRF
 Fortegra Financial Corporation
+FRGI
+Fiesta Restaurant Group, Inc.
 FRM
 Furmanite Corporation
 FRME
@@ -4172,6 +4144,8 @@ FSBI
 Fidelity Bancorp, Inc.
 FSBK
 First South Bancorp Inc
+FSBW
+FS Bancorp, Inc.
 FSC
 Fifth Street Finance Corp.
 FSCI
@@ -4189,7 +4163,7 @@ FSI International, Inc.
 FSIN
 Fushi Copperweld, Inc.
 FSL
-Freescale Semiconductor Holdings I, LTD
+Freescale Semiconductor, Ltd.
 FSLR
 First Solar, Inc.
 FSM
@@ -4223,13 +4197,11 @@ Flotek Industries, Inc.
 FTNT
 Fortinet, Inc.
 FTR
-Frontier Communications Company
+Frontier Communications Corporation
 FTT
 Federated Enhanced Treasury Income Fund
 FUBC
 1st United Bancorp, Inc. (FL)
-FUEL
-SMF Energy Corporation
 FUL
 H. B. Fuller Company
 FULL
@@ -4248,22 +4220,20 @@ FURX
 Furiex Pharmaceuticals, Inc.
 FVE
 Five Star Quality Care, Inc.
-FWF
-Wells Fargo & Company
 FWLT
 Foster Wheeler AG.
 FWRD
 Forward Air Corporation
 FWV
 First West Virginia Bancorp, Inc.
-FX
-FX Alliance Inc.
 FXCB
 Fox Chase Bancorp, Inc.
 FXCM
 FXCM Inc.
 FXEN
 FX Energy, Inc.
+G
+Genpact Limited
 GA
 Giant Interactive Group Inc
 GAB
@@ -4278,14 +4248,20 @@ GAIA
 Gaiam, Inc.
 GAIN
 Gladstone Investment Corporation
+GAINP
+Gladstone Investment Corporation
 GALE
 Galena Biopharma, Inc.
+GALT
+Galectin Therapeutics Inc.
+GALTU
+Galectin Therapeutics Inc.
+GALTW
+Galectin Therapeutics Inc.
 GAM
 General American Investors, Inc.
 GAME
 Shanda Games Limited
-GAR
-Georgia Power Company
 GAS
 AGL Resources, Inc.
 GASS
@@ -4302,6 +4278,8 @@ GBDC
 Golub Capital BDC, Inc.
 GBG
 Great Basin Gold, Ltd.
+GBIM
+GlobeImmune, Inc.
 GBL
 Gamco Investors, Inc.
 GBLI
@@ -4330,8 +4308,6 @@ GCO
 Genesco Inc.
 GCOM
 Globecomm Systems Inc.
-GCTS
-GCT Semiconductor, Inc.
 GCV
 Gabelli Convertible and Income Securities Fund, Inc. (The)
 GCVRZ
@@ -4376,14 +4352,12 @@ GENC
 Gencor Industries Inc.
 GENE
 Genetic Technologies Ltd
-GENPACT LIMITED
-15.73
 GENT
 Gentium SpA
 GEO
 Geo Group Inc (The)
-GEOI
-GeoResources, Inc.
+GEOS
+Geospace Technologies Corporation
 GEOY
 GeoEye, Inc.
 GEP
@@ -4396,8 +4370,6 @@ GERN
 Geron Corporation
 GES
 Guess?, Inc.
-GET
-Gaylord Entertainment Company
 GEVA
 Synageva BioPharma Corp.
 GEVO
@@ -4411,7 +4383,7 @@ Guaranty Federal Bancshares, Inc.
 GFF
 Griffon Corporation
 GFI
-Gold Fields Ltd.
+Gold Fields Limited
 GFIG
 GFI Group Inc.
 GFN
@@ -4420,14 +4392,10 @@ GFNCL
 General Finance Corporation
 GFNCZ
 General Finance Corporation
-GFW
-American Financial Group, Inc.
 GFY
 Western Asset Variable Rate Strategic Fund Inc.
-GFZ
-American Financial Group, Inc.
 GG
-Goldcorp Incorporated
+Goldcorp Inc.
 GGAL
 Grupo Financiero Galicia S.A.
 GGB
@@ -4460,6 +4428,8 @@ GIB
 CGI Group, Inc.
 GIFI
 Gulf Island Fabrication, Inc.
+GIG
+GigOptix, Inc.
 GIGA
 Giga-tronics Incorporated
 GIGM
@@ -4490,8 +4460,6 @@ GJK
 SYNTHETIC FIXED INCOME SECURITIES INC
 GJM
 GMAC LLC
-GJN
-SYNTHETIC FIXED INCOME SECURITIES INC
 GJO
 SYNTHETIC FIXED INCOME SECURITIES INC
 GJP
@@ -4514,6 +4482,8 @@ GKSR
 G&K Services, Inc.
 GLAD
 Gladstone Capital Corporation
+GLADP
+Gladstone Capital Corporation
 GLBS
 Globus Maritime Limited
 GLBZ
@@ -4526,12 +4496,12 @@ GLDD
 Great Lakes Dredge & Dock Corporation
 GLF
 GulfMark Offshore, Inc.
-GLGL
-GLG Life Tech Corp
 GLNG
 Golar LNG Limited
 GLO
 Clough Global Opportunities Fund
+GLOG
+GasLog Ltd.
 GLOW
 Glowpoint, Inc.
 GLP
@@ -4566,8 +4536,8 @@ GMCR
 Green Mountain Coffee Roasters, Inc.
 GME
 Gamestop Corporation
-GMET
-GeoMet, Inc.
+GMED
+Globus Medical, Inc.
 GMETP
 GeoMet, Inc.
 GMK
@@ -4585,7 +4555,7 @@ GNC Holdings, Inc.
 GNCMA
 General Communication, Inc.
 GNE
-IDT Corporation
+Genie Energy Ltd.
 GNI
 Great Northern Iron Ore Properties
 GNK
@@ -4614,8 +4584,6 @@ GOL
 Gol Linhas Aereas Inteligentes S.A.
 GOLD
 Randgold Resources Limited
-GOLF
-Golfsmith International Holdings, Inc.
 GOM
 GMAC LLC
 GOOD
@@ -4654,14 +4622,10 @@ GPRC
 Guanwei Recycling Corp.
 GPRE
 Green Plains Renewable Energy, Inc.
-GPRO
-Gen-Probe Incorporated
 GPS
 Gap, Inc. (The)
 GPX
 GP Strategies Corporation
-GR
-Goodrich Corporation (The)
 GRA
 W.R. Grace & Co.
 GRC
@@ -4673,25 +4637,23 @@ Grifols, S.A.
 GRH
 GreenHunter Energy Inc
 GRID
-First Trust NASDAQ Clean Edge Smart Grid Infrastructure Index Fund
+First Trust NASDAQ Clean Edge Smart Grid Infrastructure Index
 GRIF
 Griffin Land & Nurseries, Inc.
 GRMH
 GrayMark Healthcare, Inc.
 GRMN
 Garmin Ltd.
-GRNB
-Green Bankshares, Inc.
 GRO
 Agria Corporation
 GROW
 U.S. Global Investors, Inc.
+GRP
+Granite Real Estate Inc.
 GRPN
 Groupon, Inc.
 GRR
 Asia Tigers Fund, Inc. (The)
-GRRF
-China Grentech Corporation Limited
 GRT
 Glimcher Realty Trust
 GRVY
@@ -4736,6 +4698,8 @@ GSS
 Golden Star Resources, Ltd
 GST
 Gastar Exploration
+GSV
+Gold Standard Ventures Corporation
 GSVC
 GSV Capital Corp
 GSX
@@ -4760,10 +4724,10 @@ GTN/A
 Gray Television, Inc.
 GTS
 Triple-S Management Corporation
-GTSI
-GTSI Corp.
 GTU
 Central Gold Trust
+GTWN
+Georgetown Bancorp, Inc.
 GTXI
 GTx, Inc.
 GTY
@@ -4796,6 +4760,8 @@ GWR
 Genesee & Wyoming, Inc.
 GWRE
 Guidewire Software, Inc.
+GWRU
+Genesee & Wyoming, Inc.
 GWW
 W.W. Grainger, Inc.
 GXP
@@ -4812,6 +4778,8 @@ GYRO
 Gyrodyne Company of America, Inc.
 GZT
 Gazit-Globe Ltd.
+H
+Hyatt Hotels Corporation
 HA
 Hawaiian Holdings, Inc.
 HAE
@@ -4858,14 +4826,14 @@ HBIO
 Harvard Bioscience, Inc.
 HBM
 HudBay Minerals Inc
+HBMD
+Howard Bancorp, Inc.
 HBNC
 Horizon Bancorp (IN)
 HBNK
 Hampden Bancorp, Inc.
 HBOS
 Heritage Financial Group
-HBP
-Helix Biopherma Cp
 HCA
 HCA Holdings, Inc.
 HCBK
@@ -4874,8 +4842,6 @@ HCC
 HCC Insurance Holdings, Inc.
 HCCI
 Heritage-Crystal Clean, Inc.
-HCF
-Pyxis Credit Stategies Fund
 HCII
 Homeowners Choice, Inc.
 HCIIP
@@ -4884,6 +4850,8 @@ HCIIW
 Homeowners Choice, Inc.
 HCKT
 The Hackett Group, Inc.
+HCLP
+Hi-Crush Partners LP
 HCN
 Health Care REIT, Inc.
 HCOM
@@ -4944,22 +4912,18 @@ HFWA
 Heritage Financial Corporation
 HGG
 HHGregg, Inc.
-HGIC
-Harleysville Group Inc.
+HGH
+Hartford Financial Services Group, Inc. (The)
 HGR
-Hanger Orthopedic Group, Inc.
+Hanger, Inc.
 HGSH
 China HGS Real Estate, Inc.
-HGSI
-Human Genome Sciences, Inc.
 HGT
 Hugoton Royalty Trust
 HH
 Hooper Holmes, Inc.
 HHC
 Howard Hughes Corporation (The)
-HHGP
-Hudson Highland Group, Inc.
 HHS
 Harte-Hanks, Inc.
 HHY
@@ -4992,8 +4956,6 @@ HIO
 Western Asset High Income Opportunity Fund, Inc.
 HIS
 CIGNA High Income Shares
-HIT
-Hitachi, Ltd.
 HITK
 Hi-Tech Pharmacal Co., Inc.
 HITT
@@ -5002,10 +4964,6 @@ HIW
 Highwoods Properties, Inc.
 HIX
 Western Asset High Income Fund II Inc.
-HJA
-MS Structured Asset Corp Saturns GE Cap Corp Series 2002-14
-HJG
-MS Structured Asset Corp Saturns GE Cap Corp Series 2002-14
 HJJ
 MS Structured Asset Corp SATURNS Goldman Sachs
 HJL
@@ -5022,12 +4980,6 @@ HJV
 MS Structured Asset Corp Saturns GE Cap Corp Series 2002-14
 HK
 Halcon Resources Corporation
-HKAC
-Hicks Acquisition Company II, Inc.
-HKACU
-Hicks Acquisition Company II, Inc.
-HKACW
-Hicks Acquisition Company II, Inc.
 HKN
 HKN, Inc.
 HL
@@ -5069,7 +5021,7 @@ HomeStreet, Inc.
 HMSY
 HMS Holdings Corp
 HMY
-Harmony Gold Mining Co. Ltd.
+Harmony Gold Mining Company Limited
 HNH
 Handy & Harman Ltd.
 HNI
@@ -5094,8 +5046,6 @@ HOG
 Harley-Davidson, Inc.
 HOGS
 Zhongpin Inc.
-HOKU
-Hoku Corporation
 HOLI
 Hollysys Automation Technologies, Ltd.
 HOLL
@@ -5108,12 +5058,14 @@ HOME
 Home Federal Bancorp, Inc.
 HON
 Honeywell International Inc.
-HOOK
-Craft Brew Alliance, Inc.
 HOS
 Hornbeck Offshore Services
 HOT
 Starwood Hotels & Resorts Worldwide, Inc.
+HOTR
+Chanticleer Holdings, Inc.
+HOTRW
+Chanticleer Holdings, Inc.
 HOTT
 Hot Topic, Inc.
 HOV
@@ -5124,6 +5076,8 @@ HOVU
 Hovnanian Enterprises Inc
 HP
 Helmerich & Payne, Inc.
+HPAC
+Hyde Park Acquisition Corp. II
 HPCCP
 Huntington Preferred Capital, Inc.
 HPF
@@ -5142,6 +5096,8 @@ HPS
 John Hancock Preferred Income Fund III
 HPT
 Hospitality Properites Trust
+HPTX
+Hyperion Therapeutics, Inc.
 HPY
 Heartland Payment Systems, Inc.
 HQH
@@ -5170,18 +5126,20 @@ HSC
 Harsco Corporation
 HSFT
 HiSoft Technology International Limited
+HSH
+Hillshire Brands Company (The)
 HSIC
 Henry Schein, Inc.
 HSII
 Heidrick & Struggles International, Inc.
 HSKA
 Heska Corporation
-HSM
-Hyperion Strategic Mortgage Income Fund (The)
 HSNI
 HSN, Inc.
 HSOL
 Hanwha SolarOne Co., Ltd.
+HSON
+Hudson Global, Inc.
 HSP
 Hospira Inc
 HST
@@ -5192,6 +5150,10 @@ HSY
 Hershey Company (The)
 HT
 Hersha Hospitality Trust
+HTA
+Healthcare Trust of America, Inc.
+HTBI
+HomeTrust Bancshares, Inc.
 HTBK
 Heritage Commerce Corp
 HTCH
@@ -5200,7 +5162,13 @@ HTCO
 Hickory Tech Corporation
 HTD
 John Hancock Tax Advantaged Dividend Income Fund
+HTF
+Horizon Technology Finance Corporation
 HTGC
+Hercules Technology Growth Capital, Inc.
+HTGY
+Hercules Technology Growth Capital, Inc.
+HTGZ
 Hercules Technology Growth Capital, Inc.
 HTH
 Hilltop Holdings Inc.
@@ -5213,9 +5181,13 @@ Heartland Financial USA, Inc.
 HTM
 U.S. Geothermal Inc.
 HTR
-Hyperion Brookfield Total Return Fund, Inc.
+Hyperion Total Return Fund, Inc.
+HTR~
+Hyperion Total Return Fund, Inc.
 HTS
 Hatteras Financial Corp
+HTSI
+Harris Teeter Supermarkets, Inc.
 HTWR
 Heartware International, Inc.
 HTY
@@ -5262,15 +5234,15 @@ HXL
 Hexcel Corporation
 HXM
 Desarrolladora Homex
-HYATT HOTELS CORPORATION
-40.88
+HY
+Hyster-Yale Materials Handling, Inc.
 HYB
 New America High Income Fund, Inc. (The)
 HYF
 Managed High Yield Plus Fund, Inc.
 HYGS
 Hydrogenics Corporation
-HYH
+HYH/CL
 Lehman ABS Corporation
 HYI
 Western Asset High Yield Defined Opportunity Fund Inc.
@@ -5278,18 +5250,10 @@ HYK
 Lehman ABS Corporation
 HYL
 Lehman ABS Corporation
-HYM/CL
-Lehman ABS Corporation
 HYT
 Blackrock Corporate High Yield Fund VI Inc
 HYV
 Blackrock Corporate High Yield Fund V Inc
-HYY
-Structured Products Corp 6.25 Verizon Gbl
-HZD
-Zion Oil & Gas Inc
-HZK
-Structured Products Corp 6.25 Verizon Gbl
 HZNP
 Horizon Pharma, Inc.
 HZO
@@ -5314,8 +5278,6 @@ IBCP
 Independent Bank Corporation
 IBCPO
 Independent Bank Corporation
-IBI
-Interline Brands, Inc.
 IBIO
 iBio, Inc.
 IBKC
@@ -5352,8 +5314,6 @@ ICLR
 ICON plc
 ICON
 Iconix Brand Group, Inc.
-ICS
-Invesco California Municipal Securities
 ICUI
 ICU Medical, Inc.
 IDA
@@ -5456,8 +5416,6 @@ IHS
 IHS Inc.
 IHT
 InnSuites Hospitality Trust
-IIC
-Invesco California Municipal Income Trust
 IID
 ING International High Dividend Equity Income Fund
 IIF
@@ -5480,16 +5438,8 @@ IIVI
 II-VI Incorporated
 IKAN
 Ikanos Communications, Inc.
-IKJ
-Bank of America Corporation
-IKL
-Bank of America Corporation
-IKM
-Bank of America Corporation
 IKNX
 Ikonics Corporation
-IKR
-Bank of America Corporation
 IL
 IntraLinks Holdings, Inc.
 ILMN
@@ -5528,14 +5478,14 @@ IMS
 Invesco Value Municipal Securities
 IMT
 Invesco Value Municipal Trust
+IMUC
+ImmunoCellular Therapeutics, Ltd.
 IN
 UNOVA, Inc.
 INAP
 Internap Network Services Corporation
 INB
 Cohen & Steers Global Income Builder, Inc.
-INCB
-Indiana Community Bancorp
 INCY
 Incyte Corporation
 IND
@@ -5558,10 +5508,10 @@ INFY
 Infosys Limited
 ING
 ING Group, N.V.
+INGR
+Ingredion Incorporated
 ININ
 Interactive Intelligence Group, Inc.
-INMD
-IntegraMed America, Inc.
 INN
 Summit Hotel Properties, Inc.
 INO
@@ -5569,15 +5519,13 @@ Inovio Pharmaceuticals, Inc.
 INOC
 Innotrac Corporation
 INOD
-Innodata Isogen Inc
+Innodata Inc.
 INPH
 Interphase Corporation
 INS
 Intelligent Systems Corporation
 INSM
 Insmed, Inc.
-INSP
-InfoSpace, Inc.
 INT
 World Fuel Services Corporation
 INTC
@@ -5602,6 +5550,12 @@ INVN
 InvenSense, Inc.
 INWK
 InnerWorkings, Inc.
+INXB
+Infinity Cross Border Acquisition Corporation
+INXBU
+Infinity Cross Border Acquisition Corporation
+INXBW
+Infinity Cross Border Acquisition Corporation
 INXN
 InterXion Holding N.V.
 INZ
@@ -5638,20 +5592,14 @@ IPHS
 Innophos Holdings, Inc.
 IPI
 Intrepid Potash, Inc
-IPSU
-Imperial Sugar Company
 IPT
 iParty Corporation
 IPXL
 Impax Laboratories, Inc.
-IQC
-Invesco California Municipal Securities
 IQI
 Invesco Quality Municipal Income Trust
 IQM
 Invesco Quality Municipal Securities
-IQN
-Invesco New York Quality Municipal Securities
 IQNT
 Neutral Tandem, Inc.
 IQT
@@ -5678,12 +5626,14 @@ IRETP
 Investors Real Estate Trust
 IRF
 International Rectifier Corporation
+IRG
+Ignite Restaurant Group, Inc.
 IRIS
 IRIS International, Inc.
 IRIX
 IRIDEX Corporation
 IRL
-Irish Investment Fund, Inc. (The)
+New Ireland Fund, Inc. (The)
 IRM
 Iron Mountain Incorporated
 IROQ
@@ -5698,6 +5648,8 @@ ISBC
 Investors Bancorp, Inc.
 ISCA
 International Speedway Corporation
+ISD
+Prudential Short Duration High Yield Fund, Inc.
 ISF
 ING Group, N.V.
 ISG
@@ -5705,7 +5657,7 @@ ING Group, N.V.
 ISH
 International Shipholding Corporation
 ISHG
-iShares S&P/Citigroup 1-3 Year International Treasury Bond Fund
+iShares S&P/Citigroup 1-3 Year International Treasury Bond Fun
 ISIG
 Insignia Systems, Inc.
 ISIL
@@ -5734,8 +5686,6 @@ ISSC
 Innovative Solutions and Support, Inc.
 ISSI
 Integrated Silicon Solution, Inc.
-ISTA
-ISTA Pharmaceuticals, Inc.
 IT
 Gartner, Inc.
 ITC
@@ -5764,10 +5714,6 @@ IVAN
 Ivanhoe Energy, Inc.
 IVC
 Invacare Corporation
-IVD
-IVAX Diagnostics, Inc.
-IVN
-Ivanhoe Mines Ltd
 IVR
 INVESCO MORTGAGE CAPITAL INC
 IVZ
@@ -5844,14 +5790,10 @@ JEF
 Jefferies Group, Inc.
 JEQ
 Japan Equity Fund, Inc. (The)
-JFBC
-Jeffersonville Bancorp
 JFBI
 Jefferson Bancshares, Inc.
 JFC
 JF China Region  Fund, Inc.
-JFP
-Nuveen Tax-Advantaged Floating Rate Fund
 JFR
 Nuveen Floating Rate Income Fund
 JGG
@@ -5886,12 +5828,12 @@ JMBA
 Jamba, Inc.
 JMF
 Nuveen Energy MLP Total Return Fund
+JMI           
+Javelin Mortgage Investment Corp.
 JMP
 JMP Group Inc
 JMT
 Nuven Mortgage Opportunity Term Fund 2
-JNGW
-Jingwei International Limited
 JNJ
 Johnson & Johnson
 JNPR
@@ -5917,9 +5859,11 @@ Johnson Outdoors Inc.
 JOY
 Joy Global Inc.
 JPC
-Nuveen Preferred and Convertible Income Fund
+Nuveen Preferred Income Opportunites Fund
 JPG
 Nuveen Equity Premium and Growth Fund
+JPI
+Nuveen Preferred and Income Term Fund
 JPM
 J P Morgan Chase & Co
 JPM/WS
@@ -5929,9 +5873,11 @@ Nuveen Quality Preferred Income Fund 2
 JPZ
 Nuveen Equity Premium Income Fund
 JQC
-Nuveen Preferred and Convertible Income Fund 2
+Nuveen Credit Strategies Income Fund
 JRCC
 James River Coal Company
+JRI
+Nuveen Real Asset Income and Growth Fund
 JRJC
 China Finance Online Co. Limited
 JRN
@@ -5942,8 +5888,6 @@ JRS
 Nuveen Real Estate Fund
 JSD
 Nuveen Short Duration Credit Opportunities Fund
-JSDA
-Jones Soda Co.
 JSM
 SLM Corporation
 JSN
@@ -5970,8 +5914,6 @@ JXSB
 Jacksonville Bancorp Inc.
 JZC
 Lehman ABS Corporation
-JZH
-Lehman ABS Corporation
 JZJ
 Lehman ABS Corporation
 JZK
@@ -5984,6 +5926,8 @@ JZT
 Lehman ABS Corp
 JZV
 Lehman ABS Corporation
+K
+Kellogg Company
 KAI
 Kadant Inc
 KALU
@@ -6005,17 +5949,13 @@ KBW Inc
 KBX
 Kimber Resources Inc
 KCAP
-Kohlberg Capital Corporation
+KCAP Financial, Inc.
 KCC
 Lehman ABS Corporation
 KCG
 Knight Capital Group, Inc.
 KCLI
 Kansas City Life Insurance Company
-KCP
-Kenneth Cole Productions, Inc.
-KCW
-Lehman ABS Corporation
 KDN
 Kaydon Corporation
 KED
@@ -6024,8 +5964,6 @@ KEF
 Korea Equity Fund, Inc.
 KEG
 Key Energy Services, Inc.
-KELLOGG COMPANY
-52.11
 KELYA
 Kelly Services, Inc.
 KELYB
@@ -6054,14 +5992,14 @@ KFFG
 Kaiser Federal Financial Group, Inc.
 KFH
 KKR Financial Holdings LLC
+KFI
+KKR Financial Holdings LLC
 KFN
 KKR Financial Holdings LLC
 KFRC
 Kforce, Inc.
 KFS
 Kingsway Financial Services, Inc.
-KFT
-Kraft Foods Inc.
 KFY
 Korn/Ferry International
 KGC
@@ -6102,9 +6040,11 @@ KMB
 Kimberly-Clark Corporation
 KMF
 Kayne Anderson Midstream Energy Fund, Inc
-KMGB
+KMG
 KMG Chemicals, Inc.
 KMI
+Kinder Morgan, Inc.
+KMI/WS
 Kinder Morgan, Inc.
 KMM
 Scudder Multi-Market Income Trust
@@ -6126,14 +6066,8 @@ KNL
 Knoll, Inc.
 KNM
 Konami Corporation
-KNO
-Lehman ABS Corporation
-KNOL
-Knology, Inc.
 KNR
 Lehman ABS Corporation
-KNSY
-Kensey Nash Corporation
 KNX
 Knight Transportation, Inc.
 KNXA
@@ -6168,6 +6102,8 @@ KRA
 Kraton Performance Polymers, Inc
 KRC
 Kilroy Realty Corporation
+KRFT
+Kraft Foods Group, Inc.
 KRG
 Kite Realty Group Trust
 KRJ
@@ -6179,8 +6115,6 @@ Kronos Worldwide Inc
 KS
 KapStone Paper and Packaging Corporation
 KSA
-Lehman ABS Corporation
-KSK
 Lehman ABS Corporation
 KSM
 Scudder Strategic Municiple Income Trust
@@ -6212,14 +6146,8 @@ KTP
 Lehman ABS Corporation
 KUB
 Kubota Corporation
-KUN
-China Shenghuo Pharmaceutical Holdings, Inc
 KUTV
 Ku6 Media Co., Ltd.
-KV/A
-K-V Pharmaceutical Company
-KV/B
-K-V Pharmaceutical Company
 KVHI
 KVH Industries, Inc.
 KW
@@ -6230,12 +6158,16 @@ KWR
 Quaker Chemical Corporation
 KXM
 Kobex Minerals Inc.
+KYAK
+Kayak Software Corporation
 KYE
 Kayne Anderson Energy Total Return Fund, Inc.
 KYN
 Kayne Anderson MLP Investment Company
 KYO
 Kyocera Corporation
+L
+Loews Corporation
 LABC
 Louisiana Bancorp, Inc.
 LABL
@@ -6286,8 +6218,6 @@ LCM
 Advent/Claymore Enhanced Growth & Income Fund
 LCNB
 LCNB Corporation
-LCRY
-LeCroy Corporation
 LCUT
 Lifetime Brands, Inc.
 LDF
@@ -6296,6 +6226,8 @@ LDK
 LDK Solar Co. Ltd.
 LDL
 Lydall, Inc.
+LDP
+Cohen & Steers Limited Duration Preferred and Income Fund, Inc
 LDR
 Landauer, Inc.
 LEA
@@ -6328,6 +6260,8 @@ LFL
 Lan Chile S.A.
 LFUS
 Littelfuse, Inc.
+LFVN
+Lifevantage Corporation
 LG
 Laclede Group, Inc.
 LGCY
@@ -6368,11 +6302,9 @@ LIVE
 LiveDeal, Inc.
 LIWA
 Lihua International, Inc.
-LIZ
-Liz Claiborne, Inc.
 LKFN
 Lakeland Financial Corporation
-LKQX
+LKQ
 LKQ Corporation
 LL
 Lumber Liquidators Holdings, Inc
@@ -6413,9 +6345,7 @@ Lincoln National Corporation
 LNC/WS
 Lincoln National Corporation
 LNCE
-Lance, Inc.
-LNCR
-Lincare Holdings Inc.
+Snyder's-Lance, Inc.
 LNDC
 Landec Corporation
 LNET
@@ -6432,12 +6362,12 @@ LO
 Lorillard, Inc
 LOAN
 Manhattan Bridge Capital, Inc
+LOCK
+LifeLock, Inc.
 LOCM
-Local.com Corporation
+Local Corporation
 LODE
 Comstock Mining, Inc.
-LOEWS CORPORATION
-38.87
 LOGI
 Logitech International S.A.
 LOGM
@@ -6450,8 +6380,6 @@ LONG
 eLong, Inc.
 LOOK
 LookSmart, Ltd.
-LOOP
-LoopNet, Inc.
 LOPE
 Grand Canyon Education, Inc.
 LOR
@@ -6471,14 +6399,14 @@ Laredo Petroleum Holdings, Inc.
 LPL
 LG Display Co., Limited American Depositary Shares
 LPLA
-LPL Investment Holdings Inc.
+LPL Financial Holdings Inc.
 LPNT
 LifePoint Hospitals, Inc.
 LPR
 Lone Pine Resources Inc.
 LPS
 Lender Processing Services, Inc
-LPSB
+LPSBD
 LaPorte Bancorp, Inc.
 LPSN
 LivePerson, Inc.
@@ -6548,10 +6476,18 @@ LVB
 Steinway Musical Instruments, Inc.
 LVLT
 Level 3 Communications, Inc.
+LVNAR
+Liberty Interactive Corporation
+LVNTA
+Liberty Interactive Corporation
+LVNTB
+Liberty Interactive Corporation
 LVS
 Las Vegas Sands Corp.
 LWAY
 Lifeway Foods, Inc.
+LXFR
+Luxfer Holdings PLC
 LXK
 Lexmark International, Inc.
 LXP
@@ -6572,6 +6508,8 @@ LZB
 La-Z-Boy Incorporated
 LZEN
 Lizhan Environmental Corporation
+M
+Macy's Inc
 MA
 Mastercard Incorporated
 MAA
@@ -6580,8 +6518,8 @@ MAB
 Eaton Vance Massachusetts Municipal Bond Fund
 MAC
 Macerich Company (The)
-MACY&#39;S INC
-38.31
+MACK
+Merrimack Pharmaceuticals, Inc.
 MAG
 Magnetek, Inc.
 MAGS
@@ -6598,6 +6536,8 @@ MANH
 Manhattan Associates, Inc.
 MANT
 ManTech International Corporation
+MANU
+Manchester United Ltd.
 MAPP
 MAP Pharmaceuticals, Inc.
 MAR
@@ -6618,12 +6558,12 @@ MATR
 Mattersight Corporation
 MATW
 Matthews International Corporation
+MATX
+Matson, Inc.
 MAV
 Pioneer Municipal High Income Advantage Trust
 MAXY
 Maxygen, Inc.
-MAY
-Malaysia Fund, Inc (The)
 MAYS
 J. W. Mays, Inc.
 MBA
@@ -6650,10 +6590,10 @@ MCA
 Blackrock MuniYield California Insured Fund, Inc.
 MCBC
 Macatawa Bank Corporation
-MCBF
-Monarch Community Bancorp, Inc.
 MCBI
 MetroCorp Bancshares, Inc.
+MCBK
+Madison County Financial, Inc.
 MCC
 Medley Capital Corporation
 MCD
@@ -6680,6 +6620,8 @@ MCOX
 Mecox Lane Limited
 MCP
 Molycorp, Inc
+MCQ
+Medley Capital Corporation
 MCR
 MFS Charter Income Trust
 MCRI
@@ -6714,6 +6656,10 @@ MDGN/WS
 Medgenics, Inc.
 MDH
 MHI Hospitality Corporation
+MDIV
+First Trust Exchange-Traded Fund VI Multi-Asset Diversified In
+MDLZ
+Mondelez International, Inc.
 MDM
 Mountain Province Diamonds Inc.
 MDP
@@ -6722,14 +6668,10 @@ MDR
 McDermott International, Inc.
 MDRX
 Allscripts Healthcare Solutions, Inc.
-MDS
-Midas, Inc.
 MDSO
 Medidata Solutions, Inc.
 MDT
 Medtronic, Inc.
-MDTH
-MedCath Corporation
 MDU
 Mdu Res Group Inc
 MDVN
@@ -6746,10 +6688,14 @@ MED
 MEDIFAST INC
 MEDW
 MEDIWARE Information Systems, Inc.
+MEET
+MeetMe, Inc.
 MEG
 Media General, Inc.
 MEI
 Methode Electronics, Inc.
+MEIP
+MEI Pharma, Inc.
 MELA
 MELA Sciences, Inc
 MELI
@@ -6792,10 +6738,10 @@ MFLX
 Multi-Fineline Electronix, Inc.
 MFM
 MFS Municipal Income Trust
-MFN
-MineFinders Corp. Ltd.
 MFNC
 Mackinac Financial Corporation
+MFO
+America First Mortgage Investments, Inc.
 MFRI
 MFRI, Inc.
 MFRM
@@ -6812,6 +6758,8 @@ MGA
 Magna International, Inc.
 MGAM
 Multimedia Games Holding Company, Inc.
+MGCD
+MGC Diagnostics Corporation
 MGEE
 MGE Energy Inc.
 MGF
@@ -6830,6 +6778,8 @@ MGN
 Mines Management, Inc.
 MGPI
 MGP Ingredients, Inc.
+MGR
+Affiliated Managers Group, Inc.
 MGRC
 McGrath RentCorp
 MGT
@@ -6858,14 +6808,14 @@ MHN
 Blackrock MuniHoldings New York Quality Fund, Inc.
 MHNA
 Maiden Holdings, Ltd.
+MHNB
+Maiden Holdings, Ltd.
 MHO
 M/I Homes, Inc.
 MHP
 McGraw-Hill Companies, Inc. (The)
 MHR
 Magnum Hunter Resources Corporation
-MHS
-MedcoHealth Solutions Inc
 MHY
 Western Asset Managed High Income Fund, Inc.
 MIC
@@ -6878,8 +6828,6 @@ MIL
 MFC Industrial Ltd.
 MILL
 Miller Energy Resources, Inc.
-MIM
-MI Developments Inc
 MIN
 MFS Intermediate Income Trust
 MIND
@@ -6888,8 +6836,6 @@ MINI
 Mobile Mini, Inc.
 MIPS
 MIPS Technologies, Inc.
-MITI
-Micromet, Inc.
 MITK
 Mitek Systems, Inc.
 MITL
@@ -6900,8 +6846,6 @@ MIW
 Eaton Vance Michigan Municipal Bond Fund
 MIY
 Blackrock MuniYield Michigan Quality Fund, Inc.
-MJH
-MS Structured Asset Corp Saturns GE Cap Corp Series 2002-14
 MJI
 Blackrock MuniYield New Jersey Quality Fund, Inc.
 MJN
@@ -6922,8 +6866,6 @@ MKTG
 Responsys, Inc.
 MKTX
 MarketAxess Holdings, Inc.
-MKV
-Markel Corporation
 MLAB
 Mesa Laboratories, Inc.
 MLG
@@ -6946,10 +6888,12 @@ MLU
 MetLife, Inc.
 MLVF
 Malvern Federal Bancorp, Inc.
+MM
+Millennial Media, Inc.
 MMC
 Marsh & McLennan Companies, Inc.
-MMI
-Motorola, Inc.
+MMD
+MainStay DefinedTerm Municipal Opportunities Fund
 MMLP
 Martin Midstream Partners L.P.
 MMM
@@ -6978,8 +6922,8 @@ MNDO
 MIND C.T.I. Ltd.
 MNE
 Blackrock Muni New York Intermediate Duration Fund Inc
-MNEL
-Mission NewEnergy Limited
+MNGA
+MagneGas Corporation
 MNGL
 Blue Wolf Mongolia Holdings Corp.
 MNGLU
@@ -7020,8 +6964,6 @@ MOCO
 MOCON, Inc.
 MOD
 Modine Manufacturing Company
-MODL
-MModal Inc.
 MOFG
 MidWestOne Financial Group, Inc.
 MOG/A
@@ -7064,8 +7006,8 @@ MPET
 Magellan Petroleum Corporation
 MPG
 MPG Office Trust, Inc.
-MPJ
-Mississippi Power Company
+MPO
+Midstates Petroleum Company, Inc.
 MPR
 Met-Pro Corporation
 MPV
@@ -7082,6 +7024,8 @@ MQY
 Blackrock MuniYield Quality Fund, Inc.
 MR
 Mindray Medical International Limited
+MRC
+MRC Global Inc.
 MRCY
 Mercury Computer Systems
 MRF
@@ -7116,8 +7060,6 @@ MSCI
 MSCI Inc
 MSD
 Morgan Stanley Emerging Markets Debt Fund, Inc.
-MSDXP
-BB&T Corporation
 MSEX
 Middlesex Water Company
 MSF
@@ -7128,10 +7070,8 @@ MSFT
 Microsoft Corporation
 MSG
 The Madison Square Garden Company
-MSHL
-Marshall Edwards, Inc.
 MSI
-Motorola, Inc.
+Motorola Solutions, Inc.
 MSJ
 Morgan Stanley
 MSK
@@ -7156,8 +7096,6 @@ MSTR
 MicroStrategy Incorporated
 MSW
 Mission West Properties, Inc.
-MSY
-Invesco High Yield Investments Fund
 MSZ
 Morgan Stanley
 MT
@@ -7184,10 +7122,6 @@ MTN
 Vail Resorts, Inc.
 MTOR
 Meritor, Inc.
-MTOX
-Medtox Scientific, Inc.
-MTP
-MLP & Strategic Equity Fund Inc.
 MTR
 Mesa Royalty Trust
 MTRN
@@ -7198,6 +7132,8 @@ MTS
 Montgomery Street Income Securities, Inc.
 MTSC
 MTS Systems Corporation
+MTSI
+M/A-COM Technology Solutions Holdings, Inc.
 MTSL
 MER Telemanagement Solutions Ltd.
 MTSN
@@ -7316,6 +7252,8 @@ MZA
 MuniYield Arizona Fund, Inc.
 MZF
 Managed Duration Investment Grade Municipal Fund
+N
+Netsuite Inc
 NABI
 Nabi Biopharmaceuticals
 NAC
@@ -7334,8 +7272,6 @@ NAN
 Nuveen New York Dividend Advantage Municipal Fund
 NANO
 Nanometrics Incorporated
-NANX
-Nanophase Technologies Corporation
 NASB
 NASB Financial Inc.
 NAT
@@ -7370,6 +7306,8 @@ NBG
 National Bank of Greece SA
 NBH
 Neuberger Berman Intermediate Municipal Fund Inc.
+NBHC
+National Bank Holdings Corporation
 NBIX
 Neurocrine Biosciences, Inc.
 NBJ
@@ -7383,8 +7321,6 @@ Neuberger Berman New York Intermediate Municipal Fund Inc.
 NBR
 Nabors Industries Ltd.
 NBS
-Neostem, Inc.
-NBS/WS
 Neostem, Inc.
 NBTB
 NBT Bancorp Inc.
@@ -7406,14 +7342,14 @@ NCI
 Navigant Consulting, Inc.
 NCIT
 NCI, Inc.
-NCL
-Nuveen Insured California Premium Income Municipal Fund II, In
 NCMI
 National CineMedia, Inc.
 NCO
 Nuveen California Municipal Market Opportunity Fund, Inc.
 NCP
 Nuveen California Performance Plus Municipal Fund, Inc.
+NCQ
+NovaCopper Inc.
 NCR
 NCR Corporation
 NCS
@@ -7430,6 +7366,8 @@ NCZ
 AGIC Convertible & Income Fund II
 NDAQ
 The NASDAQ OMX Group, Inc.
+NDP
+Tortoise Energy Independence Fund, Inc.
 NDRO
 Enduro Royalty Trust
 NDSN
@@ -7448,22 +7386,20 @@ NED
 Noah Education Holdings Ltd.
 NEE
 NextEra Energy, Inc.
-NEI
-Network Engines, Inc
 NEM
-Newmont Mining Corporation (Holding Company)
+Newmont Mining Corporation
 NEN
 New England Realty Associates Limited Partnership
 NEOG
 Neogen Corporation
-NEP
-China North East Petroleum Holdings Limited
+NEON
+Neonode Inc.
 NEPT
 Neptune Technologies & Bioresources Inc
 NETC
 NET Servicos de Comunicacao S.A.
-NETSUITE INC
-49.03
+NETED
+Net Element International, Inc.
 NEU
 NewMarket Corporation
 NEV
@@ -7482,8 +7418,6 @@ NEXS
 Nexxus Lighting, Inc.
 NFBK
 Northfield Bancorp, Inc.
-NFC
-Nuveen Connecticut Dividend Advantage Municipal Fund
 NFEC
 NF Energy Saving Corporation
 NFG
@@ -7492,8 +7426,6 @@ NFJ
 NFJ Dividend, Interest & Premium Strategy Fund
 NFLX
 Netflix, Inc.
-NFM
-Nuveen Maryland Dividend Advantage Municipal Fund
 NFP
 National Financial Partners Corporation
 NFSB
@@ -7503,35 +7435,31 @@ Newfield Exploration Company
 NFZ
 Nuveen Arizona Dividend Advantage Municipal Fund
 NG
-Novagold Resources Inc New
-NGB
-Nuveen Virginia Dividend Advantage Municipal Fund
+Novagold Resources Inc.
 NGD
 NEW GOLD INC.
 NGG
 National Grid Transco, PLC
-NGK
-Nuveen Connecticut Dividend Advantage Municipal Fund 2
 NGL
 NGL ENERGY PARTNERS LP
 NGLS
 Targa Resources Partners LP
-NGO
-Nuveen Connecticut Dividend Advantage Municipal Fund 3
 NGPC
 NGP Capital Resources Company
 NGS
 Natural Gas Services Group, Inc.
-NGSX
-NeurogesX, Inc.
 NGT
 Eastern American Natural Gas Trust
+NGVC
+Natural Grocers by Vitamin Cottage, Inc.
 NGX
-Nuveen Insured Massachusetts Tax-Free Advantage Municipal Fund
+Nuveen Massachusetts AMT-Free Municipal Income Fund
 NGZ
 AGIC Global Equity & Convertible Income Fund
 NHC
 National HealthCare Corporation
+NHF
+NexPoint Credit Stategies Fund
 NHI
 National Health Investors, Inc.
 NHS
@@ -7550,8 +7478,6 @@ NIF
 Nuveen Premier Municipal Opportunity Fund, Inc.
 NIHD
 NII Holdings, Inc.
-NII
-Nuveen North Carolina Dividend Advantage Municipal Fund 3
 NILE
 Blue Nile, Inc.
 NIM
@@ -7574,8 +7500,6 @@ NKE
 Nike, Inc.
 NKG
 Nuveen Georgia Dividend Advantage Municipal Fund 2
-NKL
-Nuveen Insured California Dividend Advantage Municipal Fund
 NKO
 Nuveen New York Dividend Advantage Municipal Income Fund
 NKR
@@ -7585,7 +7509,7 @@ National Bankshares, Inc.
 NKTR
 Nektar Therapeutics
 NKX
-Nuveen Insured California Tax-Free Advantage Municipal Fund
+Nuveen California AMT-Free Municipal Income Fund
 NL
 NL Industries, Inc.
 NLNK
@@ -7638,8 +7562,6 @@ NNA/U
 Navios Maritime Acquisition Corporation
 NNA/WS
 Navios Maritime Acquisition Corporation
-NNB
-Nuveen Virginia Dividend Advantage Municipal Fund 2
 NNBR
 NN, Inc.
 NNC
@@ -7652,8 +7574,6 @@ NNJ
 Nuveen New Jersey Premium Income Municipal Fund, Inc.
 NNN
 National Retail Properties
-NNO
-Nuveen North Carolina Dividend Advantage Municipal Fund 2
 NNP
 Nuveen New York Performance Plus Municipal Fund, Inc.
 NNY
@@ -7662,14 +7582,10 @@ NOA
 North American Energy Partners, Inc.
 NOAH
 Noah Holdings Ltd.
-NOBH
-Nobility Homes, Inc.
 NOC
 Northrop Grumman Corporation
 NOG
 Northern Oil and Gas, Inc.
-NOIZ
-Micronetics, Inc.
 NOK
 Nokia Corporation
 NOM
@@ -7682,20 +7598,18 @@ NOV
 National-Oilwell, Inc.
 NOVB
 North Valley Bancorp
+NOW
+ServiceNow, Inc.
 NP
 Neenah Paper, Inc.
 NPBC
 National Penn Bancshares, Inc.
 NPBCO
 National Penn Bancshares, Inc.
-NPC
-Nuveen Insured California Premium Income Fund, Inc.
 NPD
 China Nepstar Chain Drugstore Ltd
 NPF
 Nuveen Premier Municipal Income Fund, Inc.
-NPG
-Nuveen Georgia Premium Income Municipal Fund
 NPI
 Nuveen Premium Income Municipal Fund, Inc.
 NPK
@@ -7721,7 +7635,7 @@ Nuveen Premium Income Municipal Opportunity Fund
 NPY
 Nuveen Pennsylvania Premium Income Municipal Fund II
 NQ
-NetQin Mobile Inc.
+NQ Mobile Inc.
 NQC
 Nuveen California Investment Quality Municipal Fund, Inc.
 NQI
@@ -7740,8 +7654,6 @@ NQU
 Nuveen Quality Income Municipal Fund, Inc.
 NR
 Newpark Resources, Inc.
-NRB
-Nuveen North Carolina Dividend Advantage Municipal Fund
 NRC
 National Rural Utilities Cooperative Finance Corp
 NRCI
@@ -7778,6 +7690,8 @@ NSIT
 Insight Enterprises, Inc.
 NSL
 Nuveen Senior Income Fund
+NSM
+Nationstar Mortgage Holdings Inc.
 NSP
 Insperity, Inc.
 NSPH
@@ -7786,8 +7700,6 @@ NSR
 Neustar, Inc.
 NSSC
 NAPCO Security Technologies, Inc.
-NST
-NSTAR
 NSU
 Nevsun Resources Ltd
 NSYS
@@ -7801,11 +7713,13 @@ NetScout Systems, Inc.
 NTE
 Nam Tai Electronics, Inc.
 NTES
-Netease.com, Inc.
+NetEase, Inc.
 NTG
 Tortoise MLP Fund, Inc.
 NTGR
 NETGEAR, Inc.
+NTI
+Northern Tier Energy LP
 NTIC
 Northern Technologies International Corporation
 NTK
@@ -7882,8 +7796,6 @@ NVGN
 Novogen Limited
 NVJ
 Nuveen Ohio Dividend Advantage Municipal Fund 3
-NVLS
-Novellus Systems, Inc.
 NVMI
 Nova Measuring Instruments Ltd.
 NVN
@@ -7908,10 +7820,6 @@ NWE
 NorthWestern Corporation
 NWFL
 Norwood Financial Corp.
-NWI
-Nuveen Maryland Dividend Advantage Municipal Fund 3
-NWK
-Network Equipment Technologies, Inc.
 NWL
 Newell Rubbermaid Inc.
 NWLI
@@ -7978,16 +7886,14 @@ NZF
 Nuveen Dividend Advantage Municipal Fund 3
 NZH
 Nuveen California Dividend Advantage Municipal Fund 3
-NZR
-Nuveen Maryland Dividend Advantage Municipal Fund 2
-NZT
-Telecom Corporation of New Zealand Limited
 NZW
 Nuveen Michigan Dividend Advantage Municipal Fund
-NZX
-Nuveen Georgia Dividend Advantage Municipal Fund
+O
+Realty Income Corporation
 OABC
 OmniAmerican Bancorp, Inc.
+OAK
+Oaktree Capital Group, LLC
 OAS
 Oasis Petroleum Inc.
 OB
@@ -8050,10 +7956,10 @@ OI
 Owens-Illinois, Inc.
 OIA
 Invesco Municipal Income Opportunities Trust
-OIB
-Invesco Municipal Income Opportunities Trust II
-OIC
-Invesco Municipal Income Opportunities Trust III
+OIBR
+Oi S.A.
+OIBR/C
+Oi S.A.
 OII
 Oceaneering International, Inc.
 OIIM
@@ -8142,14 +8048,10 @@ OPTR
 Optimer Pharmaceuticals, Inc.
 OPTT
 Ocean Power Technologies, Inc.
-OPWV
-Openwave Systems Inc
 OPXA
 Opexa Therapeutics, Inc.
 OPXAW
 Opexa Therapeutics, Inc.
-OPXT
-Opnext, Inc.
 OPY
 Oppenheimer Holdings, Inc.
 ORA
@@ -8166,8 +8068,6 @@ ORCC
 Online Resources Corporation
 ORCL
 Oracle Corporation
-ORCT
-Orckit Communications, Limited
 OREX
 Orexigen Therapeutics, Inc.
 ORI
@@ -8238,12 +8138,12 @@ OXM
 Oxford Industries, Inc.
 OXY
 Occidental Petroleum Corporation
-OYOG
-OYO Geospace Corporation
 OZM
 Och-Ziff Capital Management Group LLC
 OZRK
 Bank of the Ozarks
+P
+Pandora Media, Inc.
 PAA
 Plains All American Pipeline, L.P.
 PAAS
@@ -8274,14 +8174,14 @@ PAL
 North American Palladium, Ltd.
 PAM
 Pampa Energia S.A.
-PANDORA MEDIA, INC.
-13.9
+PAMT
+Parametric Sound Corp.
 PANL
 Universal Display Corporation
+PANW
+Palo Alto Networks, Inc.
 PAR
 PAR Technology Corporation
-PARL
-Parlux Fragrances, Inc.
 PATH
 NuPathe Inc.
 PATK
@@ -8294,6 +8194,8 @@ PAYX
 Paychex, Inc.
 PB
 Prosperity Bancshares, Inc.
+PBA
+Pembina Pipeline Corp.
 PBCT
 People's United Financial, Inc.
 PBH
@@ -8304,12 +8206,12 @@ PBI
 Pitney Bowes Inc
 PBIB
 Porter Bancorp, Inc.
-PBIO
-Pressure BioSciences, Inc.
 PBIP
 Prudential Bancorp, Inc. of Pennsylvania
 PBM
 Pacific Booker Minerals Inc
+PBMD
+Prima BioMed Ltd
 PBNY
 Provident New York Bancorp
 PBR
@@ -8336,8 +8238,6 @@ PCC
 PMC Commercial Trust
 PCCC
 PC Connection, Inc.
-PCE
-Pacific Office Properties Trust, Inc
 PCF
 Putnam High Income Bond Fund
 PCG
@@ -8368,22 +8268,24 @@ PCS
 MetroPCS Communications, Inc.
 PCTI
 PC-Tel, Inc.
-PCX
-Patriot Coal Corporation
 PCYC
 Pharmacyclics, Inc.
 PCYG
 Park City Group, Inc.
 PCYO
 Pure Cycle Corporation
-PDC
-Pioneer Drilling Co
+PDCE
+PDC Energy, Inc.
 PDCO
 Patterson Companies, Inc.
 PDEX
 Pro-Dex, Inc.
 PDFS
 PDF Solutions, Inc.
+PDH
+PetroLogistics LP
+PDI
+PIMCO Dynamic Income Fund
 PDII
 PDI, Inc.
 PDLI
@@ -8402,10 +8304,6 @@ PEBK
 Peoples Bancorp of North Carolina, Inc.
 PEBO
 Peoples Bancorp Inc.
-PEDH
-Peoples Educational Holdings, Inc.
-PEER
-IntelePeer, Inc.
 PEET
 Peet's Coffee & Tea, Inc.
 PEG
@@ -8434,10 +8332,10 @@ PERI
 Perion Network Ltd
 PERY
 Perry Ellis International Inc.
+PES
+Pioneer Energy Services Corp.
 PESI
 Perma-Fix Environmental Services, Inc.
-PETD
-Petroleum Development Corporation
 PETM
 PetSmart, Inc
 PETS
@@ -8448,8 +8346,6 @@ PFBI
 Premier Financial Bancorp, Inc.
 PFBX
 Peoples Financial Corporation
-PFCB
-P.F.Chang's China Bistro, Inc.
 PFD
 Flaherty & Crumrine Preferred Income Fund Incorporated
 PFE
@@ -8466,10 +8362,14 @@ PFL
 PIMCO Income Strategy Fund
 PFLT
 PennantPark Floating Rate Capital Ltd.
+PFMT
+Performant Financial Corporation
 PFN
 PIMCO Income Strategy Fund II
 PFO
 Flaherty & Crumrine Preferred Income Opportunity Fund Inc
+PFPT
+Proofpoint, Inc.
 PFS
 Provident Financial Services, Inc
 PFSW
@@ -8484,14 +8384,14 @@ PGH
 Pengrowth Energy Corporation
 PGI
 PTEK Holdings, Inc.
-PGN
-Progress Energy, Inc.
 PGNX
 Progenics Pharmaceuticals Inc.
 PGP
 Pimco Global Stocksplus & Income Fund
 PGR
 Progressive Corporation (The)
+PGRX
+Prospect Global Resources Inc.
 PGTI
 PGT, Inc.
 PH
@@ -8530,7 +8430,7 @@ PICO
 PICO Holdings Inc.
 PII
 Polaris Industries Inc.
-PIJ
+PIJ/CL
 Merrill Lynch Depositor, Inc.
 PIKE
 Pike Electric Corp.
@@ -8552,8 +8452,6 @@ PJI
 PPlus Trust
 PJL
 Preferred Plus Trust Ser QWS 2 Tr Ctf
-PJR
-Merrill Lynch Depositor, Inc.
 PJS
 Preferred Plus Trust Ser QWS 2 Tr Ctf
 PKBK
@@ -8588,6 +8486,8 @@ PL
 Protective Life Corporation
 PLAB
 Photronics, Inc.
+PLAY
+Dave & Buster's Entertainment, Inc.
 PLBC
 Plumas Bancorp
 PLCC
@@ -8619,13 +8519,11 @@ Preformed Line Products Company
 PLT
 Plantronics, Inc.
 PLTM
-First Trust Exchange-Traded Fund II First Trust ISE Global Platinum Index Fund
+First Trust Exchange-Traded Fund II First Trust ISE Global Pla
 PLUG
 Plug Power, Inc.
 PLUS
 Eplus Inc.
-PLV
-PPL Corporation
 PLX
 Protalix BioTherapeutics, Inc.
 PLXS
@@ -8662,24 +8560,18 @@ PMTI
 Palomar Medical Technologies, Inc.
 PMX
 PIMCO Municipal Income Fund III
-PNBC
-Princeton National Bancorp, Inc.
 PNBK
 Patriot National Bancorp Inc.
 PNC
 PNC Financial Services Group, Inc. (The)
 PNC/WS
 PNC Financial Services Group, Inc. (The)
-PNCL
-Pinnacle Airlines Corp.
 PNF
 PIMCO New York Municipal Income Fund
 PNFP
 Pinnacle Financial Partners, Inc.
 PNG
 PAA Natural Gas Storage, L.P.
-PNH
-PNC Cap Tr E
 PNI
 Pimco New York Municipal Income Fund II
 PNK
@@ -8691,7 +8583,7 @@ PennantPark Investment Corporation
 PNQI
 PowerShares NASDAQ Internet Portfolio
 PNR
-Pentair, Inc.
+Pentair, Ltd.
 PNRA
 Panera Bread Company
 PNRG
@@ -8700,8 +8592,6 @@ PNSN
 Penson Worldwide, Inc.
 PNTR
 Pointer Telocation Ltd.
-PNU
-PNC Financial Services Group, Inc. (The)
 PNW
 Pinnacle West Capital Corporation
 PNX
@@ -8804,6 +8694,8 @@ PRPH
 ProPhase Labs, Inc.
 PRSC
 The Providence Service Corporation
+PRSS
+CafePress Inc.
 PRST
 Presstek, Inc.
 PRTS
@@ -8812,12 +8704,12 @@ PRU
 Prudential Financial, Inc.
 PRWT
 Premier West Bancorp
-PRX
-Pharmaceutical Resources, Inc.
 PRXI
 Premier Exhibitions, Inc.
 PRXL
 PAREXEL International Corporation
+PRY
+Prospect Capital Corporation
 PSA
 Public Storage
 PSAU
@@ -8827,23 +8719,23 @@ PS Business Parks, Inc.
 PSBH
 PSB Holdings, Inc.
 PSCC
-PowerShares Exchange-Traded Fund Trust II PowerShares S&P SmallCap Consumer Staples Portfolio
+PowerShares Exchange-Traded Fund Trust II PowerShares S&P Smal
 PSCD
-PowerShares Exchange-Traded Fund Trust II PowerShares S&P SmallCap Consumer Discretionary Portfolio
+PowerShares Exchange-Traded Fund Trust II PowerShares S&P Smal
 PSCE
-PowerShares Exchange-Traded Fund Trust II PowerShares S&P SmallCap Energy Portfolio
+PowerShares Exchange-Traded Fund Trust II PowerShares S&P Smal
 PSCF
-PowerShares Exchange-Traded Fund Trust II PowerShares S&P SmallCap Financials Portfolio
+PowerShares Exchange-Traded Fund Trust II PowerShares S&P Smal
 PSCH
-PowerShares Exchange-Traded Fund Trust II PowerShares S&P SmallCap Health Care Portfolio
+PowerShares Exchange-Traded Fund Trust II PowerShares S&P Smal
 PSCI
-PowerShares Exchange-Traded Fund Trust II PowerShares S&P SmallCap Industrials Portfolio
+PowerShares Exchange-Traded Fund Trust II PowerShares S&P Smal
 PSCM
-PowerShares Exchange-Traded Fund Trust II PowerShares S&P SmallCap Materials Portfolio
+PowerShares Exchange-Traded Fund Trust II PowerShares S&P Smal
 PSCT
-PowerShares Exchange-Traded Fund Trust II PowerShares S&P SmallCap Information Technology Portfolio
+PowerShares Exchange-Traded Fund Trust II PowerShares S&P Smal
 PSCU
-PowerShares Exchange-Traded Fund Trust II PowerShares S&P SmallCap Utilities Portfolio
+PowerShares Exchange-Traded Fund Trust II PowerShares S&P Smal
 PSDV
 pSivida Corp.
 PSE
@@ -8854,6 +8746,8 @@ PSEM
 Pericom Semiconductor Corporation
 PSF
 Cohen & Steers Select Preferred and Income Fund, Inc.
+PSMI
+Peregrine Semiconductor Corp.
 PSMT
 PriceSmart, Inc.
 PSO
@@ -8876,6 +8770,8 @@ PSUN
 Pacific Sunwear of California, Inc.
 PSW
 Blackrock Preferred and Corporate Income Strategies Fund Inc
+PSX
+Phillips 66
 PSY
 BlackRock Credit Allocation Income Trust I, Inc
 PT
@@ -8886,8 +8782,6 @@ PTEN
 Patterson-UTI Energy, Inc.
 PTGI
 Primus Telecommunications Group Inc.
-PTI
-Patni Computer Systems Limited
 PTIE
 Pain Therapeutics
 PTIX
@@ -8931,15 +8825,13 @@ Pretium Resources, Inc.
 PVH
 PVH Corp.
 PVR
-Penn Virginia Resource Partners LP
+PVR  Partners, L.P.
 PVSW
 Pervasive Software Inc.
 PVTB
 PrivateBancorp, Inc.
 PVTBP
 PrivateBancorp, Inc.
-PVX
-Provident Energy Ltd.
 PW
 Power REIT
 PWAV
@@ -8973,8 +8865,6 @@ PPlus Trust
 PYC
 PPlus Trust
 PYG
-PPlus Trust
-PYJ
 PPlus Trust
 PYK
 PPlus Trust
@@ -9042,12 +8932,12 @@ QLTI
 QLT Inc.
 QLTY
 Quality Distribution, Inc.
+QLYS
+Qualys, Inc.
 QMM
 Quaterra Resources Inc
 QNST
 QuinStreet, Inc.
-QPSA
-Quepasa Corporation
 QQEW
 First Trust NASDAQ-100 Equal Weighted Index Fund
 QQQ
@@ -9066,8 +8956,6 @@ QRE
 QR Energy, LP
 QRM
 Quest Rare Minerals Ltd
-QSFT
-Quest Software, Inc.
 QSII
 Quality Systems, Inc.
 QTEC
@@ -9080,10 +8968,8 @@ QUAD
 Quad Graphics, Inc
 QUIK
 QuickLogic Corporation
-QXM
-Qiao Xing Mobile Communication Co., Ltd.
-RA
-RailAmerica, Inc.
+R
+Ryder System, Inc.
 RAD
 Rite Aid Corporation
 RADA
@@ -9145,19 +9031,15 @@ RCM Strategic Global Government Fund, Inc.
 RDA
 RDA Microelectronics, Inc.
 RDC
-Rowan Companies, Inc.
+Rowan Companies plc
 RDCM
 Radcom Ltd.
-RDEA
-Ardea Biosciences, Inc.
 RDEN
 Elizabeth Arden, Inc.
 RDI
 Reading International Inc
 RDIB
 Reading International Inc
-RDK
-Ruddick Corporation
 RDN
 Radian Group Inc.
 RDNT
@@ -9172,8 +9054,6 @@ RDY
 Dr. Reddy's Laboratories Ltd
 RE
 Everest Re Group, Ltd.
-REALTY INCOME CORPORATION
-36.83
 RECN
 Resources Connection, Inc.
 RECV
@@ -9210,8 +9090,6 @@ RES
 RPC, Inc.
 REV
 Revlon, Inc.
-REVU
-The Princeton Review, Inc.
 REX
 REX American Resources Corporation
 REXI
@@ -9220,16 +9098,14 @@ REXX
 Rex Energy Corporation
 RF
 Regions Financial Corporation
-RFA
-BlackRock Florida Investment Quality Municipal Trust Inc. (The
 RFI
 Cohen & Steers Total Return Realty Fund, Inc.
 RFIL
 RF Industries, Ltd.
 RFMD
 RF Micro Devices, Inc.
-RFMI
-RF Monolithics, Inc.
+RFP
+Resolute Forest Products Inc.
 RGA
 Reinsurance Group of America, Incorporated
 RGC
@@ -9242,6 +9118,8 @@ RGEN
 Repligen Corporation
 RGLD
 Royal Gold, Inc.
+RGLS
+Regulus Therapeutics Inc.
 RGP
 Regency Energy Partners LP
 RGR
@@ -9250,6 +9128,8 @@ RGS
 Regis Corporation
 RHI
 Robert Half International Inc.
+RHP
+Ryman Hospitality Properties, Inc.
 RHT
 Red Hat, Inc.
 RIC
@@ -9259,7 +9139,7 @@ Rick's Cabaret International, Inc.
 RIF
 RMR Real Estate Income Fund.
 RIG
-Transocean Inc.
+Transocean Ltd.
 RIGL
 Rigel Pharmaceuticals, Inc.
 RIMG
@@ -9274,6 +9154,8 @@ RITT
 RIT Technologies Ltd.
 RIVR
 River Valley Bancorp.
+RJD
+Raymond James Financial, Inc.
 RJET
 Republic Airways Holdings, Inc.
 RJF
@@ -9292,10 +9174,14 @@ RLI
 RLI Corp.
 RLJ
 RLJ Lodging Trust
+RLJE
+RLJ Entertainment, Inc.
 RLOC
 ReachLocal, Inc.
 RLOG
 Rand Logistics, Inc.
+RM
+Regional Management Corp.
 RMBS
 Rambus, Inc.
 RMCF
@@ -9307,7 +9193,7 @@ Rainmaker Systems, Inc.
 RMT
 Royce Micro-Cap Trust, Inc.
 RMTI
-Rockwell Medical Technologies, Inc.
+Rockwell Medical, Inc.
 RMTR
 Ramtron International Corporation
 RNDY
@@ -9320,8 +9206,6 @@ RNF
 Rentech Nitrogen Partners, L.P.
 RNIN
 Wireless Ronin Technologies, Inc.
-RNJ
-BlackRock New Jersey Investment Quality Municipal Trust Inc.
 RNN
 Rexahn Pharmaceuticals, Inc.
 RNO
@@ -9334,16 +9218,12 @@ RNST
 Renasant Corporation
 RNWK
 RealNetworks, Inc.
-RNY
-BlackRock New York Investment Quality Municipal Trust Inc. (Th
 ROC
 Rockwood Holdings, Inc.
 ROCK
 Gibraltar Industries, Inc.
 ROCM
 Rochester Medical Corporation
-RODM
-Rodman & Renshaw Capital Group, Inc.
 ROG
 Rogers Corporation
 ROIA
@@ -9356,7 +9236,11 @@ ROICU
 Retail Opportunity Investments Corp.
 ROICW
 Retail Opportunity Investments Corp.
+ROIQ
+ROI Acquisition Corp.
 ROIQU
+ROI Acquisition Corp.
+ROIQW
 ROI Acquisition Corp.
 ROK
 Rockwell Automation, Inc.
@@ -9380,8 +9264,12 @@ ROX
 Castle Brands, Inc.
 ROYL
 Royale Energy, Inc.
+ROYT
+Pacific Coast Oil Trust
 RP
 RealPage, Inc.
+RPAI
+Retail Properties of America, Inc.
 RPI
 Roberts Realty Investors, Inc.
 RPM
@@ -9408,8 +9296,6 @@ RRGB
 Red Robin Gourmet Burgers, Inc.
 RRMS
 Rose Rock Midstream, L.P.
-RRR
-RSC Holdings Inc.
 RRST
 RRSat Global Communications Network Ltd.
 RRTS
@@ -9417,7 +9303,7 @@ Roadrunner Transportation Systems, Inc
 RS
 Reliance Steel & Aluminum Co.
 RSE
-Rouse Company (The)
+Rouse Properties, Inc.
 RSG
 Republic Services, Inc.
 RSH
@@ -9466,24 +9352,26 @@ RVR
 White River Capital, Inc.
 RVSB
 Riverview Bancorp Inc
-RVSN
-RADVision Ltd.
 RVT
 Royce Value Trust, Inc.
 RWC
 RELM Wireless Corporation
 RWT
 Redwood Trust, Inc.
+RXN
+Rexnord Corporation
 RY
 Royal Bank Of Canada
 RYAAY
 Ryanair Holdings plc
-RYDER SYSTEM, INC.
-53.52
 RYL
 Ryland Group, Inc. (The)
 RYN
 Rayonier Inc. REIT
+RZA
+Reinsurance Group of America, Incorporated
+S
+Sprint  Nextel Corporation
 SA
 Seabridge Gold, Inc.
 SAAS
@@ -9509,7 +9397,9 @@ Salem Communications Corporation
 SAM
 Boston Beer Company, Inc. (The)
 SAN
-Banco Santiago, S.A.
+Banco Santander, S.A.
+SAND          
+Sandstorm Gold Ltd
 SANM
 Sanmina-SCI Corporation
 SANW
@@ -9522,8 +9412,6 @@ SAP
 SAP AG
 SAPE
 Sapient Corporation
-SAPX
-Seven Arts Entertainment, Inc.
 SAR
 Saratoga Investment Corp
 SARA
@@ -9580,10 +9468,10 @@ SCCO
 Southern Copper Corporation
 SCD
 LMP Capital and Income Fund Inc.
-SCEI
-Sino Clean Energy Inc.
 SCG
 Scana Corporation
+SCGQ
+SCG Financial Acquisition Corp
 SCHL
 Scholastic Corporation
 SCHN
@@ -9596,16 +9484,12 @@ SCI
 Service Corporation International
 SCIL
 Scientific Learning Corporation
-SCKT
-Socket Mobile, Inc.
 SCL
 Stepan Company
 SCLN
 SciClone Pharmaceuticals, Inc.
 SCLP
-Russell Exchange Traded Funds Trust Russell Small Cap Low P/E ETF
-SCMF
-Southern Community Financial Corporation
+Russell Exchange Traded Funds Trust Russell Small Cap Low P/E
 SCMFO
 Southern Community Financial Corporation
 SCMP
@@ -9613,7 +9497,7 @@ Sucampo Pharmaceuticals, Inc.
 SCMR
 Sycamore Networks, Inc.
 SCOG
-Russell Exchange Traded Funds Trust Russell Small Cap Consistent Growth ETF
+Russell Exchange Traded Funds Trust Russell Small Cap Consiste
 SCOK
 SinoCoking Coal and Coke Chemical Industries, Inc
 SCON
@@ -9629,7 +9513,7 @@ ScanSource, Inc.
 SCSS
 Select Comfort Corporation
 SCTR
-Russell Exchange Traded Funds Trust Russell Small Cap Contrarian ETF
+Russell Exchange Traded Funds Trust Russell Small Cap Contrari
 SCU
 Scana Corporation
 SCVL
@@ -9642,6 +9526,8 @@ SDBT
 SoundBite Communications, Inc.
 SDIX
 Strategic Diagnostics Inc.
+SDR
+SandRidge Mississippian Trust II
 SDRL
 Seadrill Limited
 SDT
@@ -9680,6 +9566,8 @@ SF
 Stifel Financial Corporation
 SFB
 Stifel Financial Corporation
+SFBC
+Sound Financial Bancorp, Inc.
 SFD
 Smithfield Foods, Inc.
 SFE
@@ -9711,7 +9599,7 @@ Seattle Genetics, Inc.
 SGF
 Singapore Fund, Inc. (The)
 SGGG
-Russell Exchange Traded Funds Trust Russell Small Cap Aggressive Growth ETF
+Russell Exchange Traded Funds Trust Russell Small Cap Aggressi
 SGI
 Silicon Graphics International Corp
 SGK
@@ -9730,8 +9618,6 @@ SGOC
 SGOCO Group, Ltd
 SGRP
 SPAR Group, Inc.
-SGS
-Stream Global Services, Inc
 SGU
 Star Gas Partners, L.P.
 SGY
@@ -9750,6 +9636,8 @@ SHBI
 Shore Bancshares Inc
 SHEN
 Shenandoah Telecommunications Co
+SHF
+Schiff Nutrition International, Inc.
 SHFL
 Shuffle Master, Inc.
 SHG
@@ -9772,7 +9660,7 @@ SHOR
 ShoreTel, Inc.
 SHP
 ShangPharma Corporation
-SHPGY
+SHPG
 Shire plc
 SHS
 Sauer-Danfoss Inc.
@@ -9820,6 +9708,8 @@ SINA
 Sina Corporation
 SINO
 Sino-Global Shipping America, Ltd.
+SIR
+Select Income REIT
 SIRI
 Sirius XM Radio Inc.
 SIRO
@@ -9859,7 +9749,7 @@ Skyline Corporation
 SKYW
 SkyWest, Inc.
 SKYY
-First Trust Exchange-Traded Fund II First Trust ISE Cloud Computing Index Fund
+First Trust ISE Cloud Computing Index Fund
 SLA
 American Select Portfolio, Inc.
 SLAB
@@ -9868,8 +9758,6 @@ SLB
 Schlumberger N.V.
 SLCA
 U.S. Silica Holdings, Inc.
-SLE
-Sara Lee Corporation
 SLF
 Sun Life Financial Inc.
 SLG
@@ -9908,8 +9796,6 @@ SMBC
 Southern Missouri Bancorp, Inc.
 SMBL
 Smart Balance Inc
-SMCG
-Millenium India Acquisition Company Inc.
 SMCI
 Super Micro Computer, Inc.
 SMED
@@ -9924,6 +9810,10 @@ SMI
 Semiconductor  Manufacturing International Corporation
 SMIT
 Schmitt Industries, Inc.
+SMLP
+Summit Midstream Partners, LP
+SMM
+Salient Midstream
 SMMF
 Summit Financial Group, Inc.
 SMP
@@ -9932,8 +9822,6 @@ SMRT
 Stein Mart, Inc.
 SMS
 Sims Metal Management Limited
-SMSC
-Standard Microsystems Corporation
 SMSI
 Smith Micro Software, Inc.
 SMT
@@ -9959,6 +9847,8 @@ Sony Corp Ord
 SNFCA
 Security National Financial Corporation
 SNH
+Senior Housing Properties Trust
+SNHN
 Senior Housing Properties Trust
 SNHY
 Sun Hydraulics Corporation
@@ -9988,10 +9878,6 @@ SNY
 Sanofi
 SO
 Southern Company (The)
-SOA
-Solutia Inc
-SOA/WS
-Solutia Inc
 SOCB
 Southcoast Financial Corporation
 SOCL
@@ -10014,8 +9900,6 @@ SONA
 Southern National Bancorp of Virginia, Inc.
 SONC
 Sonic Corp.
-SONO
-SonoSite, Inc.
 SONS
 Sonus Networks, Inc.
 SOQ
@@ -10054,6 +9938,10 @@ SPIL
 Siliconware Precision Industries Company, Ltd.
 SPIR
 Spire Corporation
+SPLK
+Splunk Inc.
+SPLP
+Steel Partners Holdings LP
 SPLS
 Staples, Inc.
 SPMD
@@ -10078,8 +9966,6 @@ SPR
 Spirit Aerosystems Holdings, Inc.
 SPRD
 Spreadtrum Communications, Inc.
-SPRINT  NEXTEL CORPORATION
-2.5
 SPRO
 SmartPros Ltd.
 SPRT
@@ -10106,6 +9992,8 @@ SQQQ
 ProShares UltraPro Short QQQ
 SR
 Standard Register Company (The)
+SRC
+Spirit Realty Capital, Inc.
 SRCE
 1st Source Corporation
 SRCL
@@ -10120,10 +10008,8 @@ SRF
 The Cushing Royalty & Income Fund
 SRI
 Stoneridge, Inc.
-SRLS
-SeraCare Life Sciences Inc
-SRSL
-SRS Labs, Inc.
+SRPT
+Sarepta Therapeutics, Inc.
 SRT
 StarTek, Inc.
 SRV
@@ -10151,7 +10037,7 @@ SS&C Technologies Holdings, Inc.
 SSP
 E.W. Scripps Company (The)
 SSRI
-Silver Standard Resources, Inc
+Silver Standard Resources Inc.
 SSRX
 3SBio Inc.
 SSS
@@ -10178,8 +10064,6 @@ STBZ
 State Bank Financial Corporation.
 STC
 Stewart Information Services Corporation
-STD
-Banco Santander, S.A.
 STE
 STERIS Corporation
 STEC
@@ -10232,8 +10116,6 @@ STR
 Questar Corporation
 STRA
 Strayer Education, Inc.
-STRC
-SRI/Surgical Express, Inc.
 STRI
 STR Holdings, Inc
 STRL
@@ -10250,6 +10132,8 @@ STS
 Supreme Industries, Inc.
 STSA
 Sterling Financial Corporation
+STSI
+Star Scientific, Inc.
 STT
 State Street Corporation
 STV
@@ -10268,26 +10152,24 @@ SU
 Suncor Energy  Inc.
 SUBK
 Suffolk Bancorp
-SUG
-Southern Union Company
 SUI
 Sun Communities, Inc.
 SUMR
 Summer Infant, Inc.
-SUN
-Sunoco, Inc.
 SUNH
 Sun Healthcare Group, Inc.
 SUNS
 Solar Senior Capital Ltd.
 SUP
 Superior Industries International, Inc.
+SUPN
+Supernus Pharmaceuticals, Inc.
 SUPX
 Supertex, Inc.
 SURG
 Synergetics USA, Inc.
-SURW
-SureWest Communications
+SUSP
+Susser Petroleum Partners LP
 SUSQ
 Susquehanna Bancshares, Inc.
 SUSS
@@ -10300,6 +10182,8 @@ SVBI
 Severn Bancorp Inc
 SVBL
 Silver Bull Resources, Inc.
+SVLC
+SilverCrest Mines, Inc.
 SVM
 Silvercorp Metals Inc
 SVN
@@ -10322,6 +10206,8 @@ SWI
 Solarwinds, Inc.
 SWIR
 Sierra Wireless, Inc.
+SWJ
+Stanley Black & Decker, Inc.
 SWK
 Stanley Black & Decker, Inc.
 SWKS
@@ -10344,8 +10230,6 @@ SWZ
 Swiss Helvetia Fund, Inc. (The)
 SXC
 SunCoke Energy, Inc.
-SXCI
-SXC Health Solutions Corp.
 SXI
 Standex International Corporation
 SXL
@@ -10362,8 +10246,6 @@ SYK
 Stryker Corporation
 SYKE
 Sykes Enterprises, Incorporated
-SYMBOL
-Name
 SYMC
 Symantec Corporation
 SYMM
@@ -10396,28 +10278,34 @@ SYX
 Systemax Inc.
 SYY
 Sysco Corporation
+SZC
+iShares Trust
 SZYM
 Solazyme, Inc.
+T
+AT&T Inc.
 TA
 TravelCenters of America LLC
 TAC
 TransAlta Corporation
 TACT
 TransAct Technologies Incorporated
+TAHO
+Tahoe Resources, Inc.
 TAI
 Transamerica Income Shares, Inc.
 TAIT
 Taitron Components Incorporated
 TAL
 TAL International Group, Inc.
-TAM
-TAM S.A.
 TAOM
 Taomee Holdings Limited
 TAP
 Molson Coors Brewing  Company
 TAP/A
 Molson Coors Brewing  Company
+TARO
+Taro Pharmaceutical Industries Ltd.
 TAS
 Tasman Metals Ltd
 TASR
@@ -10428,6 +10316,8 @@ TAT
 Transatlantic Petroleum Ltd
 TATT
 TAT Technologies Ltd.
+TAX
+JTH Holding Inc
 TAXI
 Medallion Financial Corp.
 TAYC
@@ -10440,8 +10330,6 @@ TBAC
 Tandy Brands Accessories, Inc.
 TBBK
 The Bancorp, Inc.
-TBET
-Tibet Pharmaceuticals, Inc.
 TBI
 TrueBlue, Inc.
 TBNK
@@ -10458,14 +10346,16 @@ TCB/WS
 TCF Financial Corporation
 TCBI
 Texas Capital Bancshares, Inc.
+TCBIL
+Texas Capital Bancshares, Inc.
 TCBIW
 Texas Capital Bancshares, Inc.
 TCBK
 TriCo Bancshares
+TCC
+Triangle Capital Corporation
 TCCO
 Technical Communications Corporation
-TCHC
-21st Century Holding Company
 TCI
 Transcontinental Realty Investors, Inc.
 TCK
@@ -10476,6 +10366,8 @@ TCO
 Taubman Centers, Inc.
 TCP
 TC PipeLines, LP
+TCPC
+TCP Capital Corp.
 TCRD
 THL Credit, Inc.
 TCX
@@ -10492,6 +10384,8 @@ TDG
 Transdigm Group Incorporated
 TDI
 Telephone and Data Systems, Inc.
+TDIV
+First Trust Exchange-Traded Fund VI First Trust NASDAQ Technol
 TDJ
 Telephone and Data Systems, Inc.
 TDS
@@ -10556,8 +10450,6 @@ TG
 Tredegar Corporation
 TGA
 Transglobe Energy Corp
-TGAL
-Tegal Corporation
 TGB
 Taseko Mines Limited
 TGC
@@ -10602,6 +10494,8 @@ THR
 Thermon Group Holdings, Inc.
 THRD
 TF Financial Corporation
+THRM
+Gentherm Inc
 THRX
 Theravance, Inc.
 THS
@@ -10612,8 +10506,6 @@ TI
 Telecom Italia S.P.A.
 TI/A
 Telecom Italia S.P.A.
-TIBB
-TIB Financial Corporation
 TIBX
 TIBCO Software, Inc.
 TICC
@@ -10624,8 +10516,6 @@ TIF
 Tiffany & Co.
 TIGR
 TigerLogic Corporation
-TIII
-Tii Network Technologies, Inc.
 TIK
 Tel-Instrument Electronics Corp.
 TINY
@@ -10638,8 +10528,6 @@ TISI
 Team, Inc.
 TITN
 Titan Machinery Inc.
-TIV
-Tri-Valley Corporation
 TIVO
 TiVo Inc.
 TJX
@@ -10656,12 +10544,6 @@ TKR
 Timken Company (The)
 TLAB
 Tellabs, Inc.
-TLB
-Talbots, Inc. (The)
-TLB/WS
-Talbots, Inc. (The)
-TLEO
-Taleo Corporation
 TLF
 Tandy Leather Factory, Inc.
 TLI
@@ -10676,14 +10558,14 @@ TLP
 Transmontaigne Partners L.P.
 TLR
 Timberline Resources Corporation
+TLYS
+Tilly's, Inc.
 TM
 Toyota Motor Corp Ltd Ord
 TMH
 Team Health Holdings, Inc.
 TMK
 Torchmark Corporation
-TMM
-Grupo TMM, S.A.
 TMNG
 The Management Network Group, Inc.
 TMO
@@ -10694,14 +10576,8 @@ TMS
 TMS International Corp.
 TNAV
 TeleNav, Inc.
-TNB
-Thomas & Betts Corporation
 TNC
 Tennant Company
-TNE
-Tele Norte Leste Participacoes S.A.
-TNGN
-Tengion, Inc.
 TNGO
 Tangoe, Inc.
 TNH
@@ -10756,8 +10632,6 @@ TRAK
 DealerTrack Holdings, Inc.
 TRC
 Tejon Ranch Co
-TRCR
-Transcend Services, Inc.
 TREE
 Tree.com, Inc.
 TREX
@@ -10768,18 +10642,20 @@ TRGP
 Targa Resources, Inc.
 TRGT
 Targacept, Inc.
-TRH
-Transatlantic Holdings, Inc.
 TRI
 Thomson Reuters Corp
 TRIB
 Trinity Biotech plc
+TRIO
+Trio Merger Corp.
 TRIP
 TripAdvisor, Inc.
 TRIT
 Tri-Tech Holding Inc.
 TRK
 Speedway Motorsports, Inc.
+TRLA
+Trulia, Inc.
 TRLG
 True Religion Apparel, Inc.
 TRMB
@@ -10796,10 +10672,20 @@ TRNS
 Transcat, Inc.
 TRNX
 Tornier N.V.
+TROV
+TrovaGene, Inc.
+TROVU
+TrovaGene, Inc.
+TROVW
+TrovaGene, Inc.
 TROW
 T. Rowe Price Group, Inc.
+TROX
+Tronox Limited
 TRP
 Transcanada Pipelines, Ltd.
+TRQ
+Turquoise Hill Resources Ltd.
 TRR
 TRC Companies, Inc.
 TRS
@@ -10846,6 +10732,8 @@ TSRA
 Tessera Technologies, Inc.
 TSRI
 TSR, Inc.
+TSRO
+TESARO, Inc.
 TSRX
 Trius Therapeutics, Inc.
 TSS
@@ -10854,10 +10742,8 @@ TST
 TheStreet, Inc.
 TSTC
 Telestone Technologies Corp.
-TSTF
-TeamStaff, Inc.
 TSU
-Tele Celular Sul Participacoes S.A.
+TIM Participacoes S.A.
 TSYS
 TeleCommunication Systems, Inc.
 TTC
@@ -10882,6 +10768,8 @@ TTO
 Tortoise Capital Resources Corporation
 TTP
 Tortoise Pipeline & Energy Fund, Inc.
+TTS
+Tile Shop Hldgs, Inc.
 TTTM
 T3 Motion Inc
 TTTM/WS/W
@@ -10894,10 +10782,10 @@ TU
 TELUS Corporation
 TUC
 Mac-Gray Corporation
-TUDO
-Tudou Holdings Limited
 TUES
 Tuesday Morning Corp.
+TUMI
+Tumi Holdings, Inc.
 TUP
 Tupperware Corporation
 TV
@@ -10960,10 +10848,10 @@ TYY
 Tortoise Energy Capital Corporation
 TZF
 Bear Stearns Depositor, Inc.
-TZK
+TZK/CL
 Trust Ctfs 2002 1 Bear Stearns Depositor Inc Acting as Deposit
 TZOO
-Travelzoo Inc
+Travelzoo Inc.
 TZYM
 Tranzyme, Inc.
 UA
@@ -10974,6 +10862,8 @@ UAL
 United Continental Holdings, Inc.
 UAM
 Universal American Corp.
+UAMY
+United States Antimony Corporation
 UAN
 CVR Partners, LP
 UBA
@@ -11058,8 +10948,6 @@ ULTI
 The Ultimate Software Group, Inc.
 ULTR
 Ultrapetrol (Bahamas) Limited
-ULU
-Uluru Inc.
 UMBF
 UMB Financial Corporation
 UMC
@@ -11082,14 +10970,12 @@ UNH
 UnitedHealth Group Incorporated
 UNIS
 Unilife Corporation
-UNITED STATES STEEL CORPORATION
-27.51
 UNM
 Unum Group
 UNP
 Union Pacific Corporation
 UNS
-UniSource Energy Corporation
+UNS Energy Corporation
 UNT
 Unit Corporation
 UNTD
@@ -11104,6 +10990,8 @@ UPG
 Universal Power Group Inc
 UPI
 Uroplasty, Inc.
+UPIP
+Unwired Planet, Inc.
 UPL
 Ultra Petroleum Corp.
 UPS
@@ -11150,6 +11038,8 @@ USLM
 United States Lime & Minerals, Inc.
 USM
 United States Cellular Corporation
+USMD
+USMD Holdings, Inc.
 USMO
 USA Mobility, Inc.
 USNA
@@ -11160,8 +11050,6 @@ USTR
 United Stationers Inc.
 USU
 USEC Inc.
-UTA
-Universal Travel Group
 UTEK
 Ultratech, Inc.
 UTF
@@ -11194,8 +11082,10 @@ UWN
 Nevada Gold & Casinos, Inc.
 UZA
 United States Cellular Corporation
+V
+Visa Inc.
 VAC
-Marriot International
+Marriot Vacations Worldwide Corporation
 VAL
 Valspar Corporation (The)
 VALE
@@ -11230,6 +11120,8 @@ VCLT
 Vanguard Long-Term Corporate Bond ETF
 VCO
 Vina Concha Y Toro
+VCRA
+Vocera Communications, Inc.
 VCSH
 Vanguard Short-Term Corporate Bond ETF
 VCV
@@ -11290,14 +11182,12 @@ VIMC
 Vimicro International Corporation
 VIP
 Open Joint Stock Company &quot;Vimpel-Communications&quot;
+VIPS
+Vipshop Holdings Limited
 VIRC
 Virco Manufacturing Corporation
-VISA INC.
-116.16
 VISN
 VisionChina Media, Inc.
-VIST
-VIST Financial Corp
 VIT
 Vanceinfo Technologies Inc
 VITC
@@ -11316,8 +11206,6 @@ VLCCF
 Knightsbridge Tankers Limited
 VLGEA
 Village Super Market, Inc.
-VLNC
-Valence Technology, Inc.
 VLO
 Valero Energy Corporation
 VLT
@@ -11355,17 +11243,17 @@ Vornado Realty Trust
 VNOD
 Vornado Realty L.P.
 VNQI
-Vanguard International Equity Index Funds Vanguard Global ex-U.S. Real Estate ETF
+Vanguard International Equity Index Funds Vanguard Global ex-U
 VNR
 Vanguard Natural Resources LLC
+VNTV
+Vantiv, Inc.
 VOC
 VOC Energy Trust
 VOCS
 Vocus, Inc.
 VOD
 Vodafone Group Plc
-VOG
-Voyager Oil & Gas, Inc.
 VOLC
 Volcano Corporation
 VONE
@@ -11388,8 +11276,6 @@ VPRT
 Vistaprint N.V.
 VPV
 Invesco Van Kampen Pennsylvania Value Municipal Income Trust
-VQ
-Venoco, Inc.
 VR
 Validus Holdings, Ltd.
 VRA
@@ -11496,6 +11382,8 @@ WAFDW
 Washington Federal, Inc.
 WAG
 Walgreen Co.
+WAGE
+WageWorks, Inc.
 WAIR
 Wesco Aircraft Holdings, Inc.
 WAL
@@ -11524,8 +11412,6 @@ WBS/WS
 Webster Financial Corporation
 WBSN
 Websense, Inc.
-WCAA
-WCA Waste Corporation
 WCBO
 West Coast Bancorp
 WCC
@@ -11558,8 +11444,6 @@ WERN
 Werner Enterprises, Inc.
 WES
 Western Gas Partners, LP
-WEST
-Westinghouse Solar, Inc.
 WETF
 WisdomTree Investments, Inc.
 WEX
@@ -11594,10 +11478,10 @@ WHG
 Westwood Holdings Group Inc
 WHR
 Whirlpool Corporation
-WHRT
-World Heart Corporation
 WHX
 Whiting USA Trust I
+WHZ
+Whiting USA Trust II
 WIA
 Western Asset/Claymore U.S. Treasury Inflation Prot Secs Fd
 WIBC
@@ -11612,8 +11496,6 @@ WIN
 Windstream Corporation
 WINA
 Winmark Corporation
-WINN
-Winn-Dixie Stores, Inc.
 WIRE
 Encore Wire Corporation
 WIT
@@ -11646,6 +11528,8 @@ WMAR
 West Marine, Inc.
 WMB
 Williams Companies, Inc. (The)
+WMC
+Western Asset Mortgage Capital Corporation
 WMCO
 Williams Controls, Inc.
 WMGI
@@ -11658,14 +11542,10 @@ WMT
 Wal-Mart Stores, Inc.
 WNC
 Wabash National Corporation
-WNI
-Schiff Nutrition International, Inc.
 WNR
 Western Refining, Inc.
 WNS
 WNS (Holdings) Limited
-WOLF
-Great Wolf Resorts, Inc.
 WOOD
 iShares S&P Global Timber &Forestry Index Fund
 WOOF
@@ -11673,7 +11553,7 @@ VCA Antech, Inc.
 WOR
 Worthington Industries, Inc.
 WPC
-W.P. Carey & Co. LLC
+W.P. Carey Inc.
 WPCS
 WPCS International Incorporated
 WPI
@@ -11712,8 +11592,8 @@ WRLS
 Telular Corporation
 WRN
 Western Copper and Gold Corporation
-WRS
-Westar Energy, Inc.
+WRT
+Winthrop Realty Trust
 WSB
 WSB Holdings, Inc.
 WSBC
@@ -11723,6 +11603,8 @@ Waterstone Financial, Inc.
 WSCI
 WSI Industries Inc.
 WSFS
+WSFS Financial Corporation
+WSFSL
 WSFS Financial Corporation
 WSH
 Willis Group Holdings Limited
@@ -11762,8 +11644,6 @@ WTW
 Weight Watchers International Inc
 WU
 Western Union Company (The)
-WUHN
-Wuhan General Group (China), Inc.
 WVFC
 WVS Financial Corp.
 WVVI
@@ -11781,7 +11661,7 @@ Warwick Valley Telephone Company
 WWW
 Wolverine World Wide, Inc.
 WWWW
-Web.com Group, Inc
+Web.com Group, Inc.
 WX
 Wuxi Pharmatech (Cayman) Inc.
 WXS
@@ -11796,10 +11676,10 @@ WYY
 WidePoint Corporation
 WZE
 WIZZARD SOFTWARE CORPORATION
+X
+United States Steel Corporation
 XAA
 American Municipal Income Portfolio
-XATA
-XATA Corporation
 XBKS
 Xenith Bankshares, Inc.
 XCJ
@@ -11818,17 +11698,13 @@ XFP
 Lehman ABS Corporation
 XFR
 Lehman ABS Corporation
-XG
-Extorre Gold Mines Ltd.
 XIDE
 Exide Technologies
 XIN
 Xinyuan Real Estate Co Ltd
-XING
-Qiao Xing Universal Resources, Inc.
 XKE
 Lehman ABS Corporation
-XKN
+XKN/CL
 Lehman ABS Corporation
 XKO
 Lehman ABS Corporation
@@ -11837,7 +11713,7 @@ XL Group plc
 XLNX
 Xilinx, Inc.
 XLS
-ITT Corporation
+Exelis Inc.
 XNPT
 XenoPort, Inc.
 XNY
@@ -11847,7 +11723,7 @@ Exxon Mobil Corporation
 XOMA
 XOMA Corporation
 XOXO
-The Knot, Inc.
+XO Group, Inc.
 XPL
 Solitario Exploration & Royalty Corp
 XPO
@@ -11856,12 +11732,12 @@ XRA
 Exeter Resource Corporation
 XRAY
 DENTSPLY International Inc.
-XRIT
-X-Rite, Incorporated
 XRM
 Xerium Technologies, Inc.
 XRS
 TAL Education Group
+XRSC
+XRS Corporation
 XRTX
 Xyratex Ltd.
 XRX
@@ -11879,11 +11755,15 @@ World Energy Solutions Inc (DE)
 XXIA
 Ixia
 XYL
-ITT Corporation
+Xylem Inc.
+Y
+Alleghany Corporation
 YAVY
 Yadkin Valley Financial Corporation
 YDNT
 Young Innovations, Inc.
+YELP
+Yelp Inc.
 YGE
 Yingli Green Energy Holding Company Limited
 YHOO
@@ -11892,8 +11772,10 @@ YMI
 YM BioSciences, Inc.
 YNDX
 Yandex N.V.
+YOD
+You On Demand Holdings, Inc.
 YOKU
-Youku Inc.
+Youku Tudou Inc.
 YONG
 Yongye International, Inc.
 YORW
@@ -11908,6 +11790,8 @@ YUM
 Yum! Brands, Inc.
 YZC
 Yanzhou Coal Mining Company Limited
+Z
+Zillow, Inc.
 ZA
 Zuoan Fashion Limited
 ZAGG
@@ -11930,8 +11814,6 @@ ZHNE
 Zhone Technologies, Inc.
 ZIGO
 Zygo Corporation
-ZILLOW, INC.
-30.65
 ZINC
 Horsehead Holding Corp.
 ZION
@@ -11960,22 +11842,16 @@ ZNGA
 Zynga Inc.
 ZNH
 China Southern Airlines Company Limited
-ZNWAL
-Zion Oil & Gas Inc
 ZNWAW
 Zion Oil & Gas Inc
 ZNWAZ
 Zion Oil & Gas Inc
-ZOLL
-Zoll Medical Corporation
 ZOLT
 Zoltek Companies, Inc.
 ZOOM
 Zoom Technologies, Inc.
 ZQK
 Quiksilver, Inc.
-ZSTN
-ZST Digital Networks, Inc.
 ZTR
 Zweig Total Return Fund, Inc. (The)
 ZUMZ
