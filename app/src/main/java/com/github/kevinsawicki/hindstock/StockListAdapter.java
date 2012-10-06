@@ -18,6 +18,8 @@ package com.github.kevinsawicki.hindstock;
 import android.content.Context;
 import android.database.Cursor;
 import android.support.v4.widget.SimpleCursorAdapter;
+import android.widget.AlphabetIndexer;
+import android.widget.SectionIndexer;
 
 import com.github.kevinsawicki.hindstock.R.id;
 import com.github.kevinsawicki.hindstock.R.layout;
@@ -25,7 +27,10 @@ import com.github.kevinsawicki.hindstock.R.layout;
 /**
  * Adapter to display a list of stocks
  */
-public class StockListAdapter extends SimpleCursorAdapter {
+public class StockListAdapter extends SimpleCursorAdapter implements
+    SectionIndexer {
+
+  private final SectionIndexer indexer;
 
   /**
    * Create adapter for stocks
@@ -36,6 +41,8 @@ public class StockListAdapter extends SimpleCursorAdapter {
   public StockListAdapter(Context context, Cursor cursor) {
     super(context, layout.stock, cursor, new String[] { "symbol", "name" },
         new int[] { id.tv_symbol, id.tv_name }, 0);
+
+    indexer = new AlphabetIndexer(cursor, 1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
   }
 
   /**
@@ -52,5 +59,19 @@ public class StockListAdapter extends SimpleCursorAdapter {
   @Override
   public CharSequence convertToString(final Cursor cursor) {
     return cursor != null ? cursor.getString(1) : "";
+  }
+
+  @Override
+  public Object[] getSections() {
+    return indexer.getSections();
+  }
+
+  @Override
+  public int getPositionForSection(int section) {
+    return indexer.getPositionForSection(section);
+  }
+
+  public int getSectionForPosition(int position) {
+    return indexer.getSectionForPosition(position);
   }
 }

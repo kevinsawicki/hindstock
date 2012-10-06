@@ -48,6 +48,7 @@ public class ViewStocksActivity extends SherlockActivity implements
     ViewFinder finder = new ViewFinder(this);
     final ListView list = finder.find(android.R.id.list);
     list.setOnItemClickListener(this);
+    list.setFastScrollEnabled(true);
 
     new AsyncTask<Void, Void, Cursor>() {
 
