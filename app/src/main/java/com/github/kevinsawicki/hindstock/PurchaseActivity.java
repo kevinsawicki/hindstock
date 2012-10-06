@@ -519,6 +519,7 @@ public class PurchaseActivity extends SherlockActivity {
         symbolText.setText(stock.symbol);
         symbolText.setSelection(stock.symbol.length());
         symbolText.dismissDropDown();
+        amountText.requestFocus();
       }
       return;
     }
