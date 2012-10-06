@@ -46,7 +46,7 @@ public class SymbolLoader {
 
 	/**
 	 * Create loader to read symbols from given stream
-	 * 
+	 *
 	 * @param output
 	 * @param directory
 	 * @throws IOException
@@ -69,7 +69,7 @@ public class SymbolLoader {
 
 	/**
 	 * Writer the symbols and release the resources held by this loader
-	 * 
+	 *
 	 * @throws IOException
 	 */
 	public void finish() throws IOException {
@@ -98,6 +98,7 @@ public class SymbolLoader {
 			return false;
 		System.out.println("Processing: " + files.peek());
 		reader = new BufferedReader(new FileReader(files.poll()), 8192);
+		reader.readLine();
 		return true;
 	}
 
@@ -107,7 +108,7 @@ public class SymbolLoader {
 
 	/**
 	 * Read next stock line
-	 * 
+	 *
 	 * @return true if more lines, false otherwise
 	 * @throws IOException
 	 */
@@ -125,22 +126,25 @@ public class SymbolLoader {
 		final int length = line.length();
 		int start = 1;
 		int quote = line.indexOf('"', start);
+		if (quote == -1)
+			return advance();
+
 		int column = 0;
 		String symbol = null;
 		String name = null;
 		while (start < length) {
-			if (start + 1 != quote)
-				switch (column++) {
-				case 0:
-					symbol = line.substring(start, quote);
-					break;
-				case 1:
-					name = line.substring(start, quote);
-					if (symbol.indexOf('^') == -1)
-						symbols.put(symbol.toUpperCase(US), normalizeName(name));
-					return true;
-				}
-			start = quote + 1;
+			switch (column++) {
+			case 0:
+				symbol = line.substring(start, quote);
+				break;
+			case 1:
+				name = line.substring(start, quote);
+				if (symbol.indexOf('^') == -1)
+					symbols.put(symbol.toUpperCase(US), normalizeName(name));
+				return true;
+			}
+			// Advance over closing quote, comma, and next open quote
+			start = quote + 3;
 			quote = line.indexOf('"', start);
 			if (quote == -1)
 				quote = length;
@@ -156,14 +160,16 @@ public class SymbolLoader {
 	 * <p>
 	 * Second argument must be directory containing one or more .csv files to
 	 * import
-	 * 
+	 *
 	 * @param args
 	 * @throws IOException
 	 */
 	public static void main(String[] args) throws IOException {
-		if (args.length != 2)
+		if (args.length != 2) {
 			System.err
 					.println("First argument must be output file, second argument must be directory containing CSV files to import");
+			return;
+		}
 
 		SymbolLoader loader = new SymbolLoader(new File(args[0]), new File(
 				args[1]));
