@@ -15,7 +15,6 @@
  */
 package com.github.kevinsawicki.hindstock;
 
-import static android.view.View.VISIBLE;
 import static com.github.kevinsawicki.hindstock.IntentConstant.EXTRA_QUOTE;
 import static com.github.kevinsawicki.hindstock.IntentConstant.EXTRA_STOCK;
 import static java.text.DateFormat.SHORT;
@@ -33,7 +32,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.FloatMath;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -41,15 +39,12 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.TextView;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.github.kevinsawicki.hindstock.R.color;
 import com.github.kevinsawicki.hindstock.R.id;
 import com.github.kevinsawicki.hindstock.R.layout;
 import com.github.kevinsawicki.hindstock.R.menu;
@@ -61,8 +56,6 @@ import com.github.kevinsawicki.wishlist.ViewFinder;
 
 import java.io.IOException;
 import java.text.DateFormat;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -81,10 +74,6 @@ public class PurchaseActivity extends SherlockActivity {
   private static final int ID_BUY_DATE = 0;
 
   private static final int ID_SELL_DATE = 1;
-
-  private final NumberFormat numberFormat = NumberFormat.getIntegerInstance();
-
-  private final NumberFormat decimalFormat = new DecimalFormat("0.00");
 
   private final DateFormat dateFormat = DateFormat.getDateInstance(SHORT);
 
@@ -105,22 +94,6 @@ public class PurchaseActivity extends SherlockActivity {
   private EditText buyDateText;
 
   private EditText sellDateText;
-
-  private LinearLayout priceLabelsArea;
-
-  private LinearLayout priceValuesArea;
-
-  private TextView buyPriceText;
-
-  private TextView sellPriceText;
-
-  private View quoteArea;
-
-  private View netArea;
-
-  private TextView netLabel;
-
-  private TextView netText;
 
   private RadioButton dollarsButton;
 
@@ -159,14 +132,6 @@ public class PurchaseActivity extends SherlockActivity {
     amountText = finder.find(id.et_amount);
     buyDateText = finder.find(id.et_buy_date);
     sellDateText = finder.find(id.et_sell_date);
-    priceLabelsArea = finder.find(id.ll_price_labels);
-    priceValuesArea = finder.find(id.ll_price_values);
-    buyPriceText = finder.find(id.tv_buy_price);
-    sellPriceText = finder.find(id.tv_sell_price);
-    netArea = finder.find(id.ll_net);
-    netLabel = finder.find(id.tv_net_label);
-    netText = finder.find(id.tv_net);
-    quoteArea = finder.find(id.ll_quote);
     dollarsButton = finder.find(id.rb_dollars);
 
     finder.onClick(id.tv_browse, new Runnable() {
@@ -297,10 +262,6 @@ public class PurchaseActivity extends SherlockActivity {
     Toaster.showLong(this, message);
   }
 
-  private int getColor(final int id) {
-    return getResources().getColor(id);
-  }
-
   private String getSymbol() {
     String symbol = symbolText.getText().toString().trim();
     return !TextUtils.isEmpty(symbol) ? symbol : symbolText.getHint()
@@ -419,48 +380,9 @@ public class PurchaseActivity extends SherlockActivity {
   }
 
   private void displayQuote(final Quote quote) {
-    float netAmount = quote.getNet();
-    float dollars = FloatMath.floor(Math.abs(netAmount) + 0.5F);
-    int percentage = Math.round(quote.getRate());
-    percentage = Math.abs(percentage);
-    StringBuilder netTextValue = new StringBuilder();
-    if (netAmount >= 0) {
-      netLabel.setTextColor(getColor(color.gain));
-      netLabel.setText(getString(string.profit_label));
-      netText.setTextColor(getColor(color.gain));
-    } else {
-      netLabel.setTextColor(getColor(color.loss));
-      netLabel.setText(getString(string.loss_label));
-      netText.setTextColor(getColor(color.loss));
-    }
-    netTextValue.append('$').append(' ');
-
-    if (dollars < 1000000F) {
-      netTextValue.append(numberFormat.format(dollars));
-    } else if (dollars < 1000000000F) {
-      dollars = dollars / 1000000F;
-      netTextValue.append(decimalFormat.format(dollars));
-      netTextValue.append(' ').append('m');
-    } else if (dollars < 1000000000000F) {
-      dollars = dollars / 1000000000F;
-      netTextValue.append(decimalFormat.format(dollars));
-      netTextValue.append(' ').append('b');
-    } else if (dollars < 1000000000000000F) {
-      dollars = dollars / 1000000000000F;
-      netTextValue.append(decimalFormat.format(dollars));
-      netTextValue.append(' ').append('t');
-    }
-
-    netTextValue.append("  (").append(numberFormat.format(percentage))
-        .append('%').append(')');
-    buyPriceText.setText("$ " + decimalFormat.format(quote.getCost()));
-    priceLabelsArea.setVisibility(VISIBLE);
-    buyPriceText.setText("$ " + decimalFormat.format(quote.buyPrice));
-    sellPriceText.setText("$ " + decimalFormat.format(quote.sellPrice));
-    priceValuesArea.setVisibility(VISIBLE);
-    netArea.setVisibility(VISIBLE);
-    netText.setText(netTextValue);
-    quoteArea.setVisibility(VISIBLE);
+    Intent intent = new Intent(getApplicationContext(), QuoteActivity.class);
+    intent.putExtra(EXTRA_QUOTE.name(), quote);
+    startActivity(intent);
 
     showCalculating(false);
   }

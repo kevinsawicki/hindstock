@@ -29,6 +29,9 @@
       android:name=".ViewStocksActivity"
       android:configChanges="orientation|keyboardHidden|screenSize"
       android:label="@string/select_a_stock" />
+    <activity
+      android:name=".QuoteActivity"
+      android:configChanges="orientation|keyboardHidden|screenSize" />
   </application>
 
 </manifest>
