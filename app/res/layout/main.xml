@@ -45,7 +45,7 @@
         android:completionThreshold="1"
         android:hint="@string/symbol_hint"
         android:imeOptions="actionDone"
-        android:inputType="text"
+        android:inputType="textNoSuggestions"
         android:singleLine="true" />
     </LinearLayout>
 
