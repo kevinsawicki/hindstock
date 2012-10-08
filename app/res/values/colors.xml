@@ -22,5 +22,7 @@
   <color name="edit_text_background">#F8F8F8</color>
   <color name="edit_text_inner">#EDEDED</color>
   <color name="edit_text_outer">#959595</color>
+  <color name="divider_top">#DDDDDD</color>
+  <color name="divider_bottom">#FFFFFF</color>
 
 </resources>
