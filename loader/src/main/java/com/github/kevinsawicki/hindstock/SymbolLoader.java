@@ -26,21 +26,64 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Queue;
-import java.util.TreeMap;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Loader of stock symbols
  */
 public class SymbolLoader {
 
+	private static class Stock implements Comparable<Stock> {
+
+		public final String symbol;
+
+		public final String name;
+
+		public final String index;
+
+		Stock(final String symbol, final String name, final String index) {
+			this.symbol = symbol.toUpperCase(US);
+			this.name = name.trim().replace("&#39;", "'");
+			this.index = index;
+		}
+
+		Stock write(PrintWriter writer) {
+			writer.append(symbol).append('\n');
+			writer.append(name).append('\n');
+			writer.append(index).append('\n');
+			return this;
+		}
+
+		@Override
+		public int hashCode() {
+			return name.hashCode();
+		}
+
+		@Override
+		public boolean equals(Object other) {
+			if (this == other)
+				return true;
+			else
+				return other instanceof Stock
+						&& symbol.equals(((Stock) other).symbol);
+		}
+
+		@Override
+		public int compareTo(Stock other) {
+			return symbol.compareTo(other.symbol);
+		}
+
+	}
+
 	private BufferedReader reader;
 
 	private final File output;
 
-	private final Map<String, String> symbols = new TreeMap<String, String>();
+	private final Set<Stock> stocks = new TreeSet<Stock>();
+
+	private String index;
 
 	private final Queue<File> files;
 
@@ -73,11 +116,10 @@ public class SymbolLoader {
 	 * @throws IOException
 	 */
 	public void finish() throws IOException {
-		System.out.println("Symbols found: " + symbols.size());
+		System.out.println("Symbols found: " + stocks.size());
 		PrintWriter writer = new PrintWriter(new FileWriter(output, false));
-		for (Entry<String, String> entry : symbols.entrySet())
-			writer.append(entry.getKey()).append('\n').append(entry.getValue())
-					.append('\n');
+		for (Stock stock : stocks)
+			stock.write(writer);
 		if (reader != null)
 			try {
 				reader.close();
@@ -96,14 +138,13 @@ public class SymbolLoader {
 			}
 		if (files.isEmpty())
 			return false;
-		System.out.println("Processing: " + files.peek());
-		reader = new BufferedReader(new FileReader(files.poll()), 8192);
+
+		File file = files.poll();
+		index = file.getName().substring(0, file.getName().indexOf('.'));
+		System.out.println("Processing: " + file);
+		reader = new BufferedReader(new FileReader(file), 8192);
 		reader.readLine();
 		return true;
-	}
-
-	private String normalizeName(final String name) {
-		return name.trim().replace("&#39;", "'");
 	}
 
 	/**
@@ -140,7 +181,7 @@ public class SymbolLoader {
 			case 1:
 				name = line.substring(start, quote);
 				if (symbol.indexOf('^') == -1)
-					symbols.put(symbol.toUpperCase(US), normalizeName(name));
+					stocks.add(new Stock(symbol, name, index));
 				return true;
 			}
 			// Advance over closing quote, comma, and next open quote

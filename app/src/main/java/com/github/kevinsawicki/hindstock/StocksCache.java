@@ -15,7 +15,6 @@
  */
 package com.github.kevinsawicki.hindstock;
 
-import static java.util.Locale.US;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -23,7 +22,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
-import android.text.TextUtils;
 import android.util.Log;
 
 import java.io.BufferedReader;
@@ -44,33 +42,34 @@ public class StocksCache extends SQLiteOpenHelper {
    * @param context
    */
   public StocksCache(final Context context) {
-    super(context, "stocks.db", null, 2);
+    super(context, "stocks.db", null, 6);
 
     this.context = context;
   }
 
   @Override
   public void onCreate(SQLiteDatabase db) {
-    db.execSQL("CREATE VIRTUAL TABLE stocks USING fts3(_id INTEGER PRIMARY KEY AUTOINCREMENT, symbol TEXT, name TEXT);");
+    db.execSQL("CREATE TABLE stocks (_id INTEGER PRIMARY KEY AUTOINCREMENT, symbol TEXT, name TEXT, exchange TEXT);");
+    db.execSQL("CREATE VIRTUAL TABLE search USING fts3(symbol TEXT PRIMARY KEY, name TEXT);");
 
     BufferedReader reader = null;
     long time = System.currentTimeMillis();
     int count = 0;
-    ContentValues values = new ContentValues(2);
+    ContentValues values = new ContentValues(3);
     db.beginTransaction();
     try {
       reader = new BufferedReader(new InputStreamReader(context.getAssets()
           .open("stocks.txt")), 8192 * 2);
       String symbol;
       while ((symbol = reader.readLine()) != null) {
-        if (symbol.length() == 0)
-          continue;
         String name = reader.readLine();
-        if (TextUtils.isEmpty(name))
-          continue;
+        String exchange = reader.readLine();
 
+        values.clear();
         values.put("symbol", symbol);
         values.put("name", name);
+        db.insert("search", null, values);
+        values.put("exchange", exchange);
         db.insert("stocks", null, values);
         count++;
       }
@@ -94,6 +93,7 @@ public class StocksCache extends SQLiteOpenHelper {
   @Override
   public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     db.execSQL("DROP TABLE IF EXISTS stocks");
+    db.execSQL("DROP TABLE IF EXISTS search");
     onCreate(db);
   }
 
@@ -137,16 +137,15 @@ public class StocksCache extends SQLiteOpenHelper {
    * @param query
    * @return cursor
    */
-  public Cursor getFilteredStocks(String query) {
+  public Cursor getFilteredStocks(final String query) {
     SQLiteDatabase db = getReadable();
     if (db == null)
       return null;
 
     SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
-    builder.setTables("stocks");
+    builder.setTables("stocks JOIN search ON (stocks.symbol = search.symbol)");
     return builder.query(db, new String[] { "stocks._id", "stocks.symbol",
-        "stocks.name" }, "stocks MATCH ?",
-        new String[] { "symbol:" + query.toUpperCase(US) + '*' + "OR name:*"
-            + query + '*' }, null, null, null);
+        "stocks.name" }, "search MATCH ?", new String[] { "name:*" + query
+        + '*' }, null, null, null);
   }
 }
