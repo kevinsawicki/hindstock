@@ -24,7 +24,6 @@ import static java.util.Calendar.YEAR;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnDismissListener;
@@ -155,11 +154,10 @@ public class PurchaseActivity extends SherlockActivity {
     new StocksLoader(getApplicationContext()) {
 
       @Override
-      protected void onPostExecute(Cursor cursor) {
+      protected void onPostExecute(final Cursor cursor) {
         if (cursor == null)
           return;
 
-        Context context = getApplicationContext();
         StockListAdapter adapter = new StockListAdapter(context, cursor);
         adapter.setFilterQueryProvider(new StocksFilter(context));
         symbolText.setAdapter(adapter);

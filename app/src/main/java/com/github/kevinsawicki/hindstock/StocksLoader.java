@@ -24,7 +24,10 @@ import android.os.AsyncTask;
  */
 public class StocksLoader extends AsyncTask<Void, Void, Cursor> {
 
-  private final Context context;
+  /**
+   * Context
+   */
+  protected final Context context;
 
   /**
    * Create stock list loader
