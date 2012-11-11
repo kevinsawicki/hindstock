@@ -163,7 +163,6 @@ public class PurchaseActivity extends SherlockActivity {
         StockListAdapter adapter = new StockListAdapter(context, cursor);
         adapter.setFilterQueryProvider(new StocksFilter(context));
         symbolText.setAdapter(adapter);
-
       };
     }.execute();
   }
