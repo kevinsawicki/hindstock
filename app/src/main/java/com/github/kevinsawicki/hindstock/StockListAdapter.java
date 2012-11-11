@@ -39,8 +39,8 @@ public class StockListAdapter extends SimpleCursorAdapter implements
    * @param cursor
    */
   public StockListAdapter(Context context, Cursor cursor) {
-    super(context, layout.stock, cursor, new String[] { "symbol", "name" },
-        new int[] { id.tv_symbol, id.tv_name }, 0);
+    super(context, layout.stock, cursor, new String[] { "symbol", "name",
+        "exchange" }, new int[] { id.tv_symbol, id.tv_name, id.tv_exchange }, 0);
 
     indexer = new AlphabetIndexer(cursor, 1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
   }
@@ -71,6 +71,7 @@ public class StockListAdapter extends SimpleCursorAdapter implements
     return indexer.getPositionForSection(section);
   }
 
+  @Override
   public int getSectionForPosition(int position) {
     return indexer.getSectionForPosition(position);
   }

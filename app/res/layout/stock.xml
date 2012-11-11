@@ -22,4 +22,11 @@
     android:textColor="@color/text_light"
     android:textSize="14sp" />
 
+  <TextView
+    android:id="@+id/tv_exchange"
+    style="@style/textView"
+    android:singleLine="true"
+    android:textColor="@color/text_light"
+    android:textSize="12sp" />
+
 </LinearLayout>

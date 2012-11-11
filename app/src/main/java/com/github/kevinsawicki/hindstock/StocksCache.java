@@ -128,7 +128,7 @@ public class StocksCache extends SQLiteOpenHelper {
     SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
     builder.setTables("stocks");
     return builder.query(db, new String[] { "stocks._id", "stocks.symbol",
-        "stocks.name" }, null, null, null, null, null);
+        "stocks.name", "stocks.exchange" }, null, null, null, null, null);
   }
 
   /**
@@ -145,7 +145,7 @@ public class StocksCache extends SQLiteOpenHelper {
     SQLiteQueryBuilder builder = new SQLiteQueryBuilder();
     builder.setTables("stocks JOIN search ON (stocks.symbol = search.symbol)");
     return builder.query(db, new String[] { "stocks._id", "stocks.symbol",
-        "stocks.name" }, "search MATCH ?", new String[] { "name:*" + query
-        + '*' }, null, null, null);
+        "stocks.name", "stocks.exchange" }, "search MATCH ?",
+        new String[] { "name:*" + query + '*' }, null, null, null);
   }
 }
