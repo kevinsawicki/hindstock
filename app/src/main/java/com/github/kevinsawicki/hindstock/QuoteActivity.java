@@ -23,11 +23,11 @@ import android.os.Bundle;
 import android.util.FloatMath;
 import android.widget.TextView;
 
-import com.actionbarsherlock.R.layout;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.github.kevinsawicki.hindstock.R.color;
 import com.github.kevinsawicki.hindstock.R.id;
+import com.github.kevinsawicki.hindstock.R.layout;
 import com.github.kevinsawicki.hindstock.R.string;
 import com.github.kevinsawicki.wishlist.ViewFinder;
 
