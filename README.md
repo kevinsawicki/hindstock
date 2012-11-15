@@ -1,6 +1,6 @@
 # Hind Stock - Android Stock Purchase Simulator
 
-[![Build Status](https://travis-ci.org/kevinsawicki/hindstock.png)](https://travis-ci.org/kevinsawicki/hindstock))
+[![Build Status](https://travis-ci.org/kevinsawicki/hindstock.png)](https://travis-ci.org/kevinsawicki/hindstock)
 
 Android application to simulate stock buys and sells and display the net profit
 or loss along with the rate of return.
