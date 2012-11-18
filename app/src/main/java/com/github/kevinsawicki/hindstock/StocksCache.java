@@ -19,10 +19,10 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.util.Log;
+
+import com.github.kevinsawicki.wishlist.DatabaseHelper;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,7 +32,7 @@ import java.text.MessageFormat;
 /**
  * Stocks cached in SQLite populated initially from a file
  */
-public class StocksCache extends SQLiteOpenHelper {
+public class StocksCache extends DatabaseHelper {
 
   private static final String TAG = "StocksLoader";
 
@@ -95,24 +95,6 @@ public class StocksCache extends SQLiteOpenHelper {
     db.execSQL("DROP TABLE IF EXISTS stocks");
     db.execSQL("DROP TABLE IF EXISTS search");
     onCreate(db);
-  }
-
-  /**
-   * Get readable database
-   *
-   * @return readable database or null if it failed to create/open
-   */
-  protected SQLiteDatabase getReadable() {
-    try {
-      return getReadableDatabase();
-    } catch (SQLiteException e1) {
-      // Make second attempt
-      try {
-        return getReadableDatabase();
-      } catch (SQLiteException e2) {
-        return null;
-      }
-    }
   }
 
   /**
