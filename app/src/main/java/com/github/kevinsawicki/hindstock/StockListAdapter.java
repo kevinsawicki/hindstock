@@ -17,17 +17,18 @@ package com.github.kevinsawicki.hindstock;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.support.v4.widget.SimpleCursorAdapter;
+import android.view.View;
 import android.widget.AlphabetIndexer;
 import android.widget.SectionIndexer;
 
 import com.github.kevinsawicki.hindstock.R.id;
 import com.github.kevinsawicki.hindstock.R.layout;
+import com.github.kevinsawicki.wishlist.SingleTypeCursorAdapter;
 
 /**
  * Adapter to display a list of stocks
  */
-public class StockListAdapter extends SimpleCursorAdapter implements
+public class StockListAdapter extends SingleTypeCursorAdapter implements
     SectionIndexer {
 
   private final SectionIndexer indexer;
@@ -39,8 +40,7 @@ public class StockListAdapter extends SimpleCursorAdapter implements
    * @param cursor
    */
   public StockListAdapter(Context context, Cursor cursor) {
-    super(context, layout.stock, cursor, new String[] { "symbol", "name",
-        "exchange" }, new int[] { id.tv_symbol, id.tv_name, id.tv_exchange }, 0);
+    super(context, cursor, 0, layout.stock);
 
     indexer = new AlphabetIndexer(cursor, 1, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
   }
@@ -57,11 +57,6 @@ public class StockListAdapter extends SimpleCursorAdapter implements
   }
 
   @Override
-  public CharSequence convertToString(final Cursor cursor) {
-    return cursor != null ? cursor.getString(1) : "";
-  }
-
-  @Override
   public Object[] getSections() {
     return indexer.getSections();
   }
@@ -74,5 +69,19 @@ public class StockListAdapter extends SimpleCursorAdapter implements
   @Override
   public int getSectionForPosition(int position) {
     return indexer.getSectionForPosition(position);
+  }
+
+  @Override
+  protected int[] getChildViewIds() {
+    return new int[] { id.tv_symbol, id.tv_name, id.tv_exchange };
+  }
+
+  @Override
+  public void bindView(View view, Context context, Cursor cursor) {
+    super.bindView(view, context, cursor);
+
+    setText(0, 1);
+    setText(1, 2);
+    setText(2, 3);
   }
 }
